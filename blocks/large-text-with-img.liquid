@@ -1,0 +1,427 @@
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .image-text-{{ ai_gen_id }} {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: {{ block.settings.padding }}px 0;
+    overflow: hidden;
+  }
+
+  .image-text-container-{{ ai_gen_id }} {
+    position: relative;
+    max-width: 100%;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .media-container-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .media-background-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: blur({{ block.settings.blur_amount }}px);
+    opacity: {{ block.settings.background_opacity }};
+  }
+  
+  .media-background-{{ ai_gen_id }} video,
+  .media-background-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-text-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    font-family: {{ block.settings.font_family }};
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-transform: {{ block.settings.text_transform }};
+    position: relative;
+    z-index: 2;
+  }
+
+  .image-text-stroke-{{ ai_gen_id }} {
+    -webkit-text-stroke: {{ block.settings.stroke_width }}px {{ block.settings.stroke_color }};
+    text-stroke: {{ block.settings.stroke_width }}px {{ block.settings.stroke_color }};
+  }
+
+  .media-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: {{ block.settings.overlay_color }};
+    opacity: {{ block.settings.overlay_opacity }};
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 749px) {
+    .image-text-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="image-text-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.media_type == 'image' and block.settings.image %}
+    <div class="media-container-{{ ai_gen_id }}">
+      <div class="media-background-{{ ai_gen_id }}">
+        <img src="{{ block.settings.image | image_url: width: 2000 }}" alt="" width="2000" height="1000" loading="lazy">
+      </div>
+      {% if block.settings.enable_overlay %}
+        <div class="media-overlay-{{ ai_gen_id }}"></div>
+      {% endif %}
+    </div>
+  {% elsif block.settings.media_type == 'video' and block.settings.video_url != blank %}
+    <div class="media-container-{{ ai_gen_id }}">
+      <div class="media-background-{{ ai_gen_id }}">
+        <video autoplay loop muted playsinline>
+          <source src="{{ block.settings.video_url }}" type="video/mp4">
+        </video>
+      </div>
+      {% if block.settings.enable_overlay %}
+        <div class="media-overlay-{{ ai_gen_id }}"></div>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  <div class="image-text-container-{{ ai_gen_id }}">
+    {% if block.settings.media_type == 'image' and block.settings.image %}
+      <h2 
+        class="image-text-heading-{{ ai_gen_id }} {% if block.settings.enable_stroke %}image-text-stroke-{{ ai_gen_id }}{% endif %}" 
+        style="background-image: url('{{ block.settings.image | image_url: width: 2000 }}');"
+      >
+        {{ block.settings.text }}
+      </h2>
+    {% elsif block.settings.media_type == 'video' and block.settings.video_url != blank %}
+      <h2 class="image-text-heading-{{ ai_gen_id }} {% if block.settings.enable_stroke %}image-text-stroke-{{ ai_gen_id }}{% endif %}" 
+        {% if block.settings.video_poster %}
+          style="background-image: url('{{ block.settings.video_poster | image_url: width: 2000 }}');"
+        {% else %}
+          style="background-image: url('{{ block.settings.image | image_url: width: 2000 }}');"
+        {% endif %}
+      >
+        {{ block.settings.text }}
+      </h2>
+    {% else %}
+      <div class="image-text-placeholder-{{ ai_gen_id }}">
+        <h2 
+          class="image-text-heading-{{ ai_gen_id }} {% if block.settings.enable_stroke %}image-text-stroke-{{ ai_gen_id }}{% endif %}" 
+          style="background-image: url('{{ 'image' | placeholder_svg_tag | escape }}');"
+        >
+          {{ block.settings.text }}
+        </h2>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image/Video Text",
+  "tag": null,
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "HELLO WORLD"
+    },
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image",
+      "info": "Used when media type is set to Image"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Link to MP4 video file (used when media type is set to Video)"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video poster image",
+      "info": "Optional preview image for the video"
+    },
+    {
+      "type": "header",
+      "content": "Background Effects"
+    },
+    {
+      "type": "range",
+      "id": "blur_amount",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Background blur amount",
+      "default": 5,
+      "info": "Controls how blurry the media is outside of the text"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "min": 0.1,
+      "max": 1.0,
+      "step": 0.1,
+      "label": "Background opacity",
+      "default": 0.5,
+      "info": "Controls how visible the media is outside of the text"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enable color overlay",
+      "default": false,
+      "info": "Adds a colored overlay on top of the background media"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0.1,
+      "max": 0.9,
+      "step": 0.1,
+      "label": "Overlay opacity",
+      "default": 0.3
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "select",
+      "id": "font_family",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "inherit",
+          "label": "Theme default"
+        },
+        {
+          "value": "'Arial', sans-serif",
+          "label": "Arial"
+        },
+        {
+          "value": "'Helvetica', sans-serif",
+          "label": "Helvetica"
+        },
+        {
+          "value": "'Times New Roman', serif",
+          "label": "Times New Roman"
+        },
+        {
+          "value": "'Georgia', serif",
+          "label": "Georgia"
+        },
+        {
+          "value": "'Courier New', monospace",
+          "label": "Courier New"
+        },
+        {
+          "value": "'Verdana', sans-serif",
+          "label": "Verdana"
+        },
+        {
+          "value": "'Trebuchet MS', sans-serif",
+          "label": "Trebuchet MS"
+        },
+        {
+          "value": "'Impact', sans-serif",
+          "label": "Impact"
+        },
+        {
+          "value": "'Gill Sans', sans-serif",
+          "label": "Gill Sans"
+        }
+      ],
+      "default": "inherit"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 40,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Font size",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Font size on mobile",
+      "default": 60
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra bold"
+        },
+        {
+          "value": "900",
+          "label": "Black"
+        }
+      ],
+      "default": "800"
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "label": "Text case",
+      "options": [
+        {
+          "value": "none",
+          "label": "Normal"
+        },
+        {
+          "value": "uppercase",
+          "label": "UPPERCASE"
+        }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Outline"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_stroke",
+      "label": "Enable text outline",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "stroke_width",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Outline thickness",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "stroke_color",
+      "label": "Outline color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image/Video Text"
+    }
+  ]
+}
+{% endschema %}

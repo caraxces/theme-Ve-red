@@ -1,0 +1,289 @@
+{% doc %}
+  @prompt
+    Large text filled with video, video được tải lên từ local hoặc được chọn từ trong shopify file 
+, Large text filled with an video
+
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .video-text-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding: {{ block.settings.padding }}px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .video-text-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    max-width: 100%;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .video-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+    z-index: 2;
+  }
+
+  .video-text-background-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .video-text-background-{{ ai_gen_id }} video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  .video-text-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .video-text-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .video-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_mobile }}px;
+    }
+    
+    .video-text-container-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_mobile }}px 0;
+    }
+  }
+{% endstyle %}
+
+<video-text-block-{{ ai_gen_id }} class="video-text-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="video-text-wrapper-{{ ai_gen_id }}">
+    <h2 class="video-text-{{ ai_gen_id }}">{{ block.settings.text }}</h2>
+    
+    <div class="video-text-background-{{ ai_gen_id }}">
+      {% if block.settings.video != blank %}
+        <video 
+          autoplay 
+          muted 
+          loop 
+          playsinline
+          id="video-{{ ai_gen_id }}"
+        >
+          <source src="{{ block.settings.video }}" type="video/mp4">
+        </video>
+      {% else %}
+        <div class="video-text-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</video-text-block-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class VideoTextBlock{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.textElement = this.querySelector('.video-text-{{ ai_gen_id }}');
+        this.videoElement = this.querySelector('#video-{{ ai_gen_id }}');
+      }
+
+      connectedCallback() {
+        if (this.videoElement) {
+          this.setupVideoText();
+          window.addEventListener('resize', this.setupVideoText.bind(this));
+        }
+      }
+
+      setupVideoText() {
+        // Apply text mask effect
+        this.textElement.style.webkitBackgroundClip = 'text';
+        this.textElement.style.backgroundClip = 'text';
+        this.textElement.style.color = 'transparent';
+        
+        // Create a dynamic background for the text that shows the video
+        const rect = this.textElement.getBoundingClientRect();
+        const containerRect = this.getBoundingClientRect();
+        
+        const offsetX = rect.left - containerRect.left;
+        const offsetY = rect.top - containerRect.top;
+        
+        this.textElement.style.backgroundImage = 'url(#)';
+        this.textElement.style.backgroundPosition = `calc(50% - ${offsetX}px) calc(50% - ${offsetY}px)`;
+        this.textElement.style.backgroundSize = 'cover';
+      }
+    }
+
+    customElements.define('video-text-block-{{ ai_gen_id }}', VideoTextBlock{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Video Text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text Content"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "AMAZING"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 40,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Text size",
+      "default": 150
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "min": 30,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Text size on mobile",
+      "default": 80
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra Bold"
+        },
+        {
+          "value": "900",
+          "label": "Black"
+        }
+      ],
+      "default": "800"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Video Settings"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 150,
+      "step": 10,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Vertical padding on mobile",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Text"
+    }
+  ]
+}
+{% endschema %}

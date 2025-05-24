@@ -1,0 +1,231 @@
+{% doc %}
+  @prompt
+    Tạo một section cho phép chèn hình ảnh vào giữa văn bản, với khả năng tùy chỉnh vị trí hình ảnh (trái, phải, giữa) và văn bản có thể bao quanh hình ảnh
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .text-with-image-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: {{ block.settings.image_position_mobile }};
+    gap: {{ block.settings.spacing }}px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .text-with-image-{{ ai_gen_id }} {
+      flex-direction: {{ block.settings.image_position }};
+      align-items: {{ block.settings.vertical_alignment }};
+    }
+  }
+
+  .text-with-image-{{ ai_gen_id }}.position-left {
+    flex-direction: row;
+  }
+
+  .text-with-image-{{ ai_gen_id }}.position-right {
+    flex-direction: row-reverse;
+  }
+
+  .text-with-image-{{ ai_gen_id }}.position-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-with-image__image-wrapper-{{ ai_gen_id }} {
+    flex: 0 0 {{ block.settings.image_width }}%;
+    max-width: {{ block.settings.image_width }}%;
+    position: relative;}
+
+  .text-with-image-{{ ai_gen_id }}.position-center .text-with-image__image-wrapper-{{ ai_gen_id }} {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: {{ block.settings.spacing }}px;
+  }
+
+  .text-with-image__image-placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .text-with-image__image-placeholder-{{ ai_gen_id }} svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .text-with-image__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .text-with-image__text-{{ ai_gen_id }} {
+    flex: 1;}
+
+  @media screen and (max-width: 749px) {
+    .text-with-image__image-wrapper-{{ ai_gen_id }} {
+      flex: 0 0 100%;
+      max-width: 100%;}
+    
+    .text-with-image-{{ ai_gen_id }}.position-left,
+    .text-with-image-{{ ai_gen_id }}.position-right {
+      flex-direction: column;
+    }
+  }
+{% endstyle %}
+
+<div
+  class="text-with-image-{{ ai_gen_id }} position-{{ block.settings.image_position }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="text-with-image__image-wrapper-{{ ai_gen_id }}">
+    {% if block.settings.image != blank %}
+      <img
+        src="{{ block.settings.image | image_url: width: 1500 }}"
+        alt="{{ block.settings.image.alt | escape }}"
+        loading="lazy"
+        width="{{ block.settings.image.width }}"
+        height="{{ block.settings.image.height }}"
+        class="text-with-image__image-{{ ai_gen_id }}"
+      >
+    {% else %}
+      <div class="text-with-image__image-placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="text-with-image__text-{{ ai_gen_id }}">
+    {{ block.settings.text }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text with Image",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text content",
+      "default": "<p>Add your text here. This text will wrap around the image based on the selected position. You can format this text using the rich text editor.</p><p>Add multiple paragraphs to see how the text flows around the image. The more content you add, the better you'll be able to see the wrapping effect.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position (desktop)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "image_position_mobile",
+      "label": "Image position (mobile)",
+      "options": [
+        {
+          "value": "column",
+          "label": "Top"
+        },
+        {
+          "value": "column-reverse",
+          "label": "Bottom"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Middle"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "label": "Image width",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with Image"
+    }
+  ]
+}
+{% endschema %}
