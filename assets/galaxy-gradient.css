@@ -1,0 +1,429 @@
+/* Galaxy Gradient Background - Đen sang Đỏ từ trái sang phải */
+
+/* Gradient chính cho toàn bộ theme */
+:root {
+  --galaxy-gradient: linear-gradient(to right, 
+    #000000 0%, #000000 5%, #000000 10%, #000000 15%, 
+    #050000 20%, #050000 25%, #0a0000 30%, #0a0000 35%, 
+    #0f0000 40%, #140000 45%, #190000 50%, #1e0000 55%, 
+    #230000 60%, #280000 65%, #2d0000 70%, #320000 75%, 
+    #460000 80%, #5a0000 85%, #6e0000 90%, #820000 95%, #ff0000 100%);
+}
+
+/* Gradient cho body */
+body {
+  background: var(--galaxy-gradient) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+/* Gradient cho header - sử dụng cùng gradient với body nhưng có opacity */
+.header,
+.header-section,
+#header-component,
+header-component {
+  background: linear-gradient(to right, 
+    rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.95) 5%, rgba(0,0,0,0.95) 10%, rgba(0,0,0,0.95) 15%, 
+    rgba(5,0,0,0.9) 20%, rgba(5,0,0,0.9) 25%, rgba(10,0,0,0.9) 30%, rgba(10,0,0,0.9) 35%, 
+    rgba(15,0,0,0.9) 40%, rgba(20,0,0,0.9) 45%, rgba(25,0,0,0.9) 50%, rgba(30,0,0,0.9) 55%, 
+    rgba(35,0,0,0.9) 60%, rgba(40,0,0,0.9) 65%, rgba(45,0,0,0.9) 70%, rgba(50,0,0,0.9) 75%, 
+    rgba(70,0,0,0.9) 80%, rgba(90,0,0,0.9) 85%, rgba(110,0,0,0.9) 90%, rgba(130,0,0,0.9) 95%, rgba(255,0,0,0.9) 100%) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Gradient cho header rows */
+.header__row {
+  background: linear-gradient(to right, 
+    rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.85) 5%, rgba(0,0,0,0.85) 10%, rgba(0,0,0,0.85) 15%, 
+    rgba(5,0,0,0.8) 20%, rgba(5,0,0,0.8) 25%, rgba(10,0,0,0.8) 30%, rgba(10,0,0,0.8) 35%, 
+    rgba(15,0,0,0.8) 40%, rgba(20,0,0,0.8) 45%, rgba(25,0,0,0.8) 50%, rgba(30,0,0,0.8) 55%, 
+    rgba(35,0,0,0.8) 60%, rgba(40,0,0,0.8) 65%, rgba(45,0,0,0.8) 70%, rgba(50,0,0,0.8) 75%, 
+    rgba(70,0,0,0.8) 80%, rgba(90,0,0,0.8) 85%, rgba(110,0,0,0.8) 90%, rgba(130,0,0,0.8) 95%, rgba(255,0,0,0.8) 100%) !important;
+}
+
+/* Gradient cho footer - sử dụng CHÍNH XÁC cùng gradient với body */
+footer,
+.footer,
+.section-wrapper,
+.shopify-section footer,
+footer .section,
+footer .section-background,
+#footer-group,
+.footer-group {
+  background: var(--galaxy-gradient) !important;
+  background-attachment: fixed !important;
+}
+
+/* Gradient cho section background trong footer */
+.section-background {
+  background: var(--galaxy-gradient) !important;
+  background-attachment: fixed !important;
+}
+
+/* Đảm bảo text có màu sáng để dễ đọc trên nền tối */
+body,
+.header,
+.header *,
+footer,
+footer * {
+  color: #ffffff !important;
+}
+
+/* Đảm bảo links có màu sáng */
+a {
+  color: #ffcccc !important;
+}
+
+a:hover {
+  color: #ffffff !important;
+}
+
+/* Buttons có màu phù hợp */
+.button,
+.btn {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.button:hover,
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* Hiệu ứng galaxy với animation */
+@keyframes galaxyShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Thêm hiệu ứng shimmer cho body */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 70%);
+  background-size: 200% 200%;
+  animation: galaxyShimmer 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Đảm bảo content có background trong suốt để hiển thị gradient */
+.content-for-layout,
+main {
+  background: transparent !important;
+}
+
+/* Sections có background trong suốt */
+.section {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Đặc biệt cho các color scheme */
+[class*="color-scheme-"],
+[class*="color-"] {
+  background: transparent !important;
+}
+
+/* Shopify sections */
+.shopify-section {
+  background: transparent !important;
+}
+
+/* Đảm bảo header transparent hoạt động tốt */
+.header[transparent] {
+  background: linear-gradient(to right, 
+    rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.8) 15%, 
+    rgba(5,0,0,0.75) 20%, rgba(5,0,0,0.75) 25%, rgba(10,0,0,0.7) 30%, rgba(10,0,0,0.7) 35%, 
+    rgba(15,0,0,0.7) 40%, rgba(20,0,0,0.7) 45%, rgba(25,0,0,0.7) 50%, rgba(30,0,0,0.7) 55%, 
+    rgba(35,0,0,0.7) 60%, rgba(40,0,0,0.7) 65%, rgba(45,0,0,0.7) 70%, rgba(50,0,0,0.7) 75%, 
+    rgba(70,0,0,0.7) 80%, rgba(90,0,0,0.7) 85%, rgba(110,0,0,0.7) 90%, rgba(130,0,0,0.7) 95%, rgba(255,0,0,0.7) 100%) !important;
+}
+
+/* Cải thiện hiệu ứng galaxy với stars */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: galaxyStars 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+@keyframes galaxyStars {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+/* Input fields có màu phù hợp */
+input,
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Navigation menu items */
+.header-menu a,
+.menu-list a,
+nav a {
+  color: #ffffff !important;
+}
+
+.header-menu a:hover,
+.menu-list a:hover,
+nav a:hover {
+  color: #ffcccc !important;
+}
+
+/* Cart và search icons */
+.cart-icon,
+.search-icon,
+.header-actions svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Logo */
+.header-logo img {
+  filter: brightness(1.2) contrast(1.1) !important;
+}
+
+/* Dropdown menus */
+.dropdown-menu,
+.menu-dropdown {
+  background: linear-gradient(to right, 
+    rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.98) 20%, rgba(5,0,0,0.95) 40%, 
+    rgba(10,0,0,0.95) 60%, rgba(20,0,0,0.95) 80%, rgba(50,0,0,0.95) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Product cards và content cards */
+.product-card,
+.collection-card,
+.card {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.product-card:hover,
+.collection-card:hover,
+.card:hover {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Price text */
+.price,
+.money {
+  color: #ffcccc !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #ffffff !important;
+}
+
+/* Paragraphs */
+p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Responsive design cho mobile */
+@media screen and (max-width: 749px) {
+  :root {
+    --galaxy-gradient: linear-gradient(to bottom, 
+      #000000 0%, #000000 5%, #000000 10%, #000000 15%, 
+      #050000 20%, #050000 25%, #0a0000 30%, #0a0000 35%, 
+      #0f0000 40%, #140000 45%, #190000 50%, #1e0000 55%, 
+      #230000 60%, #280000 65%, #2d0000 70%, #320000 75%, 
+      #460000 80%, #5a0000 85%, #6e0000 90%, #820000 95%, #ff0000 100%);
+  }
+  
+  body {
+    background: var(--galaxy-gradient) !important;
+  }
+  
+  .header,
+  .header-section,
+  #header-component,
+  header-component {
+    background: linear-gradient(to bottom, 
+      rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.95) 15%, rgba(5,0,0,0.9) 30%, 
+      rgba(10,0,0,0.9) 45%, rgba(20,0,0,0.9) 60%, rgba(40,0,0,0.9) 75%, 
+      rgba(60,0,0,0.9) 90%, rgba(130,0,0,0.9) 100%) !important;
+  }
+  
+  footer,
+  .footer,
+  .section-wrapper,
+  footer .section,
+  footer .section-background,
+  footer [class*="color-scheme-"],
+  .section-wrapper [class*="color-scheme-"] {
+    background: var(--galaxy-gradient) !important;
+    background-attachment: fixed !important;
+  }
+}
+
+/* Cải thiện hiệu ứng cho tablet */
+@media screen and (min-width: 750px) and (max-width: 1199px) {
+  body::before {
+    animation-duration: 12s;
+  }
+  
+  body::after {
+    animation-duration: 25s;
+  }
+}
+
+/* Hiệu ứng đặc biệt cho desktop lớn */
+@media screen and (min-width: 1200px) {
+  :root {
+    --galaxy-gradient: linear-gradient(45deg, 
+      #000000 0%, #000000 5%, #000000 10%, #000000 15%, 
+      #050000 20%, #050000 25%, #0a0000 30%, #0a0000 35%, 
+      #0f0000 40%, #140000 45%, #190000 50%, #1e0000 55%, 
+      #230000 60%, #280000 65%, #2d0000 70%, #320000 75%, 
+      #460000 80%, #5a0000 85%, #6e0000 90%, #820000 95%, #ff0000 100%);
+  }
+  
+  body {
+    background: var(--galaxy-gradient) !important;
+    background-size: 400% 400% !important;
+    animation: galaxyRotate 30s ease-in-out infinite !important;
+  }
+}
+
+@keyframes galaxyRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Override các background color schemes của theme gốc */
+[class*="color-scheme-"],
+[class*="color-"],
+.section,
+.shopify-section,
+.header__row {
+  background-color: transparent !important;
+}
+
+/* Đặc biệt override cho footer sections */
+footer [class*="color-scheme-"],
+footer [class*="color-"],
+footer .section,
+.section-wrapper [class*="color-scheme-"],
+.section-wrapper [class*="color-"],
+.section-wrapper .section {
+  background: var(--galaxy-gradient) !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+/* Đảm bảo header không bị override */
+#header-group,
+.header-section {
+  background: transparent !important;
+}
+
+/* Override CSS variables của theme gốc */
+.header__row {
+  --color-background: transparent !important;
+  --header-bg-color: transparent !important;
+}
+
+/* Đảm bảo tất cả text có contrast tốt */
+* {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Loại bỏ text-shadow cho icons */
+svg, 
+.icon,
+[class*="icon-"] {
+  text-shadow: none !important;
+}
+
+/* Đảm bảo hiệu ứng galaxy stars không bị ảnh hưởng */
+body::before,
+body::after {
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* Force footer gradient - Override mọi CSS khác */
+footer,
+footer *,
+.section-wrapper,
+.section-wrapper *,
+#footer-group,
+#footer-group * {
+  background-image: var(--galaxy-gradient) !important;
+  background-color: transparent !important;
+  background-attachment: fixed !important;
+}
+
+/* Đặc biệt cho các element con trong footer */
+footer .section-content-wrapper,
+footer .layout-panel-flex,
+footer .spacing-style,
+.section-wrapper .section-content-wrapper,
+.section-wrapper .layout-panel-flex,
+.section-wrapper .spacing-style {
+  background: transparent !important;
+  background-image: none !important;
+} 

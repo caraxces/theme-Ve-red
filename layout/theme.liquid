@@ -5,6 +5,7 @@
 >
   <head>
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'galaxy-gradient.css' | asset_url | stylesheet_tag }}
 
     {%- if settings.favicon != blank -%}
       <link
