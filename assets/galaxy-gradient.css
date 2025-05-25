@@ -130,20 +130,27 @@ main {
   background: transparent !important;
 }
 
-/* Sections có background trong suốt */
-.section {
-  background: rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Đặc biệt cho các color scheme */
-[class*="color-scheme-"],
-[class*="color-"] {
+/* CHỈ sections trong footer có background trong suốt */
+footer .section {
   background: transparent !important;
 }
 
-/* Shopify sections */
-.shopify-section {
+/* Các sections khác giữ nguyên background của theme */
+main .section:not(footer .section) {
+  background: unset !important;
+}
+
+/* CHỈ override color schemes trong footer */
+footer [class*="color-scheme-"],
+footer [class*="color-"],
+.section-wrapper [class*="color-scheme-"],
+.section-wrapper [class*="color-"] {
   background: transparent !important;
+}
+
+/* Shopify sections khác giữ nguyên background */
+.shopify-section:not(.section-wrapper) {
+  background: unset !important;
 }
 
 /* Đảm bảo header transparent hoạt động tốt */
@@ -353,16 +360,12 @@ p {
   }
 }
 
-/* Override các background color schemes của theme gốc */
-[class*="color-scheme-"],
-[class*="color-"],
-.section,
-.shopify-section,
+/* Override chỉ cho header - không ảnh hưởng sections khác */
 .header__row {
   background-color: transparent !important;
 }
 
-/* Đặc biệt override cho footer sections */
+/* Override chỉ cho footer sections - không ảnh hưởng sections khác */
 footer [class*="color-scheme-"],
 footer [class*="color-"],
 footer .section,
@@ -405,19 +408,16 @@ body::after {
   pointer-events: none !important;
 }
 
-/* Force footer gradient - Override mọi CSS khác */
+/* Force footer gradient - CHỈ cho footer, không ảnh hưởng sections khác */
 footer,
-footer *,
 .section-wrapper,
-.section-wrapper *,
-#footer-group,
-#footer-group * {
-  background-image: var(--galaxy-gradient) !important;
-  background-color: transparent !important;
+#footer-group {
+  background: var(--galaxy-gradient) !important;
   background-attachment: fixed !important;
+  background-color: transparent !important;
 }
 
-/* Đặc biệt cho các element con trong footer */
+/* Đặc biệt cho các element con trong footer - CHỈ text và content, không ảnh hưởng media */
 footer .section-content-wrapper,
 footer .layout-panel-flex,
 footer .spacing-style,
@@ -426,4 +426,46 @@ footer .spacing-style,
 .section-wrapper .spacing-style {
   background: transparent !important;
   background-image: none !important;
+}
+
+/* Đảm bảo hero và các sections khác KHÔNG bị ảnh hưởng */
+.hero,
+.hero *,
+.hero__container,
+.hero__media-wrapper,
+.hero__image,
+.hero__video,
+.hero__content-wrapper,
+.hero-wrapper,
+.shopify-section:not(.section-wrapper),
+.shopify-section:not(.section-wrapper) *,
+main .section:not(footer .section),
+main .shopify-section:not(.section-wrapper),
+[class*="hero"],
+[class*="hero"] * {
+  background: unset !important;
+  background-image: unset !important;
+  background-color: unset !important;
+  background-attachment: unset !important;
+}
+
+/* Đặc biệt đảm bảo hero media không bị ảnh hưởng */
+.hero__image,
+.hero__video,
+.hero__media-wrapper,
+.hero__blurred-image,
+.hero__blurred-image img {
+  background: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Đảm bảo tất cả sections trong main (trừ footer) hoạt động bình thường */
+main > .shopify-section:not(.section-wrapper),
+main > .shopify-section:not(.section-wrapper) > *,
+main > .shopify-section:not(.section-wrapper) [class*="color-scheme-"],
+main > .shopify-section:not(.section-wrapper) .section {
+  background: revert !important;
+  background-image: revert !important;
+  background-color: revert !important;
 } 
