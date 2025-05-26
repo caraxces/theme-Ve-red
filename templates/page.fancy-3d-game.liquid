@@ -1,0 +1,131 @@
+{% comment %}
+  Template for Fancy 3D Decoration Game Demo Page
+{% endcomment %}
+
+<div class="page-width">
+  <div class="page-header">
+    <h1 class="main-page-title page-title h0">
+      {{ page.title | escape }}
+    </h1>
+    {% if page.content != blank %}
+      <div class="page-content rte">
+        {{ page.content }}
+      </div>
+    {% endif %}
+  </div>
+
+  {% comment %} Game Section {% endcomment %}
+  {% section 'fancy-3d-decoration-game' %}
+
+  {% comment %} Leaderboard Section {% endcomment %}
+  {% render 'game-leaderboard' %}
+
+  {% comment %} Additional content or instructions {% endcomment %}
+  <div class="game-instructions" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
+    <h2 style="margin-bottom: 1rem; color: #333;">Hướng dẫn chơi game</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      <div class="instruction-item">
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">🎯 Mục tiêu</h3>
+        <p>Trang trí căn phòng 3D của bạn với các vật dụng đẹp mắt để đạt điểm cao nhất!</p>
+      </div>
+      
+      <div class="instruction-item">
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">🎮 Cách chơi</h3>
+        <ul style="margin: 0; padding-left: 1.2rem;">
+          <li>Chọn danh mục vật phẩm (Nội thất, Cây cối, Ánh sáng, Trang trí)</li>
+          <li>Nhấp vào vật phẩm muốn đặt</li>
+          <li>Nhấp vào phòng để đặt vật phẩm</li>
+          <li>Kéo thả để di chuyển vật phẩm</li>
+          <li>Nhấp đôi để xóa vật phẩm</li>
+        </ul>
+      </div>
+      
+      <div class="instruction-item">
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">🏆 Điểm số</h3>
+        <p>Mỗi vật phẩm có điểm khác nhau. Vật phẩm càng đắt tiền thì điểm càng cao!</p>
+      </div>
+      
+      <div class="instruction-item">
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">💾 Tính năng</h3>
+        <ul style="margin: 0; padding-left: 1.2rem;">
+          <li>Lưu thiết kế của bạn</li>
+          <li>Trang trí ngẫu nhiên</li>
+          <li>Xóa tất cả để bắt đầu lại</li>
+          <li>Xoay phòng bằng chuột</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {% comment %} Game Features {% endcomment %}
+  <div class="game-features" style="margin-top: 2rem; text-align: center;">
+    <h2 style="margin-bottom: 2rem; color: #333;">Tính năng đặc biệt</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+      <div class="feature-card" style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">Hiệu ứng 3D</h3>
+        <p style="margin: 0; color: #666;">Không gian 3D thực tế với hiệu ứng đẹp mắt</p>
+      </div>
+      
+      <div class="feature-card" style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">Responsive</h3>
+        <p style="margin: 0; color: #666;">Chơi được trên mọi thiết bị</p>
+      </div>
+      
+      <div class="feature-card" style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🔊</div>
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">Âm thanh</h3>
+        <p style="margin: 0; color: #666;">Hiệu ứng âm thanh sinh động</p>
+      </div>
+      
+      <div class="feature-card" style="padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">💾</div>
+        <h3 style="color: #6366f1; margin-bottom: 0.5rem;">Lưu trữ</h3>
+        <p style="margin: 0; color: #666;">Lưu thiết kế yêu thích</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .game-instructions, .game-features {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+  }
+  
+  .instruction-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .game-instructions {
+      padding: 1rem;
+    }
+    
+    .game-instructions > div {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

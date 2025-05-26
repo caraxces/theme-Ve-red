@@ -1,0 +1,145 @@
+{{ 'fancy-3d-decoration-game.css' | asset_url | stylesheet_tag }}
+
+<div class="fancy-3d-game-container" id="fancy-3d-game-{{ section.id }}">
+  <div class="game-header">
+    <h2 class="game-title">{{ section.settings.game_title | default: 'Fancy 3D Decoration Game' }}</h2>
+    <p class="game-description">{{ section.settings.game_description | default: 'Trang trí không gian 3D của bạn với các vật dụng đẹp mắt!' }}</p>
+  </div>
+
+  <div class="game-controls">
+    <div class="control-panel">
+      <h3>Bảng điều khiển</h3>
+      <div class="decoration-categories">
+        <button class="category-btn active" data-category="furniture">
+          <span class="icon">🪑</span>
+          Nội thất
+        </button>
+        <button class="category-btn" data-category="plants">
+          <span class="icon">🌱</span>
+          Cây cối
+        </button>
+        <button class="category-btn" data-category="lighting">
+          <span class="icon">💡</span>
+          Ánh sáng
+        </button>
+        <button class="category-btn" data-category="decorations">
+          <span class="icon">🎨</span>
+          Trang trí
+        </button>
+      </div>
+
+      <div class="item-selector">
+        <div class="items-grid" id="items-grid">
+          <!-- Items will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="game-actions">
+        <button class="action-btn" id="clear-room">
+          <span class="icon">🗑️</span>
+          Xóa tất cả
+        </button>
+        <button class="action-btn" id="save-design">
+          <span class="icon">💾</span>
+          Lưu thiết kế
+        </button>
+        <button class="action-btn" id="random-decor">
+          <span class="icon">🎲</span>
+          Trang trí ngẫu nhiên
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-viewport">
+    <!-- Three.js canvas will be inserted here -->
+    <div class="three-js-controls">
+      <div>🖱️ Kéo để xoay camera</div>
+      <div>🎯 Chọn vật phẩm và nhấp để đặt</div>
+      <div>📱 Chạm và kéo trên mobile</div>
+    </div>
+  </div>
+
+  <div class="game-info">
+    <div class="score-display">
+      <span class="label">Điểm trang trí:</span>
+      <span class="score" id="decoration-score">0</span>
+    </div>
+    <div class="items-count">
+      <span class="label">Vật phẩm đã đặt:</span>
+      <span class="count" id="items-count">0</span>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'fancy-3d-decoration-game.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Fancy 3D Decoration Game",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "game_title",
+      "label": "Tiêu đề game",
+      "default": "Fancy 3D Decoration Game"
+    },
+    {
+      "type": "textarea",
+      "id": "game_description",
+      "label": "Mô tả game",
+      "default": "Trang trí không gian 3D của bạn với các vật dụng đẹp mắt!"
+    },
+    {
+      "type": "color",
+      "id": "room_color",
+      "label": "Màu phòng",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Màu nhấn",
+      "default": "#6366f1"
+    },
+    {
+      "type": "range",
+      "id": "max_items",
+      "label": "Số lượng vật phẩm tối đa",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "default": 25
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sound",
+      "label": "Bật âm thanh",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shadows",
+      "label": "Bật bóng đổ 3D",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "graphics_quality",
+      "label": "Chất lượng đồ họa",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "info": "1: Thấp, 2: Trung bình, 3: Cao"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fancy 3D Decoration Game"
+    }
+  ]
+}
+{% endschema %} 

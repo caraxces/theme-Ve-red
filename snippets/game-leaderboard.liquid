@@ -1,0 +1,430 @@
+{% comment %}
+  Game Leaderboard and Statistics Snippet
+  Usage: {% render 'game-leaderboard' %}
+{% endcomment %}
+
+<div class="game-leaderboard-container" id="game-leaderboard">
+  <div class="leaderboard-header">
+    <h3>🏆 Bảng xếp hạng</h3>
+    <button class="refresh-btn" onclick="refreshLeaderboard()">
+      <span>🔄</span>
+      Làm mới
+    </button>
+  </div>
+
+  <div class="leaderboard-content">
+    <div class="stats-overview">
+      <div class="stat-card">
+        <div class="stat-icon">🎮</div>
+        <div class="stat-info">
+          <div class="stat-number" id="total-games">0</div>
+          <div class="stat-label">Lượt chơi</div>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-info">
+          <div class="stat-number" id="highest-score">0</div>
+          <div class="stat-label">Điểm cao nhất</div>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">🏠</div>
+        <div class="stat-info">
+          <div class="stat-number" id="saved-designs">0</div>
+          <div class="stat-label">Thiết kế đã lưu</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leaderboard-table">
+      <div class="table-header">
+        <div class="rank-col">Hạng</div>
+        <div class="score-col">Điểm</div>
+        <div class="items-col">Vật phẩm</div>
+        <div class="date-col">Ngày</div>
+        <div class="action-col">Thao tác</div>
+      </div>
+      
+      <div class="table-body" id="leaderboard-entries">
+        <div class="no-data">
+          <div class="no-data-icon">🎯</div>
+          <p>Chưa có dữ liệu. Hãy chơi game để tạo kỷ lục!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="leaderboard-actions">
+    <button class="action-button" onclick="clearAllData()">
+      <span>🗑️</span>
+      Xóa tất cả dữ liệu
+    </button>
+    <button class="action-button" onclick="exportData()">
+      <span>📤</span>
+      Xuất dữ liệu
+    </button>
+  </div>
+</div>
+
+<style>
+.game-leaderboard-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.leaderboard-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background: #5855eb;
+  transform: translateY(-2px);
+}
+
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  border-radius: 50%;
+  color: white;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+.leaderboard-table {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 60px 100px 100px 120px 100px;
+  gap: 1rem;
+  padding: 1rem;
+  background: #6366f1;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.table-body {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.leaderboard-entry {
+  display: grid;
+  grid-template-columns: 60px 100px 100px 120px 100px;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.leaderboard-entry:hover {
+  background: #f8f9ff;
+}
+
+.leaderboard-entry:last-child {
+  border-bottom: none;
+}
+
+.rank {
+  font-weight: bold;
+  color: #6366f1;
+  text-align: center;
+}
+
+.rank.top-3 {
+  font-size: 1.2rem;
+}
+
+.rank.rank-1::before { content: '🥇 '; }
+.rank.rank-2::before { content: '🥈 '; }
+.rank.rank-3::before { content: '🥉 '; }
+
+.score {
+  font-weight: bold;
+  color: #333;
+}
+
+.items-count {
+  color: #666;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mini-btn {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.view-btn {
+  background: #10b981;
+  color: white;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.mini-btn:hover {
+  transform: scale(1.1);
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.no-data-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.leaderboard-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 2px solid transparent;
+}
+
+.action-button:hover {
+  background: white;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .table-header,
+  .leaderboard-entry {
+    grid-template-columns: 50px 80px 80px 100px 80px;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .stats-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .leaderboard-actions {
+    flex-direction: column;
+  }
+}
+</style>
+
+<script>
+// Leaderboard functionality
+function refreshLeaderboard() {
+  const savedDesigns = JSON.parse(localStorage.getItem('fancy3d_designs') || '[]');
+  const gameStats = JSON.parse(localStorage.getItem('fancy3d_stats') || '{}');
+  
+  // Update stats
+  document.getElementById('total-games').textContent = gameStats.totalGames || 0;
+  document.getElementById('highest-score').textContent = gameStats.highestScore || 0;
+  document.getElementById('saved-designs').textContent = savedDesigns.length;
+  
+  // Sort designs by score
+  const sortedDesigns = savedDesigns.sort((a, b) => b.score - a.score);
+  
+  const tableBody = document.getElementById('leaderboard-entries');
+  
+  if (sortedDesigns.length === 0) {
+    tableBody.innerHTML = `
+      <div class="no-data">
+        <div class="no-data-icon">🎯</div>
+        <p>Chưa có dữ liệu. Hãy chơi game để tạo kỷ lục!</p>
+      </div>
+    `;
+    return;
+  }
+  
+  tableBody.innerHTML = sortedDesigns.map((design, index) => {
+    const rank = index + 1;
+    const date = new Date(design.timestamp).toLocaleDateString('vi-VN');
+    const rankClass = rank <= 3 ? `top-3 rank-${rank}` : '';
+    
+    return `
+      <div class="leaderboard-entry">
+        <div class="rank ${rankClass}">${rank}</div>
+        <div class="score">${design.score}</div>
+        <div class="items-count">${design.items.length}</div>
+        <div class="date">${date}</div>
+        <div class="entry-actions">
+          <button class="mini-btn view-btn" onclick="viewDesign(${index})">👁️</button>
+          <button class="mini-btn delete-btn" onclick="deleteDesign(${index})">🗑️</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function viewDesign(index) {
+  const savedDesigns = JSON.parse(localStorage.getItem('fancy3d_designs') || '[]');
+  const design = savedDesigns[index];
+  
+  if (design) {
+    // Show design details in a modal or alert
+    alert(`Thiết kế #${index + 1}\nĐiểm: ${design.score}\nSố vật phẩm: ${design.items.length}\nNgày tạo: ${new Date(design.timestamp).toLocaleString('vi-VN')}`);
+  }
+}
+
+function deleteDesign(index) {
+  if (confirm('Bạn có chắc muốn xóa thiết kế này?')) {
+    const savedDesigns = JSON.parse(localStorage.getItem('fancy3d_designs') || '[]');
+    savedDesigns.splice(index, 1);
+    localStorage.setItem('fancy3d_designs', JSON.stringify(savedDesigns));
+    refreshLeaderboard();
+  }
+}
+
+function clearAllData() {
+  if (confirm('Bạn có chắc muốn xóa tất cả dữ liệu? Hành động này không thể hoàn tác!')) {
+    localStorage.removeItem('fancy3d_designs');
+    localStorage.removeItem('fancy3d_stats');
+    refreshLeaderboard();
+    alert('Đã xóa tất cả dữ liệu!');
+  }
+}
+
+function exportData() {
+  const savedDesigns = JSON.parse(localStorage.getItem('fancy3d_designs') || '[]');
+  const gameStats = JSON.parse(localStorage.getItem('fancy3d_stats') || '{}');
+  
+  const exportData = {
+    designs: savedDesigns,
+    stats: gameStats,
+    exportDate: new Date().toISOString()
+  };
+  
+  const dataStr = JSON.stringify(exportData, null, 2);
+  const dataBlob = new Blob([dataStr], {type: 'application/json'});
+  
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(dataBlob);
+  link.download = `fancy3d-game-data-${new Date().toISOString().split('T')[0]}.json`;
+  link.click();
+}
+
+// Initialize leaderboard when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.getElementById('game-leaderboard')) {
+    refreshLeaderboard();
+  }
+});
+
+// Update stats when game is played
+function updateGameStats(score) {
+  const stats = JSON.parse(localStorage.getItem('fancy3d_stats') || '{}');
+  
+  stats.totalGames = (stats.totalGames || 0) + 1;
+  stats.highestScore = Math.max(stats.highestScore || 0, score);
+  stats.lastPlayed = new Date().toISOString();
+  
+  localStorage.setItem('fancy3d_stats', JSON.stringify(stats));
+}
+</script> 
