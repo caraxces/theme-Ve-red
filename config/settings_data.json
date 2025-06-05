@@ -9,10 +9,11 @@
  */
 {
   "current": {
-    "type_body_font": "red_hat_display_n4",
-    "type_subheading_font": "red_hat_display_n6",
-    "type_heading_font": "trirong_n2",
-    "type_accent_font": "trirong_n2",
+    "logo": "shopify://shop_images/logo.webp",
+    "type_body_font": "open_sans_n4",
+    "type_subheading_font": "open_sans_n4",
+    "type_heading_font": "open_sans_i6",
+    "type_accent_font": "open_sans_n6",
     "type_size_paragraph": "18",
     "type_font_h1": "heading",
     "type_size_h1": "88",

@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "product-information",
@@ -68,6 +69,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -106,6 +108,7 @@
                   "type": "group",
                   "name": "Header",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -169,6 +172,7 @@
                       "type": "group",
                       "name": "Price & Rating",
                       "settings": {
+                        "link": "",
                         "open_in_new_tab": false,
                         "content_direction": "row",
                         "vertical_on_mobile": true,
@@ -213,6 +217,12 @@
                             "type_preset": "h5",
                             "width": "100%",
                             "alignment": "left",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "color": "var(--color-foreground)",
                             "padding-block-start": 4,
                             "padding-block-end": 0,
                             "padding-inline-start": 0,
@@ -450,6 +460,7 @@
               "name": "Header",
               "disabled": true,
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "row",
                 "vertical_on_mobile": true,
@@ -488,6 +499,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "column",
                     "vertical_on_mobile": true,
@@ -608,6 +620,7 @@
                   "type": "group",
                   "name": "Price & Rating",
                   "settings": {
+                    "link": "",
                     "open_in_new_tab": false,
                     "content_direction": "row",
                     "vertical_on_mobile": true,
@@ -652,6 +665,12 @@
                         "type_preset": "paragraph",
                         "width": "100%",
                         "alignment": "left",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "color": "var(--color-foreground)",
                         "padding-block-start": 4,
                         "padding-block-end": 0,
                         "padding-inline-start": 0,
@@ -784,6 +803,8 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "{{ closest.product.metafields.custom.image_3_hinh_1.value }}",
+            "link": "",
             "video_loop": true,
             "video_autoplay": false,
             "image_position": "cover",
@@ -804,7 +825,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Embracing small joys</h2>",
+                "text": "<p>{{ closest.product.metafields.custom.heading_3_hinh_1.value }}</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -829,7 +850,7 @@
             "text_nnymP7": {
               "type": "text",
               "settings": {
-                "text": "<p>Each item is designed to blend harmoniously with your living space while adding a unique touch. We aspire to bring balance and enrichment to everyday life.</p>",
+                "text": "<p>{{ closest.product.metafields.custom.text_block_3_hinh_1 | metafield_tag }}</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -938,6 +959,7 @@
             "group": {
               "type": "group",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -1008,6 +1030,12 @@
                     "type_preset": "paragraph",
                     "width": "100%",
                     "alignment": "center",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,

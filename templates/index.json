@@ -199,10 +199,37 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "text_PDdRjG": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Chúng tôi tạo ra những sản phẩm hoạt động tốt hơn và bền lâu hơn.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "product_card_gallery_it48dw"
+            "product_card_gallery_it48dw",
+            "text_PDdRjG"
           ]
         }
       },
@@ -235,6 +262,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/TRC_7739.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -320,7 +348,7 @@
       },
       "name": "t:names.featured_product",
       "settings": {
-        "product": "",
+        "product": "combo-den-am-tran-chinh-huong",
         "layout": "media-left",
         "color_scheme": "scheme-2",
         "padding-block-start": 0,
@@ -335,10 +363,11 @@
           "name": "t:names.product_media",
           "static": true,
           "settings": {
-            "media_type": "image",
+            "media_type": "video",
             "link": "",
+            "video": "shopify://files/videos/Ochico.mp4",
             "video_loop": true,
-            "video_autoplay": false,
+            "video_autoplay": true,
             "image_position": "cover",
             "video_position": "cover"
           },
@@ -421,7 +450,7 @@
       },
       "name": "t:names.featured_product",
       "settings": {
-        "product": "",
+        "product": "den-circular-d400",
         "layout": "media-right",
         "color_scheme": "scheme-2",
         "padding-block-start": 0,
@@ -577,7 +606,7 @@
                     "product": "{{ closest.product }}",
                     "width": "fit-content",
                     "max_width": "normal",
-                    "alignment": "left",
+                    "alignment": "center",
                     "type_preset": "h5",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
@@ -635,7 +664,7 @@
       },
       "name": "t:names.products_grid",
       "settings": {
-        "collection": "all",
+        "collection": "den-san-vuon",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 4,
@@ -782,6 +811,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [],
@@ -822,7 +852,15 @@
           "type": "large-text-with-img",
           "settings": {
             "text": "HELLO WORLD",
+            "media_type": "image",
             "image": "shopify://shop_images/nh_ch_p_man_hinh_2025-03-05_224627.png",
+            "video_url": "",
+            "blur_amount": 5,
+            "background_opacity": 0.5,
+            "enable_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0.3,
+            "font_family": "inherit",
             "font_size": 185,
             "font_size_mobile": 60,
             "font_weight": "800",
@@ -840,6 +878,7 @@
         "ai_gen_block_e1b9170_Aikmjr",
         "ai_gen_block_df0a8d0_HRJmNK"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
