@@ -1,5 +1,6 @@
 .gift-card {
-  padding: var(--padding-5xl);
+  padding-block: var(--padding-4xl);
+  padding-inline: var(--padding-lg);
   --buttons-max-width: min(16rem, 100%);
   --gift-card-image-max-width: var(--max-width--heading-normal);
   --gift-card-image-max-height: 35rem;
@@ -18,22 +19,19 @@
 
 .gift-card__image-wrapper {
   display: flex;
-  height: 100%;
-  margin: var(--padding-4xl) auto;
-  max-width: var(--gift-card-image-max-width);
-}
-
-.gift-card__image {
-  object-fit: scale-down;
+  width: 100%;
   aspect-ratio: 5 / 3;
-  max-height: var(--gift-card-image-max-height);
+  padding: var(--padding-4xl);
+  margin-block: var(--padding-4xl);
+  margin-inline: auto;
   max-width: var(--gift-card-image-max-width);
+  border: 1px solid var(--color-border);
+  border-radius: var(--style-border-radius-lg);
 }
 
-.gift-card__image-border {
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  padding: var(--padding-5xl);
+.gift-card__image-wrapper:has(.gift-card__image-generic) {
+  padding: 0;
+  border: none;
 }
 
 .gift-card__price {
@@ -44,18 +42,25 @@
   justify-content: center;
 }
 
-.gift-card__code {
-  font-family: var(--font-paragraph--family);
-  font-style: var(--font-paragraph--style);
-  font-weight: var(--font-paragraph--weight);
-}
-
+.gift-card__code,
+.gift-card__text-wrapper h1,
 .gift-card__price h2 {
   font-family: var(--font-paragraph--family);
   font-style: var(--font-paragraph--style);
   font-weight: var(--font-paragraph--weight);
-  margin-block-end: var(--margin-xl);
   text-align: center;
+  margin-block-end: var(--margin-xl);
+}
+
+.gift-card__code,
+.gift-card__text-wrapper h1 {
+  font-size: var(--font-size--2xl);
+  margin-block-end: 0;
+}
+
+.gift-card__price h2 {
+  font-size: var(--font-size--5xl);
+  margin-block-end: var(--padding-4xl);
 }
 
 .gift-card__text-wrapper {
@@ -105,13 +110,11 @@
 }
 
 .gift-card__buttons .button {
-  padding: var(--padding-sm);
   width: 100%;
   justify-content: center;
 }
 
 .gift-card__copy-button {
-  padding-block-start: var(--padding-md);
   position: relative;
 }
 
@@ -122,7 +125,8 @@
   top: calc(var(--padding-lg) * -1);
   left: 0;
   right: 0;
-  transition: opacity var(--animation-speed) var(--animation-easing),
+  transition:
+    opacity var(--animation-speed) var(--animation-easing),
     transform var(--animation-speed) var(--animation-easing);
   opacity: 0;
   transform: translateY(var(--padding-md));

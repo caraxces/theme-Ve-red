@@ -153,7 +153,6 @@
     "editorial": "编辑样式布局",
     "editorial_jumbo_text": "编辑样式布局：巨型文本",
     "hero_marquee": "主页横幅：选取框",
-    "hero_large_logo": "主页横幅：大 logo",
     "input_fields": "输入字段",
     "local_pickup": "到店取货",
     "marquee_section": "选取框",
@@ -170,7 +169,8 @@
     "social_link": "社交媒体链接",
     "split_showcase": "拆分展示",
     "variant_pickers": "多属性选择器",
-    "pills": "椭圆形框"
+    "pills": "椭圆形框",
+    "large_logo": "大 logo"
   },
   "settings": {
     "alignment": "对齐方式",
@@ -487,12 +487,14 @@
     "show_pickup_availability": "显示取货服务提供情况",
     "show_search": "显示搜索",
     "text_label_case": "文本标签大小写格式",
-    "transition_to_main_product": "产品卡转换",
+    "transition_to_main_product": "产品卡到产品页面转换",
     "use_inverse_logo": "使用反转色 logo",
     "vertical_padding": "垂直内边距",
     "visibility": "可见性",
     "product_corner_radius": "产品圆角半径",
-    "card_corner_radius": "卡片圆角半径"
+    "card_corner_radius": "卡片圆角半径",
+    "blurred_reflection": "模糊的倒影",
+    "reflection_opacity": "倒影不透明度"
   },
   "options": {
     "adapt_to_image": "适应图片",
@@ -849,7 +851,8 @@
     "product_page": "产品页面",
     "text": "文本",
     "thumbnails": "缩略图",
-    "visibility": "可见性"
+    "visibility": "可见性",
+    "app_required_for_ratings": "需要通过应用来进行产品评分。[了解详情](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>与客户分享有关您品牌的信息。描述产品、发布公告或欢迎客户访问您的商店。</p>"
@@ -887,19 +890,8 @@
     "auto_open_cart_drawer": "启用后，当产品添加到购物车时，购物车抽屉会自动打开。",
     "custom_liquid": "添加应用代码片段或其他代码以创建高级自定义。[详细了解](https://shopify.dev/docs/api/liquid)",
     "hover_effects": "应用于产品和产品系列卡",
-    "pills_usage": "用于应用的筛选条件、折扣码和搜索建议"
-  },
-  "github": {
-    "announcement_bar": "[Github 问题](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github 问题](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github 问题](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github 问题](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github 问题](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github 问题](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github 问题](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github 问题](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github 问题](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github 问题](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "用于应用的筛选条件、折扣码和搜索建议",
+    "applies_on_image_only": "仅适用于图像"
   },
   "categories": {
     "basic": "Basic",

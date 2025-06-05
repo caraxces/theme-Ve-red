@@ -95,7 +95,7 @@
       "other": "{{ count }} filtres appliqués",
       "many": "{{ count }} filtres appliqués"
     },
-    "account": "Compte",
+    "account": "Ouvrir le menu déroulant Compte",
     "cart": "Panier",
     "cart_count": "Nombre total d’articles dans le panier",
     "menu": "Menu",
@@ -107,7 +107,10 @@
     "discount_applied": "Code de réduction appliqué : {{ code }}",
     "open_cart_drawer": "Ouvrir le panier coulissant",
     "inventory_status": "Statut du stock",
-    "pause_video": "Mettre la vidéo en pause"
+    "pause_video": "Mettre la vidéo en pause",
+    "find_country": "Trouver un pays",
+    "localization_region_and_language": "Ouvrir le sélecteur de région et de langue",
+    "open_search_modal": "Ouvrir la fenêtre modale de recherche"
   },
   "actions": {
     "add_to_cart": "Ajouter au panier",
@@ -145,7 +148,8 @@
     "apply": "Appliquer",
     "sign_up": "S’inscrire",
     "sign_in_options": "Autres options de connexion",
-    "open_image_in_full_screen": "Ouvrir l’image en plein écran"
+    "open_image_in_full_screen": "Ouvrir l’image en plein écran",
+    "sort": "Trier"
   },
   "content": {
     "reviews": "avis",
@@ -255,7 +259,13 @@
       "one": "{{ count }} restant(s)",
       "other": "{{ count }} restant(s)",
       "many": "{{ count }} restant(s)"
-    }
+    },
+    "shipping_policy": "Expédition calculée lors du paiement.",
+    "powered_by": "Cette boutique sera exploitée par",
+    "store_owner_link_html": "Êtes-vous le propriétaire de la boutique ? <a href=\"{{ link }}\">Connectez-vous ici</a>",
+    "shipping_discount_error": "Les réductions sur l’expédition sont affichées lors du paiement après avoir ajouté une adresse",
+    "discount_code_error": "Le code de réduction ne peut pas être appliqué à votre panier",
+    "discount": "Remise"
   },
   "gift_cards": {
     "issued": {

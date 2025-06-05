@@ -586,7 +586,6 @@ export class Slideshow extends Component {
       const direction = Math.sign(velocity);
       const next = this.#sync();
 
-      // TODO: We should try to use velocity to scroll to a new slide rather than incrementing by 1
       const modifier = current !== next || Math.abs(velocity) < 10 || distanceTravelled < 10 ? 0 : direction;
       const newIndex = clamp(next + modifier, 0, slides.length - 1);
 

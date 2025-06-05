@@ -95,7 +95,7 @@
       "other": "Primijenjen je sljedeći broj filtara: {{ count }}",
       "few": "Primijenjen je sljedeći broj filtara: {{ count }}"
     },
-    "account": "Račun",
+    "account": "Otvori padajući izbornik računa",
     "cart": "Košarica",
     "cart_count": "Ukupan broj stavki u košarici",
     "menu": "Izbornik",
@@ -107,7 +107,10 @@
     "discount_applied": "Primijenjeni kod za popust: {{ code }}",
     "open_cart_drawer": "Otvorite ladicu košarica",
     "inventory_status": "Status zaliha",
-    "pause_video": "Pauziraj videozapis"
+    "pause_video": "Pauziraj videozapis",
+    "localization_region_and_language": "Otvori izbornik regije i jezika",
+    "open_search_modal": "Otvori dijaloški okvir pretraživanja",
+    "find_country": "Pronađi državu"
   },
   "actions": {
     "add_to_cart": "Dodaj u košaricu",
@@ -145,7 +148,8 @@
     "apply": "Primijeni",
     "sign_in_options": "Druge mogućnosti prijave",
     "sign_up": "Registrirajte se",
-    "open_image_in_full_screen": "Otvori sliku preko cijelog zaslona"
+    "open_image_in_full_screen": "Otvori sliku preko cijelog zaslona",
+    "sort": "Razvrstaj"
   },
   "content": {
     "reviews": "recenzije",
@@ -162,6 +166,7 @@
     "seller_note": "Posebne upute",
     "cart_subtotal": "Podzbroj",
     "discounts": "Popusti",
+    "discount": "Popust",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Carina i porezi su uključeni. Popusti i <a href=\"{{ link }}\">poštarina</a> obračunavaju se prilikom plaćanja.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Carina i porezi su uključeni. Popusti i poštarina obračunavaju se prilikom plaćanja.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Porezi su uključeni. Popusti i <a href=\"{{ link }}\">poštarina</a> obračunavaju se prilikom plaćanja.",
@@ -256,7 +261,11 @@
       "one": "preostalo: {{ count }}",
       "other": "preostalo: {{ count }}",
       "few": "preostalo: {{ count }}"
-    }
+    },
+    "discount_code_error": "Kod za popust se ne može primijeniti na Vašu košaricu",
+    "shipping_discount_error": "Popusti na dostavu prikazuju se na blagajni nakon dodavanja adrese",
+    "powered_by": "Ova trgovina koristi sustav",
+    "store_owner_link_html": "Jeste li vlasnik/vlasnica trgovine? <a href=\"{{ link }}\">Prijavite se ovdje</a>"
   },
   "gift_cards": {
     "issued": {

@@ -151,7 +151,6 @@
     "editorial": "Editorial",
     "editorial_jumbo_text": "Editorial: Texto Jumbo",
     "hero_marquee": "Hero: Marcador",
-    "hero_large_logo": "Hero: Logótipo grande",
     "input_fields": "Campos de entrada",
     "local_pickup": "Recolha local",
     "marquee_section": "Marcador",
@@ -167,7 +166,11 @@
     "social_link": "Ligação para redes sociais",
     "split_showcase": "Apresentação dividida",
     "variant_pickers": "Seletores de variantes",
-    "pills": "Forma de comprimidos"
+    "pills": "Forma de comprimidos",
+    "product_title": "Título do produto",
+    "large_logo": "Logótipo grande",
+    "product_list_button": "Botão Ver tudo",
+    "product_inventory": "Inventário de produtos"
   },
   "settings": {
     "alignment": "Alinhamento",
@@ -309,7 +312,7 @@
     "cart_total": "Total do carrinho",
     "cart_type": "Tipo",
     "case": "Caixa",
-    "checkout_buttons": "Permitir botões de finalização da compra acelerada",
+    "checkout_buttons": "Botões de finalização de compra acelerada",
     "collection_list": "Coleções",
     "collection_templates": "Modelos de coleção",
     "content": "Conteúdo",
@@ -478,7 +481,20 @@
     "vertical_padding": "Preenchimento vertical",
     "visibility": "Visibilidade",
     "product_corner_radius": "Raio de canto do produto",
-    "card_corner_radius": "Raio de canto do cartão"
+    "card_corner_radius": "Raio de canto do cartão",
+    "alignment_mobile": "Alinhamento em dispositivos móveis",
+    "animation_repeat": "Repetir animação",
+    "blurred_reflection": "Reflexo desfocado",
+    "card_hover_effect": "Efeito ao passar o rato no cartão",
+    "collection_title_case": "Formato de maiúsculas iniciais da coleção",
+    "effects": "Efeitos",
+    "inventory_threshold": "Limiar de stock baixo",
+    "product_and_card_title_case": "Formato de maiúsculas iniciais do produto e cartão",
+    "product_title_case": "Formato de maiúsculas iniciais do produto",
+    "reflection_opacity": "Opacidade do reflexo",
+    "show_inventory_quantity": "Mostrar quantidade de stock baixo",
+    "text_label_case": "Formato de maiúsculas iniciais das etiquetas de texto",
+    "transition_to_main_product": "Transição entre cartão de produto e página de produto"
   },
   "options": {
     "adapt_to_image": "Adaptar à imagem",
@@ -745,7 +761,12 @@
     "social_youtube": "Social: YouTube",
     "spotlight": "Spotlight",
     "standard": "Normal",
-    "subheading": "Subtítulo"
+    "subheading": "Subtítulo",
+    "blur": "Desfocar",
+    "lift": "Elevar",
+    "reveal": "Revelar",
+    "scale": "Expandir",
+    "subtle_zoom": "Zoom"
   },
   "content": {
     "advanced": "Avançado",
@@ -829,7 +850,9 @@
     "product_page": "Página do produto",
     "text": "Texto",
     "thumbnails": "Miniaturas",
-    "visibility": "Visibilidade"
+    "visibility": "Visibilidade",
+    "visible_if_collection_has_more_products": "Visível se a coleção tiver mais produtos do que os mostrados",
+    "app_required_for_ratings": "É necessária uma aplicação para as classificações de produto. [Saber mais](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Partilhe informações sobre a sua marca com os clientes. Descreva um produto, faça comunicados ou dê as boas-vindas aos clientes da loja.</p>"
@@ -866,19 +889,9 @@
     "aspect_ratio_adjusted": "Ajustado em alguns esquemas",
     "auto_open_cart_drawer": "Quando ativado, o painel deslizante do carrinho abre-se automaticamente quando um produto é adicionado ao carrinho.",
     "custom_liquid": "Adicione fragmentos de aplicação ou outro código para criar personalizações avançadas. [Saber mais](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Utilizado para filtros aplicados, códigos de desconto e sugestões de pesquisa"
-  },
-  "github": {
-    "announcement_bar": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Questão levantada no Github ](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "Utilizado para filtros aplicados, códigos de desconto e sugestões de pesquisa",
+    "applies_on_image_only": "Apenas aplicável às imagens",
+    "hover_effects": "Aplicável a cartões de produto e coleção"
   },
   "categories": {
     "basic": "Basic",

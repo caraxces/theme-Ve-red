@@ -151,7 +151,6 @@
     "editorial": "Redaktionel",
     "editorial_jumbo_text": "Redaktionel: Jumbo-tekst",
     "hero_marquee": "Hero: Lysavis",
-    "hero_large_logo": "Hero: Stort logo",
     "input_fields": "Indtastningsfelter",
     "local_pickup": "Lokal afhentning",
     "marquee_section": "Lysavis",
@@ -169,7 +168,9 @@
     "split_showcase": "Opdel udstilling",
     "variant_pickers": "Variantvælgere",
     "view_all_button": "Se alle",
-    "pills": "Etiketter"
+    "pills": "Etiketter",
+    "large_logo": "Stort logo",
+    "product_inventory": "Produktlager"
   },
   "settings": {
     "alignment": "Justering",
@@ -484,7 +485,16 @@
     "vertical_padding": "Lodret indre margen",
     "visibility": "Synlighed",
     "product_corner_radius": "Hjørneradius på produkt",
-    "card_corner_radius": "Hjørneradius på kort"
+    "card_corner_radius": "Hjørneradius på kort",
+    "alignment_mobile": "Justering for mobil",
+    "animation_repeat": "Gentag animation",
+    "blurred_reflection": "Sløret refleksion",
+    "card_hover_effect": "Kortsvæveeffekt",
+    "effects": "Effekter",
+    "inventory_threshold": "Lav grænse for lagerbeholdning",
+    "reflection_opacity": "Refleksionens uigennemsigtighed",
+    "show_inventory_quantity": "Vis lav lagermængde",
+    "transition_to_main_product": "Overgang fra produktkort til produktside"
   },
   "options": {
     "adapt_to_image": "Tilpas til billede",
@@ -751,7 +761,12 @@
     "social_youtube": "Socialt medie: YouTube",
     "spotlight": "Spotlight",
     "standard": "Standard",
-    "subheading": "Underoverskrift"
+    "subheading": "Underoverskrift",
+    "blur": "Slør",
+    "lift": "Løft",
+    "reveal": "Vis",
+    "scale": "Skaler",
+    "subtle_zoom": "Zoom"
   },
   "content": {
     "advanced": "Avanceret",
@@ -836,7 +851,8 @@
     "manage_policies": "[Administrer politikker](/admin/settings/legal)",
     "product_page": "Produktside",
     "text": "Tekst",
-    "thumbnails": "Miniaturer"
+    "thumbnails": "Miniaturer",
+    "app_required_for_ratings": "Der kræves en app til produktbedømmelser. [Få mere at vide](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Del oplysninger om dit brand med dine kunder. Beskriv et produkt, del meddelelser, eller byd velkommen til din butik.</p>"
@@ -873,19 +889,9 @@
     "aspect_ratio_adjusted": "Justeret i nogle layouts",
     "auto_open_cart_drawer": "Når indkøbskurvskuffen er aktiveret, åbner den automatisk, når der lægges et produkt i indkøbskurven.",
     "custom_liquid": "Tilføj appkodestykker eller anden kode for at oprette avancerede tilpasninger. [Få mere at vide](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Bruges til anvendte filtre, rabatkoder og søgeforslag"
-  },
-  "github": {
-    "announcement_bar": "[Github-problem](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github-problem](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github-problem](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github-problem](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github-problem](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github-problem](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github-problem](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github-problem](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github-problem](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github-problem](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "Bruges til anvendte filtre, rabatkoder og søgeforslag",
+    "applies_on_image_only": "Gælder kun for billeder",
+    "hover_effects": "Gælder for produkter og kollektionskort"
   },
   "categories": {
     "basic": "Basic",

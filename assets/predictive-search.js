@@ -64,7 +64,6 @@ class PredictiveSearchComponent extends Component {
 
     this.#getRecentlyViewed();
 
-    // TODO: Could we put a ref directly on the results child
     const results = this.refs.predictiveSearchResults.firstElementChild;
 
     if (results) {

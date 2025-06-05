@@ -91,7 +91,7 @@
       "one": "Đã áp dụng {{ count }} bộ lọc",
       "other": "Đã áp dụng {{ count }} bộ lọc"
     },
-    "account": "Tài khoản",
+    "account": "Mở danh sách thả xuống tài khoản",
     "cart": "Giỏ hàng",
     "cart_count": "Tổng mặt hàng trong giỏ hàng",
     "menu": "Menu",
@@ -103,7 +103,10 @@
     "discount_applied": "Đã áp dụng mã giảm giá: {{ code }}",
     "open_cart_drawer": "Mở ngăn giỏ hàng",
     "inventory_status": "Trạng thái hàng trong kho",
-    "pause_video": "Tạm dừng video"
+    "pause_video": "Tạm dừng video",
+    "find_country": "Tìm quốc gia",
+    "localization_region_and_language": "Mở bộ chọn khu vực và ngôn ngữ",
+    "open_search_modal": "Mở hộp tương tác tìm kiếm"
   },
   "actions": {
     "add_to_cart": "Thêm vào giỏ hàng",
@@ -140,7 +143,8 @@
     "apply": "Áp dụng",
     "sign_in_options": "Các tùy chọn đăng nhập khác",
     "sign_up": "Đăng ký",
-    "open_image_in_full_screen": "Mở hình ảnh ở chế độ toàn màn hình"
+    "open_image_in_full_screen": "Mở hình ảnh ở chế độ toàn màn hình",
+    "sort": "Sắp xếp"
   },
   "content": {
     "reviews": "đánh giá",
@@ -157,6 +161,7 @@
     "seller_note": "Hướng dẫn đặc biệt",
     "cart_subtotal": "Tổng phụ",
     "discounts": "Giảm giá",
+    "discount": "Giảm giá",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Đã bao gồm thuế và thuế nhập khẩu. Ưu đãi giảm giá và <a href=\"{{ link }}\">phí vận chuyển</a> được tính khi thanh toán.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Đã bao gồm thuế và thuế nhập khẩu. Ưu đãi giảm giá và phí vận chuyển được tính khi thanh toán.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Đã bao gồm thuế. Ưu đãi giảm giá và <a href=\"{{ link }}\">phí vận chuyển</a> được tính khi thanh toán.",
@@ -247,7 +252,12 @@
     "inventory_low_stock_show_count": {
       "one": "Còn {{ count }}",
       "other": "Còn {{ count }}"
-    }
+    },
+    "powered_by": "Cửa hàng này sẽ được cung cấp bởi",
+    "store_owner_link_html": "Bạn có phải chủ cửa hàng không? <a href=\"{{ link }}\">Đăng nhập tại đây</a>",
+    "shipping_discount_error": "Ưu đãi giảm giá vận chuyển được hiển thị tại trang thanh toán sau khi thêm địa chỉ",
+    "discount_code_error": "Không thể áp dụng mã giảm giá cho giỏ hàng của bạn",
+    "shipping_policy": "Phí vận chuyển được tính khi thanh toán."
   },
   "gift_cards": {
     "issued": {

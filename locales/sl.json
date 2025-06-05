@@ -99,7 +99,7 @@
       "few": "Št. uporabljenih filtrov: {{ count }}",
       "two": "Št. uporabljenih filtrov: {{ count }}"
     },
-    "account": "Račun",
+    "account": "Odpri spustni meni za račun",
     "cart": "Košarica",
     "cart_count": "Skupno število izdelkov v košarici",
     "menu": "Meni",
@@ -111,7 +111,10 @@
     "discount_applied": "Uporabljena koda za popust: {{ code }}",
     "open_cart_drawer": "Odprt predal košarice",
     "inventory_status": "Status zaloge",
-    "pause_video": "Zaustavi videoposnetek"
+    "pause_video": "Zaustavi videoposnetek",
+    "find_country": "Poišči državo",
+    "localization_region_and_language": "Odpri izbirnik za regijo in jezik",
+    "open_search_modal": "Odpri modalno okno za iskanje"
   },
   "actions": {
     "add_to_cart": "Dodaj v košarico",
@@ -150,7 +153,8 @@
     "apply": "Uporabi",
     "sign_in_options": "Druge možnosti za vpis",
     "sign_up": "Prijava",
-    "open_image_in_full_screen": "Odpri sliko v celozaslonskem načinu"
+    "open_image_in_full_screen": "Odpri sliko v celozaslonskem načinu",
+    "sort": "Razvrsti"
   },
   "content": {
     "reviews": "ocen.",
@@ -167,6 +171,7 @@
     "seller_note": "Posebna navodila",
     "cart_subtotal": "Vmesna vsota",
     "discounts": "Popusti",
+    "discount": "Popust",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Dajatve in davki so vključeni. Popusti in <a href=\"{{ link }}\">strošek dostave</a> se obračunajo ob zaključku nakupa.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Dajatve in davki so vključeni. Popusti in strošek dostave se obračunajo ob zaključku nakupa.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Davki so vključeni. Popusti in <a href=\"{{ link }}\">strošek dostave</a> se obračunajo ob zaključku nakupa.",
@@ -263,7 +268,12 @@
       "other": "Preostalo: {{ count }}",
       "few": "Preostalo: {{ count }}",
       "two": "Preostalo: {{ count }}"
-    }
+    },
+    "discount_code_error": "Kode popusta ni mogoče uporabiti za vašo košarico",
+    "shipping_policy": "Dostava se obračuna ob zaključku nakupa.",
+    "powered_by": "To trgovino bo omogočala platforma",
+    "store_owner_link_html": "Ali ste lastnik te trgovine? <a href=\"{{ link }}\">Prijavite se tukaj</a>",
+    "shipping_discount_error": "Popusti za dostavo so prikazani ob zaključku nakupa po dodajanju naslova"
   },
   "gift_cards": {
     "issued": {

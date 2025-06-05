@@ -11,7 +11,7 @@
   "names": {
     "borders": "Bordures",
     "collapsible_row": "Rangée réductible",
-    "custom_section": "Personnaliser la section",
+    "custom_section": "Section personnalisée",
     "icon": "Icône",
     "logo_and_favicon": "Logo et favicon",
     "product_buy_buttons": "Boutons d’achat",
@@ -27,7 +27,7 @@
     "size": "Taille",
     "spacing": "Espacement",
     "product_recommendations": "Produits recommandés",
-    "product_media": "Support multimédia du produit",
+    "product_media": "Média (produit)",
     "featured_collection": "Collection en vedette",
     "add_to_cart": "Ajouter au panier",
     "email_signup": "Inscription à la liste de diffusion",
@@ -48,8 +48,8 @@
     "alternating_content_rows": "Rangées alternées",
     "pull_quote": "Citation originale",
     "contact_form": "Formulaire de contact",
-    "featured_product": "Mise en vedette de produit",
-    "icons_with_text": "Icône avec texte",
+    "featured_product": "Produit en vedette",
+    "icons_with_text": "Icônes avec texte",
     "jumbo_text": "Texte géant",
     "accelerated_checkout": "Paiement accéléré",
     "accordion": "Accordéon",
@@ -150,7 +150,6 @@
     "editorial": "Éditorial",
     "editorial_jumbo_text": "Éditorial : Texte géant",
     "hero_marquee": "Héros : Marquee",
-    "hero_large_logo": "Héros : Grand logo",
     "input_fields": "Champs de saisie",
     "local_pickup": "Retrait en magasin",
     "marquee_section": "Marquee",
@@ -168,7 +167,10 @@
     "split_showcase": "Diviser la présentation",
     "variant_pickers": "Sélecteurs de variante",
     "view_all_button": "Voir tout",
-    "pills": "Boutons pilule"
+    "pills": "Boutons pilule",
+    "product_title": "Titre de produit",
+    "large_logo": "Grand logo",
+    "product_inventory": "Stock de produits"
   },
   "settings": {
     "autoplay": "Jeu automatique",
@@ -297,7 +299,7 @@
     "cart_total": "Total du panier",
     "cart_type": "Type",
     "case": "Cas",
-    "checkout_buttons": "Autoriser les boutons de paiement accéléré",
+    "checkout_buttons": "Boutons de paiement accéléré",
     "collection_list": "Collections",
     "collection_templates": "Modèles de collection",
     "content": "Contenu",
@@ -479,7 +481,20 @@
     "vertical_padding": "Espacement vertical",
     "visibility": "Visibilité",
     "product_corner_radius": "Rayon des coins du produit",
-    "card_corner_radius": "Rayon des coins de la carte"
+    "card_corner_radius": "Rayon des coins de la carte",
+    "alignment_mobile": "Alignement sur mobile",
+    "animation_repeat": "Répéter l’animation",
+    "blurred_reflection": "Réflexion floutée",
+    "card_hover_effect": "Effet de survol des cartes",
+    "collection_title_case": "Casse du titre de la collection",
+    "effects": "Effets",
+    "inventory_threshold": "Seuil de stock faible",
+    "product_and_card_title_case": "Casse du titre de produit et de la carte",
+    "product_title_case": "Casse du titre de produit",
+    "reflection_opacity": "Opacité de la réflexion",
+    "show_inventory_quantity": "Afficher la quantité de stock faible",
+    "text_label_case": "Casse de l’étiquette de texte",
+    "transition_to_main_product": "Transition de carte de produit à page de produit"
   },
   "options": {
     "adapt_to_image": "Adapter à l’image",
@@ -746,7 +761,12 @@
     "social_vimeo": "Social : Vimeo",
     "social_youtube": "Social : YouTube",
     "spotlight": "Spotlight",
-    "subheading": "Sous-titre"
+    "subheading": "Sous-titre",
+    "blur": "Flou",
+    "lift": "Élévation",
+    "reveal": "Révéler",
+    "scale": "Échelle",
+    "subtle_zoom": "Zoom"
   },
   "content": {
     "background_video": "Vidéo d’arrière-plan",
@@ -821,7 +841,7 @@
     "collection_page": "Page de collection",
     "copyright_info": "Découvrez comment [modifier votre déclaration de droits d’auteur](https://help.shopify.com/manual/online-store/themes/customizing-themes/remove-powered-by-shopify-message)",
     "customer_account": "Compte client",
-    "edit_empty_state_collection_in_theme_settings": "Modifier les collections ayant le statut Vide dans les [paramètres de thèmes ](/editor?context=theme&category=search)",
+    "edit_empty_state_collection_in_theme_settings": "Modifier la collection par défaut dans les [paramètres de thèmes ](/editor?context=theme&category=search)",
     "grid_layout": "Mise en page en grille",
     "home_page": "Page d’accueil",
     "images": "Images",
@@ -867,20 +887,10 @@
     "logo_font": "S’applique uniquement lorsqu’un logo n’est pas sélectionné",
     "aspect_ratio_adjusted": "Ajusté dans certaines mises en page",
     "auto_open_cart_drawer": "Lorsque cette option est activée, le panier coulissant s’ouvre automatiquement lorsqu’un produit est ajouté.",
-    "custom_liquid": "Ajoutez des extraits d’application ou d’autres éléments de code pour créer des personnalisations avancées. [En savoir plus ](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Utilisée pour les filtres appliqués, les codes de réduction et les suggestions de recherche"
-  },
-  "github": {
-    "announcement_bar": "[Problème Github](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Problème Github](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Problème Github](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Problème Github](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Problème Github](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Problème Github](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Problème Github](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Problème Github](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Problème Github](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Problème Github](https://github.com/Shopify/horizon/issues/2986)"
+    "custom_liquid": "Ajoutez des extraits d’application ou d’autres éléments de code pour créer des personnalisations avancées.[En savoir plus](https://shopify.dev/docs/api/liquid)",
+    "pills_usage": "Utilisée pour les filtres appliqués, les codes de réduction et les suggestions de recherche",
+    "applies_on_image_only": "S’applique uniquement aux images",
+    "hover_effects": "S’applique à des cartes de produits et de collections"
   },
   "categories": {
     "basic": "Basic",
@@ -895,8 +905,8 @@
     "product_list": "Liste de produits",
     "banners": "Bannières",
     "collections": "Collections",
-    "custom": "Personnalisé",
-    "decorative": "Décorative",
+    "custom": "Personnalisées",
+    "decorative": "Décoratives",
     "products": "Produits",
     "other_sections": "Autre",
     "storytelling": "Narration"

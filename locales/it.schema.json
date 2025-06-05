@@ -156,7 +156,6 @@
     "editorial": "Editoriale",
     "editorial_jumbo_text": "Editoriale: testo Jumbo",
     "hero_marquee": "Hero: Marquee",
-    "hero_large_logo": "Hero: Logo grande",
     "input_fields": "Campi di inserimento",
     "local_pickup": "Ritiro locale",
     "page": "Pagina",
@@ -169,7 +168,9 @@
     "social_link": "Link ai social",
     "split_showcase": "Split Showcase",
     "variant_pickers": "Selettori di varianti",
-    "pills": "A pillole"
+    "pills": "A pillole",
+    "large_logo": "Logo grande",
+    "product_inventory": "Scorte prodotti"
   },
   "settings": {
     "alignment": "Allineamento",
@@ -484,7 +485,16 @@
     "text_label_case": "Maiuscole/minuscole dell'etichetta di testo",
     "use_inverse_logo": "Usa logo inverso",
     "product_corner_radius": "Raggio angolo prodotto",
-    "card_corner_radius": "Raggio angolo scheda"
+    "card_corner_radius": "Raggio angolo scheda",
+    "alignment_mobile": "Allineamento su dispositivi mobili",
+    "animation_repeat": "Ripeti animazione",
+    "blurred_reflection": "Riflesso sfocato",
+    "card_hover_effect": "Effetto al passaggio del mouse sulla scheda",
+    "effects": "Effetti",
+    "inventory_threshold": "Soglia per scorte in esaurimento",
+    "reflection_opacity": "Opacità del riflesso",
+    "show_inventory_quantity": "Mostra quantità scorte in esaurimento",
+    "transition_to_main_product": "Transizione dalla scheda prodotto alla pagina del prodotto"
   },
   "options": {
     "adapt_to_image": "Adatta a immagine",
@@ -751,7 +761,12 @@
     "social_whatsapp": "Social: WhatsApp",
     "social_vimeo": "Social: Vimeo",
     "social_youtube": "Social: YouTube",
-    "subheading": "Sottotitolo"
+    "subheading": "Sottotitolo",
+    "blur": "Sfocato",
+    "lift": "Solleva",
+    "reveal": "Rivela",
+    "scale": "Ridimensiona",
+    "subtle_zoom": "Zoom"
   },
   "content": {
     "advanced": "Avanzato",
@@ -836,7 +851,8 @@
     "product_page": "Pagina del prodotto",
     "text": "Testo",
     "thumbnails": "Miniature",
-    "visibility": "Visibilità"
+    "visibility": "Visibilità",
+    "app_required_for_ratings": "Per le valutazioni dei prodotti è necessaria un'app. [Maggiori informazioni](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Condividi informazioni sul tuo brand con i clienti. Descrivi un prodotto, condividi gli annunci o dai il benvenuto ai clienti nel tuo negozio.</p>"
@@ -873,19 +889,9 @@
     "aspect_ratio_adjusted": "Adattate in alcuni layout",
     "auto_open_cart_drawer": "Se abilitata, quando un prodotto viene aggiunto al carrello la finestra del carrello si apre automaticamente.",
     "custom_liquid": "Aggiungi snippet di app o altro codice per creare personalizzazioni avanzate. [Maggiori informazioni](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Utilizzato per filtri applicati, codici sconto e suggerimenti di ricerca"
-  },
-  "github": {
-    "announcement_bar": "[Problema Github](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Problema Github](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Problema Github](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Problema Github](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Problema Github](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Problema Github](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Problema Github](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Problema Github](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Problema Github](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Problema Github](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "Utilizzato per filtri applicati, codici sconto e suggerimenti di ricerca",
+    "applies_on_image_only": "Si applica solo alle immagini",
+    "hover_effects": "Si applica alle schede di prodotti e collezioni"
   },
   "categories": {
     "product_list": "Elenco dei prodotti",

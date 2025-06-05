@@ -152,7 +152,6 @@
     "editorial": "Redaktionellt",
     "editorial_jumbo_text": "Redaktionellt: Jumbo-text",
     "hero_marquee": "Hero: Marquee",
-    "hero_large_logo": "Hero: Stor logotyp",
     "input_fields": "Inmatningsfält",
     "local_pickup": "Lokal upphämtning",
     "marquee_section": "Marquee",
@@ -169,7 +168,9 @@
     "social_link": "Länk till sociala medier",
     "split_showcase": "Split-showcase",
     "variant_pickers": "Variantväljare",
-    "pills": "Knappar"
+    "pills": "Knappar",
+    "large_logo": "Stor logotyp",
+    "product_inventory": "Produktlager"
   },
   "settings": {
     "alignment": "Justering",
@@ -484,7 +485,16 @@
     "text_label_case": "Skiftläge för för textetiketter",
     "use_inverse_logo": "Använd omvänd logotyp",
     "product_corner_radius": "Produktens hörnradie",
-    "card_corner_radius": "Kortets hörnradie"
+    "card_corner_radius": "Kortets hörnradie",
+    "alignment_mobile": "Justering på mobilen",
+    "animation_repeat": "Upprepa animering",
+    "blurred_reflection": "Suddig reflektion",
+    "card_hover_effect": "Korthovringseffekt",
+    "effects": "Effekter",
+    "inventory_threshold": "Tröskel för låg lagernivå",
+    "reflection_opacity": "Reflektionens opacitet",
+    "show_inventory_quantity": "Visa antal i lager vid låg lagernivå",
+    "transition_to_main_product": "Övergång från produktkort till produktsida"
   },
   "options": {
     "adapt_to_image": "Anpassa till bild",
@@ -751,7 +761,12 @@
     "social_vimeo": "Socialt: Vimeo",
     "social_youtube": "Socialt: YouTube",
     "standard": "Standard",
-    "subheading": "Underrubrik"
+    "subheading": "Underrubrik",
+    "blur": "Gör suddig",
+    "lift": "Lyft",
+    "reveal": "Visa",
+    "scale": "Skala",
+    "subtle_zoom": "Zooma"
   },
   "content": {
     "advanced": "Avancerat",
@@ -836,7 +851,8 @@
     "product_page": "Produktsida",
     "text": "Text",
     "thumbnails": "Miniatyrbilder",
-    "visibility": "Synlighet"
+    "visibility": "Synlighet",
+    "app_required_for_ratings": "En app krävs för produktbetyg. [Mer information](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Dela information om ditt varumärke med dina kunder. Beskriv en produkt, gör tillkännagivanden eller välkomna kunder till din butik.</p>"
@@ -873,19 +889,9 @@
     "aspect_ratio_adjusted": "Justerat i vissa layouter",
     "auto_open_cart_drawer": "När detta är aktiverat öppnas varukorgspanelen automatiskt när en produkt läggs till i varukorgen.",
     "custom_liquid": "Lägg till appfragment eller annan kod för att skapa avancerade anpassningar. [Mer information](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Används för använda filter, rabattkoder och sökförslag"
-  },
-  "github": {
-    "announcement_bar": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[GitHub-ärende](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "Används för använda filter, rabattkoder och sökförslag",
+    "applies_on_image_only": "Gäller endast för bilder",
+    "hover_effects": "Gäller produkt- och produktseriekort"
   },
   "categories": {
     "basic": "Basic",

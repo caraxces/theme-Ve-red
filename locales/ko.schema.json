@@ -151,7 +151,6 @@
     "editorial": "편집",
     "editorial_jumbo_text": "편집: 점보 텍스트",
     "hero_marquee": "히어로: 움직이는 텍스트",
-    "hero_large_logo": "히어로: 큰 로고",
     "input_fields": "입력 필드",
     "local_pickup": "지역 픽업",
     "marquee_section": "움직이는 텍스트",
@@ -166,7 +165,12 @@
     "products_grid": "제품 목록: 그리드",
     "social_link": "소셜 링크",
     "split_showcase": "분할 쇼케이스",
-    "variant_pickers": "이형 상품 피커"
+    "variant_pickers": "이형 상품 피커",
+    "product_title": "제품 이름",
+    "large_logo": "큰 로고",
+    "product_list_button": "모두 보기 버튼",
+    "product_inventory": "제품 재고",
+    "pills": "타원형"
   },
   "settings": {
     "autoplay": "자동 재생",
@@ -292,7 +296,7 @@
     "cart_total": "카트 총계",
     "cart_type": "유형",
     "case": "케이스",
-    "checkout_buttons": "빠른 결제 버튼 허용",
+    "checkout_buttons": "빠른 결제 버튼",
     "collection_list": "컬렉션",
     "collection_templates": "컬렉션 템플릿",
     "content": "콘텐츠",
@@ -473,7 +477,24 @@
     "vertical_padding": "수직 패딩",
     "visibility": "표시 유형",
     "product_corner_radius": "제품 코너 반경",
-    "card_corner_radius": "카드 코너 반경"
+    "card_corner_radius": "카드 코너 반경",
+    "alignment_mobile": "모바일 정렬",
+    "animation_repeat": "애니메이션 반복",
+    "blurred_reflection": "흐려진 반사",
+    "card_hover_effect": "카드 호버 효과",
+    "card_size": "카드 크기",
+    "collection_title_case": "컬렉션 제목 케이스",
+    "effects": "효과",
+    "inventory_threshold": "재고 부족 임계값",
+    "mobile_card_size": "모바일 카드 크기",
+    "page": "페이지",
+    "product_and_card_title_case": "제품 및 카드 제목 케이스",
+    "product_title_case": "제품 제목 케이스",
+    "reflection_opacity": "반사 불투명도",
+    "right_padding": "오른쪽 패딩",
+    "show_inventory_quantity": "재고 수량 부족 표시",
+    "text_label_case": "텍스트 레이블 케이스",
+    "transition_to_main_product": "제품 카드에서 제품 페이지로의 전환"
   },
   "options": {
     "adapt_to_image": "이미지에 맞춤",
@@ -740,7 +761,12 @@
     "social_youtube": "소셜 미디어: YouTube",
     "spotlight": "스포트라이트",
     "standard": "표준",
-    "subheading": "소제목"
+    "subheading": "소제목",
+    "blur": "흐리게",
+    "lift": "리프트",
+    "reveal": "표시",
+    "scale": "크기 조정",
+    "subtle_zoom": "확대/축소"
   },
   "content": {
     "background_video": "배경 동영상",
@@ -823,14 +849,17 @@
     "manage_policies": "[정책 관리](/admin/settings/legal)",
     "product_page": "제품 페이지",
     "text": "텍스트",
-    "thumbnails": "썸네일"
+    "thumbnails": "썸네일",
+    "visible_if_collection_has_more_products": "컬렉션에 표시된 것보다 많은 제품이 있는 경우 표시됩니다",
+    "grid_layout": "그리드 레이아웃",
+    "app_required_for_ratings": "제품 평점을 표시하려면 앱이 필요합니다. [자세히 알아보기](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>고객과 브랜드 정보를 공유하세요. 제품을 설명하고 공지 사항을 제공하고, 스토어를 방문하는 고객을 환영할 수 있습니다.</p>"
   },
   "text_defaults": {
     "collapsible_row": "축소 가능한 행",
-    "button_label": "버튼 레이블",
+    "button_label": "지금 쇼핑하기",
     "heading": "제목",
     "email_signup_button_label": "가입",
     "accordion_heading": "아코디언 제목",
@@ -859,19 +888,10 @@
     "logo_font": "로고가 선택되지 않은 경우에만 적용됩니다",
     "aspect_ratio_adjusted": "일부 레이아웃에서 조정됨",
     "auto_open_cart_drawer": "이 기능을 활성화하면, 카트에 제품이 추가될 때 카트 서랍이 자동으로 열립니다.",
-    "custom_liquid": "앱 코드 조각이나 기타 코드를 추가하여 고급 맞춤 설정을 생성할 수 있습니다. [자세히 알아보기](https://shopify.dev/docs/api/liquid)"
-  },
-  "github": {
-    "announcement_bar": "[Github 문제](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github 문제](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github 문제](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github 문제](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github 문제](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github 문제](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github 문제](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github 문제](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github 문제](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github 문제](https://github.com/Shopify/horizon/issues/2986)"
+    "custom_liquid": "앱 코드 조각이나 기타 코드를 추가하여 고급 맞춤 설정을 생성할 수 있습니다. [자세히 알아보기](https://shopify.dev/docs/api/liquid)",
+    "applies_on_image_only": "이미지에만 적용",
+    "hover_effects": "제품 및 컬렉션 카드에 적용합니다",
+    "pills_usage": "적용된 필터, 할인 코드 및 검색 제안에 사용됩니다"
   },
   "categories": {
     "basic": "Basic",

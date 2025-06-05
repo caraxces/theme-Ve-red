@@ -153,7 +153,6 @@
     "editorial": "Úvodník",
     "editorial_jumbo_text": "Úvodník: text Jumbo",
     "hero_marquee": "Hlavní banner: běžící text",
-    "hero_large_logo": "Hlavní banner: Velké logo",
     "input_fields": "Vstupní pole",
     "local_pickup": "Místní vyzvednutí",
     "marquee_section": "Běžící text",
@@ -166,7 +165,12 @@
     "products_editorial": "Seznam produktů: Úvodník",
     "social_link": "Odkaz na sociální sítě",
     "split_showcase": "Rozdělená prezentace",
-    "variant_pickers": "Výběry varianty"
+    "variant_pickers": "Výběry varianty",
+    "product_title": "Název produktu",
+    "large_logo": "Velké logo",
+    "product_list_button": "Zobrazit tlačítko vše",
+    "product_inventory": "Skladové zásoby produktu",
+    "pills": "Kulaté přepínače"
   },
   "settings": {
     "alignment": "Zarovnání",
@@ -292,7 +296,7 @@
     "cart_total": "Součet košíku",
     "cart_type": "Typ",
     "case": "Velká/malá písmena",
-    "checkout_buttons": "Povolení zrychlených pokladních tlačítek",
+    "checkout_buttons": "Tlačítka zrychlené pokladny",
     "collection_list": "Kolekce",
     "collection_templates": "Šablony kolekce",
     "content": "obsah",
@@ -473,7 +477,24 @@
     "vertical_padding": "Vertikální vnitřní okraj",
     "visibility": "Viditelnost",
     "product_corner_radius": "Poloměr rohu produktu",
-    "card_corner_radius": "Poloměr rohu karty"
+    "card_corner_radius": "Poloměr rohu karty",
+    "alignment_mobile": "Zarovnání pro mobilní zařízení",
+    "animation_repeat": "Opakování animace",
+    "blurred_reflection": "Rozmazaný odraz",
+    "card_hover_effect": "Efekt při najetí kurzorem na kartu",
+    "card_size": "Velikost karty",
+    "collection_title_case": "Interní balení na název kolekce",
+    "effects": "Efekty",
+    "inventory_threshold": "Nízký práh skladových zásob",
+    "mobile_card_size": "Velikost mobilní karty",
+    "page": "Stránka",
+    "product_and_card_title_case": "Interní balení na název produktu a karty",
+    "product_title_case": "Interní balení na název produktu",
+    "reflection_opacity": "Neprůhlednost odrazu",
+    "right_padding": "Pravý vnitřní okraj",
+    "show_inventory_quantity": "Zobrazit množství nízkých skladových zásob",
+    "text_label_case": "Interní balení textového štítku",
+    "transition_to_main_product": "Přechod z karty produktu na stránku produktu"
   },
   "options": {
     "adapt_to_image": "Přizpůsobení obrázku",
@@ -740,7 +761,12 @@
     "social_youtube": "Sociální síť: YouTube",
     "spotlight": "Spotlight",
     "standard": "Standardní",
-    "subheading": "Podnadpis"
+    "subheading": "Podnadpis",
+    "blur": "Rozostřeni",
+    "lift": "Zvednutí",
+    "reveal": "Odhalení",
+    "scale": "Škálování",
+    "subtle_zoom": "Přiblížení"
   },
   "content": {
     "advanced": "Pokročilé",
@@ -823,13 +849,16 @@
     "product_page": "Stránka produktu",
     "text": "Text",
     "thumbnails": "Miniatury",
-    "visibility": "Viditelnost"
+    "visibility": "Viditelnost",
+    "visible_if_collection_has_more_products": "Viditelné, pokud kolekce obsahuje více produktů, než je jich zobrazeno",
+    "grid_layout": "Rozvržení mřížky",
+    "app_required_for_ratings": "Pro hodnocení produktů je nutná aplikace. [Zjistit více](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Informujte zákazníky o své značce. Zároveň můžete popsat některý z produktů, oznámit důležité informace nebo přivítat zákazníky ve svém obchodě.</p>"
   },
   "text_defaults": {
-    "button_label": "Text tlačítka",
+    "button_label": "Nakupovat nyní",
     "collapsible_row": "Sbalitelný řádek",
     "heading": "Nadpis",
     "email_signup_button_label": "Předplatit",
@@ -859,7 +888,10 @@
     "logo_font": "Platí pouze v případě, že není vybráno logo",
     "aspect_ratio_adjusted": "Upraveno v některých rozvrženích",
     "auto_open_cart_drawer": "Pokud je tato funkce povolena, při přidání produktu do košíku se automaticky otevře výsuvný košík.",
-    "custom_liquid": "Přidejte fragmenty aplikací nebo jiný kód a vytvořte pokročilá přizpůsobení. [Zjistit více](https://shopify.dev/docs/api/liquid)"
+    "custom_liquid": "Přidejte fragmenty aplikací nebo jiný kód a vytvořte pokročilá přizpůsobení. [Zjistit více](https://shopify.dev/docs/api/liquid)",
+    "applies_on_image_only": "Platí pouze pro obrázky",
+    "hover_effects": "Platí pro karty produktů a kolekcí",
+    "pills_usage": "Používá se pro použité filtry, slevové kódy a návrhy vyhledávání"
   },
   "categories": {
     "product_list": "Seznam produktů",
@@ -879,17 +911,5 @@
     "products": "Produkty",
     "other_sections": "Ostatní",
     "storytelling": "Vyprávění příběhů"
-  },
-  "github": {
-    "announcement_bar": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Problém na GitHubu](https://github.com/Shopify/horizon/issues/2986)"
   }
 }

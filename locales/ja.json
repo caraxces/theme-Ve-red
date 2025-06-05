@@ -91,7 +91,7 @@
       "one": "{{ count }}フィルターを適用しました",
       "other": "{{ count }}フィルターを適用しました"
     },
-    "account": "アカウント",
+    "account": "アカウントのドロップダウンを開く",
     "cart": "カート",
     "cart_count": "カート内の合計アイテム数",
     "menu": "メニュー",
@@ -102,7 +102,11 @@
     "discount": "クーポンコードを適用する",
     "discount_applied": "適用クーポンコード:{{ code }}",
     "open_cart_drawer": "カートドロワーを開く",
-    "pause_video": "動画を一時停止"
+    "pause_video": "動画を一時停止",
+    "inventory_status": "在庫ステータス",
+    "find_country": "国を探す",
+    "localization_region_and_language": "地域と言語のセレクターを開く",
+    "open_search_modal": "検索モーダルを開く"
   },
   "actions": {
     "add_to_cart": "カートに追加",
@@ -137,7 +141,10 @@
     "enter_password": "パスワードを入力する",
     "view_store_information": "ストア情報を表示する",
     "apply": "適用",
-    "open_image_in_full_screen": "画像を全画面で表示"
+    "open_image_in_full_screen": "画像を全画面で表示",
+    "sign_in_options": "その他のログインオプション",
+    "sign_up": "サインアップする",
+    "sort": "並び替え"
   },
   "content": {
     "reviews": "レビュー",
@@ -154,6 +161,7 @@
     "seller_note": "特別な指示",
     "cart_subtotal": "小計",
     "discounts": "ディスカウント",
+    "discount": "割引",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "関税と税金が含まれます。ディスカウントと<a href=\"{{ link }}\">配送料</a>はチェックアウト時に計算されます。",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "関税と税金が含まれます。ディスカウントと配送料はチェックアウト時に計算されます。",
     "taxes_included_shipping_at_checkout_with_policy_html": "税込。ディスカウントと<a href=\"{{ link }}\">配送料</a>はチェックアウト時に計算されます。",
@@ -234,7 +242,22 @@
     "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "税込。送料はチェックアウト時に計算されます。",
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "税込。送料はチェックアウト時に計算されます。",
     "view_more_details": "詳細を表示する",
-    "wrong_password": "パスワードが正しくありません。"
+    "wrong_password": "パスワードが正しくありません。",
+    "powered_by": "このお店は次を使用しています",
+    "store_owner_link_html": "あなたはストアオーナーですか?<a href=\"{{ link }}\">こちらからログインする</a>",
+    "shipping_discount_error": "配送料の割引は、住所を追加した後のチェックアウト時に表示されます",
+    "discount_code_error": "クーポンコードはあなたのカートには適用できません。",
+    "inventory_low_stock": "低在庫",
+    "inventory_in_stock": "在庫あり",
+    "inventory_out_of_stock": "在庫切れ",
+    "page_placeholder_title": "ページタイトル",
+    "page_placeholder_content": "ページを選択して、そのコンテンツを表示します。",
+    "placeholder_image": "プレースホルダーの画像",
+    "shipping_policy": "配送料はチェックアウト時に計算されます。",
+    "inventory_low_stock_show_count": {
+      "one": "残り{{ count }}利用できます",
+      "other": "残り{{ count }}利用できます"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -252,14 +275,18 @@
   },
   "placeholders": {
     "password": "パスワード",
-    "search": "検索"
+    "search": "検索",
+    "product_title": "商品名",
+    "collection_title": "コレクションのタイトル"
   },
   "products": {
     "product": {
       "add_to_cart": "カートに追加する",
       "added_to_cart": "カートに追加済み",
       "adding_to_cart": "追加中...",
-      "add_to_cart_error": "カートに追加する際にエラーが発生しました"
+      "add_to_cart_error": "カートに追加する際にエラーが発生しました",
+      "sold_out": "売り切れ",
+      "unavailable": "利用できません"
     }
   },
   "fields": {

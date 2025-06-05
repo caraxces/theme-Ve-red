@@ -91,7 +91,7 @@
       "one": "{{ count }} filter anvendt",
       "other": "{{ count }} filtre anvendt"
     },
-    "account": "Konto",
+    "account": "Åbn kontorullemenu",
     "cart": "Indkøbskurv",
     "cart_count": "Varer i alt i indkøbskurven",
     "menu": "Menu",
@@ -102,7 +102,11 @@
     "discount": "Anvend en rabatkode",
     "discount_applied": "Anvendt rabatkode: {{ code }}",
     "open_cart_drawer": "Åbn indkøbskurvskuffe",
-    "pause_video": "Sæt video på pause"
+    "pause_video": "Sæt video på pause",
+    "inventory_status": "Lagerstatus",
+    "find_country": "Find land",
+    "localization_region_and_language": "Åbn område- og sprogvælger",
+    "open_search_modal": "Åbn søgemodus"
   },
   "actions": {
     "add_to_cart": "Læg i indkøbskurven",
@@ -138,7 +142,9 @@
     "view_store_information": "Se butiksoplysninger",
     "apply": "Anvend",
     "sign_up": "Tilmeld dig",
-    "open_image_in_full_screen": "Åbn billede i fuld skærm"
+    "open_image_in_full_screen": "Åbn billede i fuld skærm",
+    "sign_in_options": "Andre muligheder for at logge ind",
+    "sort": "Sortér"
   },
   "content": {
     "reviews": "anmeldelser",
@@ -151,6 +157,7 @@
     "seller_note": "Særlige instruktioner",
     "cart_subtotal": "Subtotal",
     "discounts": "Rabatter",
+    "discount": "Rabat",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Inklusive told og skatter. Rabatter og <a href=\"{{ link }}\">levering</a> beregnes ved betaling.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Inklusive told og skatter. Rabatter og levering beregnes ved betaling.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Inklusive skatter. Rabatter og <a href=\"{{ link }}\">levering</a> beregnes ved betaling.",
@@ -238,7 +245,19 @@
     "view_more_details": "Se flere oplysninger",
     "page_placeholder_title": "Sidetitel",
     "page_placeholder_content": "Vælg en side for at vise dens indhold.",
-    "placeholder_image": "Pladsholderbillede"
+    "placeholder_image": "Pladsholderbillede",
+    "powered_by": "Denne butik vil blive drevet af",
+    "store_owner_link_html": "Er du butiksejeren? <a href=\"{{ link }}\">Log ind her</a>",
+    "shipping_discount_error": "Forsendelsesrabatter vises ved betaling efter tilføjelse af en adresse",
+    "discount_code_error": "Rabatkoden kan ikke anvendes i din indkøbskurv",
+    "inventory_low_stock": "Lav lagerbeholdning",
+    "inventory_in_stock": "På lager",
+    "inventory_out_of_stock": "Ikke på lager",
+    "shipping_policy": "Levering beregnes ved betaling.",
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }} tilbage",
+      "other": "{{ count }} tilbage"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -256,14 +275,18 @@
   },
   "placeholders": {
     "password": "Adgangskode",
-    "search": "Søg"
+    "search": "Søg",
+    "product_title": "Produkttitel",
+    "collection_title": "Kollektionstitel"
   },
   "products": {
     "product": {
       "add_to_cart": "Læg i indkøbskurven",
       "added_to_cart": "Lagt i indkøbskurv",
       "adding_to_cart": "Tilføjer...",
-      "add_to_cart_error": "Der opstod en fejl, da du lagde varen i indkøbskurven"
+      "add_to_cart_error": "Der opstod en fejl, da du lagde varen i indkøbskurven",
+      "sold_out": "Udsolgt",
+      "unavailable": "Ikke tilgængelig"
     }
   },
   "fields": {

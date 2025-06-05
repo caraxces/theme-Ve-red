@@ -1,31 +1,5 @@
 
 
-{% stylesheet %}
-  /* Clear padding on mobile, if not full-width */
-  @media screen and (width <= 749px) {
-    .product-information--page-width .product-details > .group-block {
-      padding-inline: 0;
-    }
-  }
-
-  .view-product-title {
-    display: none;
-  }
-
-  @media screen and (width >= 750px) {
-    /* Container styles */
-    .product-details {
-      display: flex;
-      align-self: start;
-      justify-content: center;
-    }
-
-    .product-details > .group-block {
-      height: min-content;
-    }
-  }
-{% endstylesheet %}
-
 <div
   id="ProductInformation-{{ section.id }}"
   class="product-details{% if block.settings.sticky_details_desktop %} sticky-content--desktop{% endif %}"
@@ -48,6 +22,32 @@
 
   {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
 </div>
+
+{% stylesheet %}
+  /* Clear padding on mobile, if not full-width */
+  @media screen and (width < 750px) {
+    .product-information.section--page-width .product-details > .group-block {
+      padding-inline: 0;
+    }
+  }
+
+  .view-product-title {
+    display: none;
+  }
+
+  /* Container styles */
+  .product-details {
+    display: flex;
+    align-self: start;
+    justify-content: center;
+  }
+
+  @media screen and (width >= 750px) {
+    .product-details > .group-block {
+      height: min-content;
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {

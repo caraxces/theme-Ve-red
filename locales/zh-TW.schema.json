@@ -151,7 +151,6 @@
     "editorial": "編輯風格",
     "editorial_jumbo_text": "編輯風格：特大字體",
     "hero_marquee": "主圖：跑馬燈",
-    "hero_large_logo": "主圖：大型標誌",
     "input_fields": "輸入欄位",
     "local_pickup": "到店取貨",
     "marquee_section": "跑馬燈",
@@ -167,7 +166,11 @@
     "social_link": "社群媒體連結",
     "split_showcase": "分欄展示",
     "variant_pickers": "子類選擇器",
-    "pills": "圓角"
+    "pills": "圓角",
+    "product_title": "產品名稱",
+    "large_logo": "大型標誌",
+    "product_list_button": "「檢視全部」按鈕",
+    "product_inventory": "產品庫存"
   },
   "settings": {
     "alignment": "對齊方式",
@@ -295,7 +298,7 @@
     "cart_total": "購物車總金額",
     "cart_type": "類型",
     "case": "情境",
-    "checkout_buttons": "允許加速結帳作業按鈕",
+    "checkout_buttons": "加速結帳作業按鈕",
     "collection_list": "商品系列",
     "collection_templates": "商品系列範本",
     "content": "內容",
@@ -477,7 +480,21 @@
     "vertical_padding": "垂直內距",
     "visibility": "可見性",
     "product_corner_radius": "商品圓角半徑",
-    "card_corner_radius": "卡片圓角半徑"
+    "card_corner_radius": "卡片圓角半徑",
+    "alignment_mobile": "行動版對齊方式",
+    "animation_repeat": "重播動畫",
+    "blurred_reflection": "模糊反射",
+    "card_hover_effect": "卡片懸停效果",
+    "collection_title_case": "商品系列名稱案例",
+    "effects": "效果",
+    "inventory_threshold": "上架庫存過低門檻",
+    "page": "頁面",
+    "product_and_card_title_case": "商品與卡片名稱案例",
+    "product_title_case": "產品名稱案例",
+    "reflection_opacity": "反射不透明度",
+    "show_inventory_quantity": "顯示上架庫存偏低的商品",
+    "text_label_case": "文字標籤案例",
+    "transition_to_main_product": "產品卡片到產品頁面的過渡"
   },
   "options": {
     "adapt_to_image": "配合圖片",
@@ -744,7 +761,12 @@
     "social_youtube": "社群平台： YouTube",
     "spotlight": "矚目焦點",
     "standard": "標準",
-    "subheading": "子標題"
+    "subheading": "子標題",
+    "blur": "模糊",
+    "lift": "提升",
+    "reveal": "顯示",
+    "scale": "縮放比例",
+    "subtle_zoom": "縮放"
   },
   "content": {
     "advanced": "進階",
@@ -828,13 +850,15 @@
     "product_page": "產品頁面",
     "text": "文字",
     "thumbnails": "縮圖",
-    "visibility": "可見性"
+    "visibility": "可見性",
+    "visible_if_collection_has_more_products": "當商品系列的商品數量超過顯示數量時將可見",
+    "app_required_for_ratings": "需要應用程式，方可顯示商品評價。[瞭解詳情](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>和顧客分享品牌資訊、描述商品、進行公告，或歡迎顧客光臨您的商店。</p>"
   },
   "text_defaults": {
-    "button_label": "按鈕標籤",
+    "button_label": "來去逛逛",
     "collapsible_row": "可折疊的橫列",
     "heading": "標題",
     "email_signup_button_label": "訂閱",
@@ -865,19 +889,9 @@
     "aspect_ratio_adjusted": "已在部分版面配置中調整",
     "auto_open_cart_drawer": "啟用後，當商品加入購物車時，購物車導覽匣會自動開啟。",
     "custom_liquid": "新增應用程式程式碼片段或其他程式碼，以建立進階自訂內容。[瞭解詳情](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "用於顯示已套用的篩選條件、折扣代碼與搜尋建議"
-  },
-  "github": {
-    "announcement_bar": "[Github 問題](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github 問題](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github 問題](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github 問題](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github 問題](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github 問題](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github 問題](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github 問題](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github 問題](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github 問題](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "用於顯示已套用的篩選條件、折扣代碼與搜尋建議",
+    "applies_on_image_only": "僅適用於圖片",
+    "hover_effects": "適用於商品及商品系列卡片"
   },
   "categories": {
     "basic": "基礎",

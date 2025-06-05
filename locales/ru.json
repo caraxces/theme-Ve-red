@@ -93,7 +93,7 @@
     "search_results_count": "Найдено {{ count }} результата(-ов) по запросу «{{ query }}»",
     "search_results_no_results": "По запросу «{{ query }}» ничего не найдено",
     "filters": "Фильтры",
-    "account": "Учетная запись",
+    "account": "Открыть раскрывающийся список счетов",
     "cart": "Корзина",
     "cart_count": "Всего товаров в корзине",
     "filter_count": {
@@ -111,7 +111,10 @@
     "discount_applied": "Примененный промокод : {{ code }}",
     "open_cart_drawer": "Открытый ящик тележки",
     "inventory_status": "Статус ассортимента",
-    "pause_video": "Приостановить видео"
+    "pause_video": "Приостановить видео",
+    "find_country": "Найти страну",
+    "localization_region_and_language": "Открыть выбор региона и языка",
+    "open_search_modal": "Открыть модальное окно поиска"
   },
   "actions": {
     "add_to_cart": "Добавить в корзину",
@@ -150,7 +153,8 @@
     "apply": "Применить",
     "sign_in_options": "Другие способы входа",
     "sign_up": "Регистрация",
-    "open_image_in_full_screen": "Открыть изображение во весь экран"
+    "open_image_in_full_screen": "Открыть изображение во весь экран",
+    "sort": "Сортировать"
   },
   "content": {
     "reviews": "отз.",
@@ -167,6 +171,7 @@
     "seller_note": "Особые примечания",
     "cart_subtotal": "Промежуточный итог",
     "discounts": "Скидки",
+    "discount": "Скидка",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Пошлины и налоги включены. Скидки и <a href=\"{{ link }}\">стоимость доставки</a> рассчитываются при оформлении заказа.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Пошлины и налоги включены. Скидки и стоимость доставки рассчитываются при оформлении заказа.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Налоги включены. Скидки и <a href=\"{{ link }}\">стоимость доставки</a> рассчитываются при оформлении заказа.",
@@ -263,7 +268,12 @@
       "other": "Осталось: {{ count }}",
       "few": "Осталось: {{ count }}",
       "many": "Осталось: {{ count }}"
-    }
+    },
+    "powered_by": "Этот магазин работает на платформе",
+    "store_owner_link_html": "Вы владелец магазина? <a href=\"{{ link }}\">Войдите здесь</a>",
+    "shipping_discount_error": "Скидки на доставку отображаются при оформлении и оплате заказа после добавления адреса",
+    "discount_code_error": "Код скидки не может быть применен к вашей корзине",
+    "shipping_policy": "Стоимость доставки рассчитывается при оформлении заказа."
   },
   "gift_cards": {
     "issued": {

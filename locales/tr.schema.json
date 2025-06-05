@@ -153,7 +153,6 @@
     "editorial": "Başyazı",
     "editorial_jumbo_text": "Başyazı: Büyük metin",
     "hero_marquee": "Hero: Kayan yazı",
-    "hero_large_logo": "Hero: Büyük logo",
     "input_fields": "Giriş alanları",
     "local_pickup": "Mağazadan teslim alım",
     "marquee_section": "Kayan yazı",
@@ -166,7 +165,12 @@
     "products_editorial": "Ürün listesi: Editoryal",
     "social_link": "Sosyal medya bağlantısı",
     "split_showcase": "Split showcase",
-    "variant_pickers": "Varyasyon seçiciler"
+    "variant_pickers": "Varyasyon seçiciler",
+    "product_title": "Ürün başlığı",
+    "large_logo": "Büyük logo",
+    "product_list_button": "Tümünü görüntüle düğmesi",
+    "product_inventory": "Ürün envanteri",
+    "pills": "Seçenekler"
   },
   "settings": {
     "autoplay": "Otomatik oynatma",
@@ -306,7 +310,7 @@
     "cart_total": "Sepet toplamı",
     "cart_type": "Tür",
     "case": "Büyük/küçük harf durumu",
-    "checkout_buttons": "Hızlı ödeme düğmelerine izin ver",
+    "checkout_buttons": "Hızlı ödeme düğmeleri",
     "collection_list": "Koleksiyonlar",
     "collection_templates": "Koleksiyon şablonları",
     "content": "İçerik",
@@ -473,7 +477,24 @@
     "show_search": "Aramayı göster",
     "use_inverse_logo": "Ters logo kullan",
     "product_corner_radius": "Ürün köşe yarıçapı",
-    "card_corner_radius": "Kart köşe yarıçapı"
+    "card_corner_radius": "Kart köşe yarıçapı",
+    "alignment_mobile": "Mobil hizalama",
+    "animation_repeat": "Animasyonu tekrarla",
+    "blurred_reflection": "Bulanık yansıma",
+    "card_hover_effect": "Kart üzerine gelme efekti",
+    "card_size": "Kart boyutu",
+    "collection_title_case": "Koleksiyon başlığı büyük/küçük harf durumu",
+    "effects": "Efektler",
+    "inventory_threshold": "Düşük stok eşiği",
+    "mobile_card_size": "Mobil kart boyutu",
+    "page": "Sayfa",
+    "product_and_card_title_case": "Ürün ve kart başlığı büyük/küçük harf durumu",
+    "product_title_case": "Ürün başlığı büyük/küçük harf durumu",
+    "reflection_opacity": "Yansıma opaklığı",
+    "right_padding": "Sağ iç boşluk",
+    "show_inventory_quantity": "Düşük stok miktarını göster",
+    "text_label_case": "Metin etiketi büyük/küçük harf durumu",
+    "transition_to_main_product": "Ürün kartı - ürün sayfası geçişi"
   },
   "options": {
     "adapt_to_image": "Görsele uyarla",
@@ -740,7 +761,12 @@
     "social_vimeo": "Sosyal medya: Vimeo",
     "social_youtube": "Sosyal medya: YouTube",
     "standard": "Standart",
-    "subheading": "Alt başlık"
+    "subheading": "Alt başlık",
+    "blur": "Bulanıklaştır",
+    "lift": "Yükseltme",
+    "reveal": "Göster",
+    "scale": "Ölçek",
+    "subtle_zoom": "Yakınlaştırma"
   },
   "content": {
     "background_video": "Arka plan videosu",
@@ -823,14 +849,17 @@
     "product_page": "Ürün sayfası",
     "text": "Metin",
     "thumbnails": "Küçük resimler",
-    "visibility": "Görünürlük"
+    "visibility": "Görünürlük",
+    "visible_if_collection_has_more_products": "Koleksiyonda gösterilenden daha fazla ürün varsa görünür",
+    "grid_layout": "Izgara düzeni",
+    "app_required_for_ratings": "Ürün derecelendirmeleri için bir uygulama gereklidir. [Daha fazla bilgi edinin](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Müşterilerinizle markanız hakkında bilgi paylaşın. Ürün açıklaması girin, duyuru paylaşın veya mağazanıza gelen müşterileri karşılayın.</p>"
   },
   "text_defaults": {
     "collapsible_row": "Daraltılabilir satır",
-    "button_label": "Düğme etiketi",
+    "button_label": "Şimdi satın al",
     "heading": "Başlık",
     "email_signup_button_label": "Abone ol",
     "accordion_heading": "Akordeon başlığı",
@@ -859,19 +888,10 @@
     "transparent_background": "Okunabilirlik için şeffaf arka plan uygulanmış her bir şablonu inceleyin",
     "aspect_ratio_adjusted": "Bazı düzenlerde ayarlandı",
     "auto_open_cart_drawer": "Etkinleştirildiğinde sepete ürün eklenmesi durumunda sepet çekmecesi otomatik olarak açılır.",
-    "custom_liquid": "Gelişmiş kişiselleştirmeler oluşturmak için uygulama parçacıkları veya başka bir kod ekleyin. [Daha fazla bilgi edinin](https://shopify.dev/docs/api/liquid)"
-  },
-  "github": {
-    "announcement_bar": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github Sorunu](https://github.com/Shopify/horizon/issues/2986)"
+    "custom_liquid": "Gelişmiş kişiselleştirmeler oluşturmak için uygulama parçacıkları veya başka bir kod ekleyin. [Daha fazla bilgi edinin](https://shopify.dev/docs/api/liquid)",
+    "applies_on_image_only": "Yalnızca görseller için geçerlidir",
+    "hover_effects": "Ürün ve koleksiyon kartları için geçerlidir",
+    "pills_usage": "Uygulanan filtreler, indirim kodları ve arama önerileri için kullanılır"
   },
   "categories": {
     "product_list": "Ürün listesi",

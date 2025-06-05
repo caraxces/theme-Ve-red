@@ -87,7 +87,7 @@
     "slideshow_next": "Επόμενη διαφάνεια",
     "slideshow_previous": "Προηγούμενη διαφάνεια",
     "filters": "Φίλτρα",
-    "account": "Λογαριασμός",
+    "account": "Ανοίξτε το αναδυόμενο μενού του λογαριασμού",
     "cart": "Καλάθι",
     "cart_count": "Σύνολο προϊόντων στο καλάθι",
     "filter_count": {
@@ -103,7 +103,10 @@
     "discount_applied": "Εφαρμόστηκε ο κωδικός έκπτωση: {{ code }}",
     "open_cart_drawer": "Άνοιγμα cart drawer",
     "inventory_status": "Κατάσταση αποθέματος",
-    "pause_video": "Παύση του βίντεο"
+    "pause_video": "Παύση του βίντεο",
+    "localization_region_and_language": "Επιλέξτε περιοχή και γλώσσα",
+    "open_search_modal": "Ανοίξτε το πεδίο αναζήτησης",
+    "find_country": "Εύρεση χώρας"
   },
   "actions": {
     "add_to_cart": "Προσθήκη στο καλάθι",
@@ -140,7 +143,8 @@
     "apply": "Εφαρμογή",
     "sign_in_options": "Άλλες επιλογές σύνδεσης",
     "sign_up": "Εγγραφή",
-    "open_image_in_full_screen": "Άνοιγμα εικόνας σε πλήρη οθόνη"
+    "open_image_in_full_screen": "Άνοιγμα εικόνας σε πλήρη οθόνη",
+    "sort": "Ταξινόμηση"
   },
   "content": {
     "reviews": "κριτικές",
@@ -157,6 +161,7 @@
     "seller_note": "Ειδικές οδηγίες",
     "cart_subtotal": "Υποσύνολο",
     "discounts": "Εκπτώσεις",
+    "discount": "Έκπτωση",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Οι δασμοί και οι φόροι συμπεριλαμβάνονται. Οι εκπτώσεις και τα έξοδα <a href=\"{{ link }}\">αποστολής</a> υπολογίζονται κατά την ολοκλήρωση της αγοράς.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Οι δασμοί και οι φόροι συμπεριλαμβάνονται. Οι εκπτώσεις και τα έξοδα αποστολής υπολογίζονται κατά την ολοκλήρωση της αγοράς.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Οι φόροι συμπεριλαμβάνονται. Οι εκπτώσεις και τα έξοδα <a href=\"{{ link }}\">αποστολής</a> υπολογίζονται κατά την ολοκλήρωση της αγοράς.",
@@ -248,7 +253,11 @@
       "one": "{{ count }} ακόμη",
       "other": "{{ count }} ακόμη"
     },
-    "shipping_policy": "Τα έξοδα αποστολής υπολογίζονται κατά την ολοκλήρωση της αγοράς."
+    "shipping_policy": "Τα έξοδα αποστολής υπολογίζονται κατά την ολοκλήρωση της αγοράς.",
+    "discount_code_error": "Ο κωδικός έκπτωσης δεν μπορεί να εφαρμοστεί στο καλάθι σας",
+    "powered_by": "Αυτό το κατάστημα θα υποστηρίζεται από το",
+    "store_owner_link_html": "Είστε ο ιδιοκτήτης του καταστήματος; <a href=\"{{ link }}\">Συνδεθείτε εδώ</a>",
+    "shipping_discount_error": "Οι εκπτώσεις αποστολής εμφανίζονται στην ολοκλήρωση αγοράς μετά την προσθήκη διεύθυνσης"
   },
   "gift_cards": {
     "issued": {

@@ -95,7 +95,7 @@
       "other": "{{ count }} filtri applicati",
       "many": "{{ count }} filtri applicati"
     },
-    "account": "Account",
+    "account": "Apri menu a discesa dell'account",
     "cart": "Carrello",
     "cart_count": "Totale articoli nel carrello",
     "menu": "Menu",
@@ -107,7 +107,10 @@
     "discount_applied": "Codice sconto applicato: {{ code }}",
     "open_cart_drawer": "Apri finestra del carrello",
     "inventory_status": "Stato delle scorte",
-    "pause_video": "Metti video in pausa"
+    "pause_video": "Metti video in pausa",
+    "find_country": "Trova paese",
+    "localization_region_and_language": "Apri selettore dell'area geografica e della lingua",
+    "open_search_modal": "Apri modale di ricerca"
   },
   "actions": {
     "add_to_cart": "Aggiungi al carrello",
@@ -145,7 +148,8 @@
     "apply": "Applica",
     "sign_in_options": "Altre opzioni di accesso",
     "sign_up": "Iscriviti",
-    "open_image_in_full_screen": "Apri immagine a schermo intero"
+    "open_image_in_full_screen": "Apri immagine a schermo intero",
+    "sort": "Ordina"
   },
   "content": {
     "reviews": "recensioni",
@@ -162,6 +166,7 @@
     "seller_note": "Istruzioni speciali",
     "cart_subtotal": "Subtotale",
     "discounts": "Sconti",
+    "discount": "Sconto",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Dazi e imposte inclusi. Sconti e <a href=\"{{ link }}\">spedizione</a> calcolati al check-out.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Dazi e imposte inclusi. Sconti e spedizione calcolati al check-out.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Imposte incluse. Sconti e <a href=\"{{ link }}\">spedizione</a> calcolati al check-out.",
@@ -255,7 +260,12 @@
       "one": "{{ count }} rimasto",
       "other": "{{ count }} rimasto",
       "many": "{{ count }} rimasto"
-    }
+    },
+    "discount_code_error": "Il codice sconto non può essere applicato al tuo carrello",
+    "shipping_policy": "Spese di spedizione calcolate al check-out.",
+    "powered_by": "Questo negozio sarà ospitato su",
+    "store_owner_link_html": "Il negozio è di tua proprietà? <a href=\"{{ link }}\">Accedi qui</a>",
+    "shipping_discount_error": "Gli sconti sulla spedizione vengono mostrati al momento del check-out dopo l'aggiunta di un indirizzo"
   },
   "gift_cards": {
     "issued": {

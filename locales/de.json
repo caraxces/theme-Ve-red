@@ -87,7 +87,7 @@
     "search_results_count": "{{ count }} Suchergebnisse für „{{ query }}“ gefunden",
     "search_results_no_results": "Keine Ergebnisse für „{{ query }}“ gefunden",
     "filters": "Filter",
-    "account": "Konto",
+    "account": "Konto-Drop-down-Menü öffnen",
     "cart": "Warenkorb",
     "cart_count": "Artikel im Warenkorb insgesamt",
     "filter_count": {
@@ -103,7 +103,10 @@
     "discount_applied": "Angewendeter Rabattcode: {{ code }}",
     "open_cart_drawer": "Warenkorbeinschub öffnen",
     "inventory_status": "Inventarstatus",
-    "pause_video": "Video pausieren"
+    "pause_video": "Video pausieren",
+    "find_country": "Land finden",
+    "localization_region_and_language": "Region- und Sprachauswahl öffnen",
+    "open_search_modal": "Modal suchen öffnen"
   },
   "actions": {
     "add_to_cart": "In den Warenkorb legen",
@@ -140,7 +143,8 @@
     "apply": "Anwenden",
     "sign_in_options": "Andere Anmeldeoptionen",
     "sign_up": "Registrieren",
-    "open_image_in_full_screen": "Bild im Vollbildmodus öffnen"
+    "open_image_in_full_screen": "Bild im Vollbildmodus öffnen",
+    "sort": "Sortieren"
   },
   "content": {
     "reviews": "Reviews",
@@ -157,6 +161,7 @@
     "seller_note": "Besondere Anweisungen",
     "cart_subtotal": "Zwischensumme",
     "discounts": "Rabatte",
+    "discount": "Rabatt",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Inkl. Zollgebühren und Steuern. Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Inkl. Zollgebühren und Steuern. Rabatte und Versand werden beim Checkout berechnet.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Inkl. Steuern. Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
@@ -248,7 +253,11 @@
     "inventory_low_stock_show_count": {
       "one": "{{ count }} übrig",
       "other": "{{ count }} übrig"
-    }
+    },
+    "powered_by": "Dieser Shop wird unterstützt werden von",
+    "store_owner_link_html": "Bist du der Shop-Inhaber? <a href=\"{{ link }}\">Hier einloggen</a>",
+    "shipping_discount_error": "Versandrabatte werden beim Checkout angezeigt, nachdem die Adresse hinzugefügt wurde",
+    "discount_code_error": "Rabattcode kann nicht auf den Warenkorb angewendet werden"
   },
   "gift_cards": {
     "issued": {

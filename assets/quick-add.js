@@ -1,8 +1,9 @@
 import { morph } from '@theme/morph';
 import { Component } from '@theme/component';
 import { CartUpdateEvent, ThemeEvents } from '@theme/events';
-import { DialogComponent } from '@theme/dialog';
+import { DialogComponent, DialogCloseEvent } from '@theme/dialog';
 import { mediaQueryLarge, isMobileBreakpoint } from '@theme/utilities';
+
 export class QuickAddComponent extends Component {
   /** @type {AbortController | null} */
   #abortController = null;
@@ -54,9 +55,20 @@ export class QuickAddComponent extends Component {
     this.#openQuickAddModal();
   };
 
+  /** @param {QuickAddDialog} dialogComponent */
+  #stayVisibleUntilDialogCloses(dialogComponent) {
+    this.toggleAttribute('stay-visible', true);
+
+    dialogComponent.addEventListener(DialogCloseEvent.eventName, () => this.toggleAttribute('stay-visible', false), {
+      once: true,
+    });
+  }
+
   #openQuickAddModal = () => {
     const dialogComponent = document.getElementById('quick-add-dialog');
     if (!(dialogComponent instanceof QuickAddDialog)) return;
+
+    this.#stayVisibleUntilDialogCloses(dialogComponent);
 
     dialogComponent.showDialog();
   };

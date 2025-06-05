@@ -27,9 +27,6 @@ export default class VariantPicker extends Component {
    * @param {Event} event - The variant change event.
    */
   variantChanged(event) {
-    // What are we missing?
-    // - need to support swatches potentially, we will need to check on what's needed for that.
-
     if (!(event.target instanceof HTMLElement)) return;
 
     this.updateSelectedOption(event.target);

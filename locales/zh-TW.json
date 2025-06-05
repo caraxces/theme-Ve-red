@@ -87,7 +87,7 @@
     "search_results_count": "找到 {{ count }} 筆「{{ query }}」的搜尋結果",
     "search_results_no_results": "找不到「{{ query }}」的相關結果",
     "filters": "篩選條件",
-    "account": "帳號",
+    "account": "開啟帳號下拉式選單",
     "cart": "購物車",
     "cart_count": "購物車內品項總數",
     "filter_count": {
@@ -103,7 +103,10 @@
     "discount_applied": "套用的折扣代碼：{{ code }}",
     "open_cart_drawer": "開啟購物車",
     "inventory_status": "庫存狀態",
-    "pause_video": "暫停影片"
+    "pause_video": "暫停影片",
+    "find_country": "尋找國家",
+    "localization_region_and_language": "開啟地區和語言選擇器",
+    "open_search_modal": "開啟搜尋互動視窗"
   },
   "actions": {
     "add_to_cart": "加入購物車",
@@ -139,7 +142,9 @@
     "enter_password": "輸入密碼",
     "view_store_information": "檢視商店資訊",
     "sign_in_options": "其他登入選項",
-    "open_image_in_full_screen": "全螢幕開啟圖片"
+    "open_image_in_full_screen": "全螢幕開啟圖片",
+    "sign_up": "註冊",
+    "sort": "排序"
   },
   "content": {
     "reviews": "評論",
@@ -152,6 +157,7 @@
     "seller_note": "特別指示",
     "cart_subtotal": "小計",
     "discounts": "折扣",
+    "discount": "折扣",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "已包含關稅和稅額。結帳時計算折扣和<a href=\"{{ link }}\">運費</a>。",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "已包含關稅和稅額。結帳時計算折扣和運費。",
     "taxes_included_shipping_at_checkout_with_policy_html": "已包含稅額。結帳時計算折扣和<a href=\"{{ link }}\">運費</a>。",
@@ -243,7 +249,15 @@
     "inventory_low_stock_show_count": {
       "one": "尚餘 {{ count }}",
       "other": "尚餘 {{ count }}"
-    }
+    },
+    "powered_by": "本商店技術支援來自",
+    "store_owner_link_html": "您是商店擁有人嗎？<a href=\"{{ link }}\">請在此登入</a>",
+    "shipping_discount_error": "新增地址後，結帳時將顯示運費折扣",
+    "discount_code_error": "折扣代碼無法套用至您的購物車",
+    "page_placeholder_title": "頁面標題",
+    "page_placeholder_content": "選取一個頁面，即可顯示其內容。",
+    "placeholder_image": "佔位符圖片",
+    "shipping_policy": "結帳時計算運費。"
   },
   "gift_cards": {
     "issued": {
@@ -261,14 +275,18 @@
   },
   "placeholders": {
     "password": "密碼",
-    "search": "搜尋"
+    "search": "搜尋",
+    "product_title": "產品名稱",
+    "collection_title": "商品系列標題"
   },
   "products": {
     "product": {
       "add_to_cart": "加入購物車",
       "added_to_cart": "已放入購物車",
       "adding_to_cart": "正在新增…",
-      "add_to_cart_error": "加入購物車時發生錯誤"
+      "add_to_cart_error": "加入購物車時發生錯誤",
+      "sold_out": "售罄",
+      "unavailable": "無可用資料"
     }
   },
   "fields": {

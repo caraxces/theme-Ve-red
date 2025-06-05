@@ -91,7 +91,7 @@
       "one": "{{ count }} filter toegepast",
       "other": "{{ count }} filters toegepast"
     },
-    "account": "Account",
+    "account": "Accountkeuzelijst openen",
     "cart": "Winkelwagen",
     "cart_count": "Totaal aantal artikelen in winkelwagen",
     "menu": "Menu",
@@ -103,7 +103,10 @@
     "discount_applied": "Toegepaste kortingscode: {{ code }}",
     "open_cart_drawer": "Winkelwagenoptie openen",
     "inventory_status": "Voorraadstatus",
-    "pause_video": "Video pauzeren"
+    "pause_video": "Video pauzeren",
+    "find_country": "Land zoeken",
+    "localization_region_and_language": "Regio- en taalkiezer openen",
+    "open_search_modal": "Zoekvenster openen"
   },
   "actions": {
     "add_to_cart": "Aan winkelwagen toevoegen",
@@ -140,7 +143,8 @@
     "apply": "Toepassen",
     "sign_in_options": "Andere inlogopties",
     "sign_up": "Aanmelden",
-    "open_image_in_full_screen": "Afbeelding openen in volledig scherm"
+    "open_image_in_full_screen": "Afbeelding openen in volledig scherm",
+    "sort": "Sorteren"
   },
   "content": {
     "reviews": "recensies",
@@ -157,6 +161,7 @@
     "seller_note": "Speciale instructies",
     "cart_subtotal": "Subtotaal",
     "discounts": "Kortingen",
+    "discount": "Korting",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Douanerechten en belastingen inbegrepen. Kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Douanerechten en belastingen inbegrepen. Kortingen en verzending worden bij de checkout berekend.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Belastingen inbegrepen. Kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
@@ -248,7 +253,11 @@
       "one": "{{ count }} over",
       "other": "{{ count }} over"
     },
-    "shipping_policy": "Verzendkosten worden berekend bij de checkout."
+    "shipping_policy": "Verzendkosten worden berekend bij de checkout.",
+    "shipping_discount_error": "Verzendkortingen worden bij de checkout getoond nadat het adres is ingevoerd",
+    "discount_code_error": "Kortingscode kan niet worden toegepast op je winkelwagen",
+    "powered_by": "Deze winkel wordt mogelijk gemaakt door",
+    "store_owner_link_html": "Ben jij de winkeleigenaar? <a href=\"{{ link }}\">Log hier in</a>"
   },
   "gift_cards": {
     "issued": {

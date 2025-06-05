@@ -91,7 +91,7 @@
       "one": "{{ count }} suodatin käytössä",
       "other": "{{ count }} suodatinta käytössä"
     },
-    "account": "Tili",
+    "account": "Avaa tilin pudotusvalikko",
     "cart": "Ostoskori",
     "cart_count": "Tuotteita ostoskorissa yhteensä",
     "menu": "Valikko",
@@ -103,7 +103,10 @@
     "discount_applied": "Käytetty alennuskoodi: {{ code }}",
     "open_cart_drawer": "Avaa veto-ostoskori",
     "inventory_status": "Varaston tila",
-    "pause_video": "Keskeytä video"
+    "pause_video": "Keskeytä video",
+    "find_country": "Etsi maa",
+    "localization_region_and_language": "Avaa alueen ja kielen valitsin",
+    "open_search_modal": "Avaa modaalinen hakuikkuna"
   },
   "actions": {
     "add_to_cart": "Lisää ostoskoriin",
@@ -140,7 +143,8 @@
     "apply": "Käytä",
     "sign_in_options": "Muut kirjautumisvaihtoehdot",
     "sign_up": "Rekisteröidy",
-    "open_image_in_full_screen": "Avaa kuva koko näytön tilassa"
+    "open_image_in_full_screen": "Avaa kuva koko näytön tilassa",
+    "sort": "Lajittele"
   },
   "content": {
     "reviews": "arvostelua",
@@ -157,6 +161,7 @@
     "seller_note": "Erityisohjeet",
     "cart_subtotal": "Välisumma",
     "discounts": "Alennukset",
+    "discount": "Alennus",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Sisältää tullit ja verot. Alennukset ja <a href=\"{{ link }}\">toimituskulut</a> lasketaan kassalla.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Sisältää tullit ja verot. Alennukset ja toimituskulut lasketaan kassalla.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Sisältää verot. Alennukset ja <a href=\"{{ link }}\">toimituskulut</a> lasketaan kassalla.",
@@ -247,7 +252,12 @@
     "inventory_low_stock_show_count": {
       "one": "{{ count }} jäljellä",
       "other": "{{ count }} jäljellä"
-    }
+    },
+    "powered_by": "Tämän kaupan alustana on",
+    "store_owner_link_html": "Oletko kaupan omistaja? <a href=\"{{ link }}\">Kirjaudu sisään tästä</a>",
+    "shipping_discount_error": "Toimitusalennukset näytetään kassalla osoitteen lisäämisen jälkeen",
+    "discount_code_error": "Alennuskoodin lisääminen ostoskoriisi ei onnistu",
+    "shipping_policy": "Toimituskulut lasketaan kassalla."
   },
   "gift_cards": {
     "issued": {
@@ -265,14 +275,18 @@
   },
   "placeholders": {
     "password": "Salasana",
-    "search": "Hae"
+    "search": "Hae",
+    "product_title": "Tuotteen nimi",
+    "collection_title": "Kokoelman nimi"
   },
   "products": {
     "product": {
       "add_to_cart": "Lisää ostoskoriin",
       "added_to_cart": "Lisätty ostoskoriin",
       "adding_to_cart": "Lisätään...",
-      "add_to_cart_error": "Ostoskoriin lisättäessä tapahtui virhe"
+      "add_to_cart_error": "Ostoskoriin lisättäessä tapahtui virhe",
+      "sold_out": "Loppuunmyyty",
+      "unavailable": "Ei käytettävissä"
     }
   },
   "fields": {

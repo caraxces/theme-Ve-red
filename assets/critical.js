@@ -208,23 +208,20 @@ class OverflowList extends DeclarativeShadowElement {
       height = Math.round(entry.contentRect.height);
     }
 
+    if (isResize) {
+      if (!width || !height || (width === this.#lastDimensions.width && height === this.#lastDimensions.height)) {
+        // Skip reflow if dimensions are 0 or the same as the last reflow
+        return;
+      }
+
+      this.#lastDimensions = { width: Math.round(width), height: Math.round(height) };
+    }
+
     this.#scheduled = true;
 
     this.schedule(() => {
       this.#reflowItems();
       this.#scheduled = false;
-      if (!isResize) {
-        this.#reflowItems();
-        return;
-      }
-
-      // Skip reflow if dimensions are 0 or the same as the last reflow
-      if (width && height) {
-        if (width !== this.#lastDimensions.width || height !== this.#lastDimensions.height) {
-          this.#lastDimensions = { width: Math.round(width), height: Math.round(height) };
-          this.#reflowItems();
-        }
-      }
     });
   };
 

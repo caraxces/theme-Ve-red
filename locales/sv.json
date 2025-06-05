@@ -91,7 +91,7 @@
       "one": "{{ count }} filter tillämpas",
       "other": "{{ count }} filter tillämpas"
     },
-    "account": "Konto",
+    "account": "Öppna kontomeny",
     "cart": "Varukorg",
     "cart_count": "Totalt antal artiklar i varukorgen",
     "menu": "Meny",
@@ -102,7 +102,11 @@
     "discount": "Använd rabattkod",
     "discount_applied": "Tillämpad rabattkod: {{ code }}",
     "open_cart_drawer": "Öppna varukorgspanel",
-    "pause_video": "Pausa video"
+    "pause_video": "Pausa video",
+    "inventory_status": "Lagerstatus",
+    "find_country": "Hitta land",
+    "localization_region_and_language": "Öppna region- och språkväljare",
+    "open_search_modal": "Öppna sökfönster"
   },
   "actions": {
     "add_to_cart": "Lägg till i varukorgen",
@@ -137,7 +141,10 @@
     "log_in": "Logga in",
     "log_out": "Logga ut",
     "apply": "Tillämpa",
-    "open_image_in_full_screen": "Öppna bilden i helskärm"
+    "open_image_in_full_screen": "Öppna bilden i helskärm",
+    "sign_in_options": "Andra inloggningsalternativ",
+    "sign_up": "Registrera dig",
+    "sort": "Sortera"
   },
   "content": {
     "reviews": "recensioner",
@@ -154,6 +161,7 @@
     "seller_note": "Särskilda instruktioner",
     "cart_subtotal": "Delsumma",
     "discounts": "Rabatter",
+    "discount": "Rabatt",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Tullavgifter och skatter ingår. Rabatter och <a href=\"{{ link }}\">fraktkostnad</a> beräknas i kassan.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Tullavgifter och skatter ingår. Rabatter och fraktkostnad beräknas i kassan.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Skatter ingår. Rabatter och <a href=\"{{ link }}\">fraktkostnad</a> beräknas i kassan.",
@@ -237,7 +245,19 @@
     "view_more_details": "Visa fler uppgifter",
     "page_placeholder_title": "Sidrubrik",
     "page_placeholder_content": "Välj en sida om du vill visa dess innehåll.",
-    "placeholder_image": "Platshållarbild"
+    "placeholder_image": "Platshållarbild",
+    "powered_by": "Denna butik kommer att drivas av",
+    "store_owner_link_html": "Är du butiksägaren? <a href=\"{{ link }}\">Logga in här</a>",
+    "shipping_discount_error": "Leveransrabatter visas i kassan när du lägger till en adress",
+    "discount_code_error": "Rabattkoden kan inte tillämpas på din varukorg",
+    "inventory_low_stock": "Låg lagernivå",
+    "inventory_in_stock": "I lager",
+    "inventory_out_of_stock": "Slut i lager",
+    "shipping_policy": "Fraktkostnad beräknas i kassan.",
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }} kvar",
+      "other": "{{ count }} kvar"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -255,14 +275,18 @@
   },
   "placeholders": {
     "password": "Lösenord",
-    "search": "Sök"
+    "search": "Sök",
+    "product_title": "Produktnamn",
+    "collection_title": "Produktseriens namn"
   },
   "products": {
     "product": {
       "add_to_cart": "Lägg till i varukorgen",
       "added_to_cart": "Tillagd i varukorgen",
       "adding_to_cart": "Lägger till ...",
-      "add_to_cart_error": "Det uppstod ett fel när artikeln skulle läggas till i varukorgen"
+      "add_to_cart_error": "Det uppstod ett fel när artikeln skulle läggas till i varukorgen",
+      "sold_out": "Slutsåld",
+      "unavailable": "Inte tillgängliga"
     }
   },
   "fields": {

@@ -80,7 +80,7 @@
     "details": "詳細",
     "divider": "区切り線",
     "filters": "絞り込みと並べ替え",
-    "follow_on_shop": "Shopでフォローする",
+    "follow_on_shop": "Shopでフォロー",
     "footer": "フッター",
     "footer_utilities": "フッターユーティリティ",
     "group": "グループ",
@@ -153,7 +153,6 @@
     "editorial": "編集",
     "editorial_jumbo_text": "編集：ジャンボ文字",
     "hero_marquee": "ヒーロー：マーキー",
-    "hero_large_logo": "ヒーロー：大きなロゴマーク",
     "input_fields": "入力フィールド",
     "local_pickup": "店舗受取",
     "marquee_section": "マーキー",
@@ -166,7 +165,12 @@
     "products_editorial": "商品リスト: エディトリアル",
     "social_link": "ソーシャルリンク",
     "split_showcase": "Split showcase",
-    "variant_pickers": "バリエーションピッカー"
+    "variant_pickers": "バリエーションピッカー",
+    "product_title": "商品名",
+    "large_logo": "大きなロゴ",
+    "product_list_button": "[すべて表示] ボタン",
+    "product_inventory": "商品の在庫",
+    "pills": "ピル型ボタン"
   },
   "settings": {
     "alignment": "配置",
@@ -309,7 +313,7 @@
     "cart_total": "カートの合計",
     "cart_type": "タイプ",
     "case": "ケース",
-    "checkout_buttons": "簡単なチェックアウトボタンを許可",
+    "checkout_buttons": "簡単なチェックアウトボタン",
     "collection_list": "コレクション",
     "collection_templates": "コレクションテンプレート",
     "content": "コンテンツ",
@@ -473,7 +477,24 @@
     "vertical_padding": "垂直余白",
     "visibility": "公開/非公開",
     "product_corner_radius": "商品の角丸の半径",
-    "card_corner_radius": "カードの角丸の半径"
+    "card_corner_radius": "カードの角丸の半径",
+    "alignment_mobile": "モバイル配置",
+    "animation_repeat": "繰り返しアニメーション",
+    "blurred_reflection": "ぼやけた反射",
+    "card_hover_effect": "カードのホバー効果",
+    "card_size": "カードサイズ",
+    "collection_title_case": "コレクションタイトルの大文字・小文字設定",
+    "effects": "効果",
+    "inventory_threshold": "低在庫しきい値",
+    "mobile_card_size": "モバイルカードサイズ",
+    "page": "ページ",
+    "product_and_card_title_case": "商品とカードのタイトルの大文字・小文字設定",
+    "product_title_case": "商品名の大文字・小文字設定",
+    "reflection_opacity": "反射の不透明度",
+    "right_padding": "右の余白",
+    "show_inventory_quantity": "低在庫数量を表示する",
+    "text_label_case": "テキストラベルの大文字・小文字設定",
+    "transition_to_main_product": "商品カードから商品ページへの遷移"
   },
   "options": {
     "adapt_to_image": "画像に合わせる",
@@ -740,7 +761,12 @@
     "social_youtube": "ソーシャル：YouTube",
     "spotlight": "Spotlight",
     "standard": "標準",
-    "subheading": "小見出し"
+    "subheading": "小見出し",
+    "blur": "ぼかし",
+    "lift": "リフト",
+    "reveal": "表示する",
+    "scale": "拡大",
+    "subtle_zoom": "ズーム"
   },
   "content": {
     "advanced": "高度",
@@ -823,13 +849,16 @@
     "manage_policies": "[ポリシーを管理](/admin/settings/legal)",
     "product_page": "商品ページ",
     "text": "テキスト",
-    "thumbnails": "サムネイル"
+    "thumbnails": "サムネイル",
+    "visible_if_collection_has_more_products": "コレクションに表示されているよりも多くの商品がある場合に表示されます",
+    "grid_layout": "グリッドレイアウト",
+    "app_required_for_ratings": "商品評価にはアプリが必要です。[詳しくはこちら](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>ブランドに関する情報をお客様と共有します。商品を説明したり、告知をしたり、ストアへのお客様を歓迎したりします。</p>"
   },
   "text_defaults": {
-    "button_label": "ボタンのラベル",
+    "button_label": "今すぐ購入",
     "collapsible_row": "折りたたみ可能な行",
     "heading": "見出し",
     "email_signup_button_label": "登録",
@@ -859,19 +888,10 @@
     "transparent_background": "読みやすいように透明な背景が適用された各テンプレートを確認します",
     "aspect_ratio_adjusted": "一部レイアウトを調整しました",
     "auto_open_cart_drawer": "有効にすると、商品がカートに追加されたときにカートドロワーが自動的に開きます。",
-    "custom_liquid": "アプリのスニペットやその他のコードを追加して、高度なカスタマイズを作成します。[詳しくはこちら](https://shopify.dev/docs/api/liquid)"
-  },
-  "github": {
-    "announcement_bar": "[Githubの問題](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Githubの問題](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Githubの問題](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Githubの問題](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Githubの問題](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Githubの問題](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Githubの問題](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Githubの問題](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Githubの問題](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Githubの問題](https://github.com/Shopify/horizon/issues/2986)"
+    "custom_liquid": "アプリのスニペットやその他のコードを追加して、高度なカスタマイズを作成します。[詳しくはこちら](https://shopify.dev/docs/api/liquid)",
+    "applies_on_image_only": "画像にのみ適用する",
+    "hover_effects": "商品およびコレクションカードに適用する",
+    "pills_usage": "適用されたフィルター、割引コード、検索候補に使用されます"
   },
   "categories": {
     "product_list": "商品リスト",

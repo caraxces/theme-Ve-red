@@ -91,7 +91,7 @@
       "one": "{{ count }} filter brukt",
       "other": "{{ count }} filtre brukt"
     },
-    "account": "Konto",
+    "account": "Åpne kontoens rullegardinmeny",
     "cart": "Handlekurv",
     "cart_count": "Totalt antall varer i handlekurven",
     "menu": "Meny",
@@ -102,7 +102,11 @@
     "discount": "Bruk en rabattkode",
     "discount_applied": "Brukt rabattkode: {{ code }}",
     "open_cart_drawer": "Åpne handlekurvskuffen",
-    "pause_video": "Sett videoen på pause"
+    "pause_video": "Sett videoen på pause",
+    "inventory_status": "Lagerstatus",
+    "find_country": "Finn land",
+    "localization_region_and_language": "Åpne område- og språkvelgeren",
+    "open_search_modal": "Åpne søkemodalen"
   },
   "actions": {
     "add_to_cart": "Legg i handlekurv",
@@ -137,7 +141,10 @@
     "submit": "Send inn",
     "enter_password": "Angi passordet",
     "view_store_information": "Vis butikkinformasjon",
-    "open_image_in_full_screen": "Åpne bildet i fullskjerm"
+    "open_image_in_full_screen": "Åpne bildet i fullskjerm",
+    "sign_in_options": "Andre påloggingsalternativer",
+    "sign_up": "Registrer deg",
+    "sort": "Sorter"
   },
   "content": {
     "reviews": "anmeldelser",
@@ -154,6 +161,7 @@
     "seller_note": "Spesielle instruksjoner",
     "cart_subtotal": "Delsum",
     "discounts": "Rabatter",
+    "discount": "Rabatt",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Inkludert toll og andre avgifter. Rabatter og <a href=\"{{ link }}\">frakt</a> beregnes i kassen.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Inkludert toll og andre avgifter. Rabatter og frakt beregnes i kassen.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Avgifter inkludert. Rabatter og <a href=\"{{ link }}\">frakt</a> beregnes i kassen.",
@@ -237,7 +245,19 @@
     "wrong_password": "Feil passord",
     "page_placeholder_title": "Sidetittel",
     "page_placeholder_content": "Velg en side for å vise innholdet.",
-    "placeholder_image": "Plassholderbilde"
+    "placeholder_image": "Plassholderbilde",
+    "shipping_discount_error": "Fraktrabatter vises i kassen etter at du har lagt til en adresse",
+    "discount_code_error": "Rabattkoden kan ikke brukes på handlekurven din",
+    "inventory_low_stock": "Lav lagerbeholdning",
+    "inventory_in_stock": "På lager",
+    "inventory_out_of_stock": "Ikke på lager",
+    "shipping_policy": "Frakt beregnes i kassen.",
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }} igjen",
+      "other": "{{ count }} igjen"
+    },
+    "powered_by": "Denne butikken skal bli drevet av",
+    "store_owner_link_html": "Er du butikkeieren? <a href=\"{{ link }}\">Logg inn her</a>"
   },
   "gift_cards": {
     "issued": {
@@ -255,14 +275,18 @@
   },
   "placeholders": {
     "password": "Passord",
-    "search": "Søk"
+    "search": "Søk",
+    "product_title": "Produkttittel",
+    "collection_title": "Samlingstittel"
   },
   "products": {
     "product": {
       "add_to_cart": "Legg i handlekurv",
       "added_to_cart": "Lagt til i handlekurv",
       "adding_to_cart": "Legger til ...",
-      "add_to_cart_error": "Problem med å legge til i handlekurven"
+      "add_to_cart_error": "Problem med å legge til i handlekurven",
+      "sold_out": "Utsolgt",
+      "unavailable": "Utilgjengelig"
     }
   },
   "fields": {

@@ -9,13 +9,15 @@ import { cartPerformance } from '@theme/performance';
  *
  * @typedef {Object} CartDiscountComponentRefs
  * @property {HTMLElement} cartDiscountError - The error element.
+ * @property {HTMLElement} cartDiscountErrorDiscountCode - The discount code error element.
+ * @property {HTMLElement} cartDiscountErrorShipping - The shipping error element.
  */
 
 /**
  * @extends {Component<CartDiscountComponentRefs>}
  */
 class CartDiscount extends Component {
-  requiredRefs = ['cartDiscountError'];
+  requiredRefs = ['cartDiscountError', 'cartDiscountErrorDiscountCode', 'cartDiscountErrorShipping'];
 
   /** @type {AbortController | null} */
   #activeFetch = null;
@@ -35,6 +37,8 @@ class CartDiscount extends Component {
    * @param {SubmitEvent} event - The submit event on our form.
    */
   applyDiscount = async (event) => {
+    const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
+
     event.preventDefault();
     event.stopPropagation();
 
@@ -52,9 +56,15 @@ class CartDiscount extends Component {
       const existingDiscounts = this.#existingDiscounts();
       if (existingDiscounts.includes(discountCodeValue)) return;
 
-      existingDiscounts.push(discountCodeValue);
+      cartDiscountError.classList.add('hidden');
+      cartDiscountErrorDiscountCode.classList.add('hidden');
+      cartDiscountErrorShipping.classList.add('hidden');
+
       const config = fetchConfig('json', {
-        body: JSON.stringify({ discount: existingDiscounts.join(','), sections: [this.dataset.sectionId] }),
+        body: JSON.stringify({
+          discount: [...existingDiscounts, discountCodeValue].join(','),
+          sections: [this.dataset.sectionId],
+        }),
       });
 
       const response = await fetch(Theme.routes.cart_update_url, {
@@ -64,17 +74,43 @@ class CartDiscount extends Component {
 
       const data = await response.json();
 
-      if (data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
-        return discount.code === discountCodeValue && discount.applicable === false;
-      })) {
-        this.#handleDiscountError();
+      if (
+        data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
+          return discount.code === discountCodeValue && discount.applicable === false;
+        })
+      ) {
+        discountCode.value = '';
+        this.#handleDiscountError('discount_code');
         return;
       }
 
+      const newHtml = data.sections[this.dataset.sectionId];
+      const parsedHtml = new DOMParser().parseFromString(newHtml, 'text/html');
+      const section = parsedHtml.getElementById(`shopify-section-${this.dataset.sectionId}`);
+      const discountCodes = section?.querySelectorAll('.cart-discount__pill') || [];
+      if (section) {
+        const codes = Array.from(discountCodes)
+          .map((element) => (element instanceof HTMLLIElement ? element.dataset.discountCode : null))
+          .filter(Boolean);
+        // Before morphing, we need to check if the shipping discount is applicable in the UI
+        // we check the liquid logic compared to the cart payload to assess whether we leveraged
+        // a valid shipping discount code.
+        if (
+          codes.length === existingDiscounts.length &&
+          codes.every((/** @type {string} */ code) => existingDiscounts.includes(code)) &&
+          data.discount_codes.find((/** @type {{ code: string; applicable: boolean; }} */ discount) => {
+            return discount.code === discountCodeValue && discount.applicable === true;
+          })
+        ) {
+          this.#handleDiscountError('shipping');
+          discountCode.value = '';
+          return;
+        }
+      }
+
       document.dispatchEvent(new DiscountUpdateEvent(data, this.id));
-      morphSection(this.dataset.sectionId, data.sections[this.dataset.sectionId]);
+      morphSection(this.dataset.sectionId, newHtml);
     } catch (error) {
-      // Something went wrong, should we retry?
     } finally {
       this.#activeFetch = null;
       cartPerformance.measureFromEvent('discount-update:user-action', event);
@@ -127,7 +163,6 @@ class CartDiscount extends Component {
       document.dispatchEvent(new DiscountUpdateEvent(data, this.id));
       morphSection(this.dataset.sectionId, data.sections[this.dataset.sectionId]);
     } catch (error) {
-      // Something went wrong, should we retry?
     } finally {
       this.#activeFetch = null;
     }
@@ -135,9 +170,14 @@ class CartDiscount extends Component {
 
   /**
    * Handles the discount error.
+   *
+   * @param {'discount_code' | 'shipping'} type - The type of discount error.
    */
-  #handleDiscountError() {
-    this.refs.cartDiscountError.classList.remove('hidden');
+  #handleDiscountError(type) {
+    const { cartDiscountError, cartDiscountErrorDiscountCode, cartDiscountErrorShipping } = this.refs;
+    const target = type === 'discount_code' ? cartDiscountErrorDiscountCode : cartDiscountErrorShipping;
+    cartDiscountError.classList.remove('hidden');
+    target.classList.remove('hidden');
   }
 
   /**

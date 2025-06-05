@@ -27,19 +27,34 @@ export const viewTransition = {
  */
 const viewTransitionTypes = {
   'product-grid': async () => {
-    const productCards = /** @type {NodeListOf<HTMLElement>} */ (
-      document.querySelectorAll('.product-grid .product-grid__item')
-    );
-    if (!productCards.length) return;
-    const visibleProductCards = await getIntersectingElements(productCards, {
-      rootMargin: `0px 0px 1000px 0px`,
-    });
+    const grid = document.querySelector('.product-grid');
+    const productCards = /** @type {HTMLElement[]} */ ([
+      ...document.querySelectorAll('.product-grid .product-grid__item'),
+    ]);
 
-    visibleProductCards.forEach((card) =>
-      card.style.setProperty('view-transition-name', `product-card-${card.dataset.productId}`)
+    if (!grid || !productCards.length) return;
+
+    await new Promise((resolve) =>
+      requestIdleCallback(() => {
+        const cardsToAnimate = getCardsToAnimate(grid, productCards);
+
+        productCards.forEach((card, index) => {
+          if (index < cardsToAnimate) {
+            card.style.setProperty('view-transition-name', `product-card-${card.dataset.productId}`);
+          } else {
+            card.style.setProperty('content-visibility', 'hidden');
+          }
+        });
+
+        resolve(null);
+      })
     );
 
-    return () => visibleProductCards.forEach((card) => card.style.removeProperty('view-transition-name'));
+    return () =>
+      productCards.forEach((card) => {
+        card.style.removeProperty('view-transition-name');
+        card.style.removeProperty('content-visibility');
+      });
   },
 };
 
@@ -426,48 +441,61 @@ export function getVisibleElements(root, elements, ratio = 1, axis) {
 }
 
 /**
- * Asynchronously resolves to the subset of elements that are visible
- * (i.e., intersecting the viewport or supplied root) **when the first
- * IntersectionObserver callback fires**.
- *
- * A one-shot `IntersectionObserver` is created; after the first batch of
- * `IntersectionObserverEntry` objects arrives, it disconnects itself and
- * the promise resolves with only the intersecting targets.
- *
- * @template {Element} T
- *
- * @async
- * @param {Readonly<NodeListOf<T>> | Iterable<T>} elements
- *        Collection of elements to test for visibility.
- * @param {IntersectionObserverInit} [options={}]
- *        Standard IntersectionObserver options (`root`, `rootMargin`, `threshold`).
- *
- * @returns {Promise<T[]>}
- *          Promise that resolves with the visible elements.
+ * Determines which grid items should be animated during a transition.
+ * It makes an estimation based on the zoom-out card size because it's
+ * the common denominator for both transition states. I.e. transitioning either
+ * from 10 to 20 cards the other way around, both need 20 cards to be animated.
+ * @param {Element} grid - The grid element
+ * @param {Element[]} cards - The cards to animate
+ * @returns {number} - Number of cards that should be animated
  */
-export async function getIntersectingElements(elements, options = {}) {
-  /** @type {T[]} */
-  const elArray = Array.from(elements);
+function getCardsToAnimate(grid, cards) {
+  if (!grid || !cards || cards.length === 0) return 0;
 
-  // Short-circuit: nothing to observe or API unavailable.
-  if (!elArray.length || typeof IntersectionObserver === 'undefined') {
-    return [];
+  const itemSample = cards[0];
+  if (!itemSample) return 0;
+
+  // Calculate the visible area of the grid for the Y axis. Assume X is always fully visible:
+  const gridRect = grid.getBoundingClientRect();
+  const visibleArea = {
+    top: Math.max(0, gridRect.top),
+    bottom: Math.min(window.innerHeight, gridRect.bottom),
+  };
+
+  const visibleHeight = Math.round(visibleArea.bottom - visibleArea.top);
+  if (visibleHeight <= 0) return 0;
+
+  /** @type {import('product-card').ProductCard | null} */
+  const cardSample = itemSample.querySelector('product-card');
+  const gridStyle = getComputedStyle(grid);
+
+  const galleryAspectRatio = cardSample?.refs?.cardGallery?.style.getPropertyValue('--gallery-aspect-ratio') || '';
+  let aspectRatio = parseFloat(galleryAspectRatio) || 0.5;
+  if (galleryAspectRatio?.includes('/')) {
+    const [width = '1', height = '2'] = galleryAspectRatio.split('/');
+    aspectRatio = parseInt(width, 10) / parseInt(height, 10);
   }
 
-  return new Promise((resolve) => {
-    /** @type {IntersectionObserver} */
-    const observer = new IntersectionObserver((entries, obs) => {
-      /** @type {T[]} */
-      const visible = /** @type {T[]} */ (
-        entries.filter((e) => e.isIntersecting).map((e) => /** @type {T} */ (e.target))
-      );
+  const cardGap = parseInt(cardSample?.refs?.productCardLink?.style.getPropertyValue('--product-card-gap') || '') || 12;
+  const gridGap = parseInt(gridStyle.getPropertyValue('--product-grid-gap')) || 12;
 
-      obs.disconnect(); // one-shot: tear down immediately
-      resolve(visible);
-    }, options);
+  // Assume only a couple of lines of text in the card details (title and price).
+  // If the title wraps into more lines, we might just animate more cards, but that's fine.
+  const detailsSize = ((parseInt(gridStyle.fontSize) || 16) + 2) * 2;
 
-    elArray.forEach((el) => observer.observe(el));
-  });
+  const isMobile = window.innerWidth < 750;
+
+  // Always use the zoom-out state card width
+  const cardWidth = isMobile ? Math.round((gridRect.width - gridGap) / 2) : 100;
+  const cardHeight = Math.round(cardWidth / aspectRatio) + cardGap + detailsSize;
+
+  // Calculate the number of cards that fit in the visible area:
+  // - The width estimation is pretty accurate, we can ignore decimals.
+  // - The height estimation needs to account for peeking rows, so we round up.
+  const columnsInGrid = isMobile ? 2 : Math.floor((gridRect.width + gridGap) / (cardWidth + gridGap));
+  const rowsInGrid = Math.ceil((visibleHeight - gridGap) / (cardHeight + gridGap));
+
+  return columnsInGrid * rowsInGrid;
 }
 
 /**

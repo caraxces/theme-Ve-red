@@ -4,7 +4,7 @@
   {% unless block.settings.product == blank %}
     {% render 'product-card-badges', product: block.settings.product %}
     {%  if settings.quick_add or settings.mobile_quick_add %}
-      {% render 'quick-add', product: block.settings.product %}
+      {% render 'quick-add', product: block.settings.product, section_id: section.id %}
     {% endif %}
   {% endunless %}
 {% endcapture %}
@@ -14,9 +14,7 @@
 {% # Title and price for the zoomed out grid view %}
 <div class="product-grid-view-zoom-out--details">
   {% if block.settings.product == blank %}
-    <div class="text-block">
-      <h4>{{ 'content.product_card_placeholder' | t }}</h4>
-    </div>
+    <h3 class="h4">{{ 'content.product_card_placeholder' | t }}</h3>
   {% else %}
     <h3 class="h4">{{ block.settings.product.title }}</h3>
     <div class="h6">
@@ -59,7 +57,7 @@
         }
       ],
       "default": "portrait",
-      "label": "t:settings.image_ratio",
+      "label": "t:settings.aspect_ratio",
       "info": "t:info.aspect_ratio_adjusted"
     },
     {

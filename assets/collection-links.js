@@ -155,9 +155,21 @@ class CollectionLinks extends Component {
 
     /** @param {PointerEvent} event */
     const updateImagePosition = (event) => {
-      selectedImage.style.setProperty('--x', `${event.clientX}px`);
-      selectedImage.style.setProperty('--y', `${event.clientY}px`);
+      const imageHeight = selectedImage.offsetHeight;
+      const imageWidth = selectedImage.offsetWidth;
+      const viewportHeight = window.innerHeight;
+      const viewportWidth = window.innerWidth;
+      const offset = 15;
+
+      const wouldBeCutOff = event.clientY + imageHeight + offset > viewportHeight;
+      const yPos = wouldBeCutOff ? event.clientY - imageHeight - offset : event.clientY + offset;
+
+      const xPos = Math.min(Math.max(offset, event.clientX + offset), viewportWidth - imageWidth - offset);
+
+      selectedImage.style.setProperty('--x', `${xPos}px`);
+      selectedImage.style.setProperty('--y', `${yPos}px`);
     };
+
     const reset = () => {
       selectedImage.removeAttribute('reveal');
       target.removeEventListener('mousemove', updateImagePosition);

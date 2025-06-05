@@ -91,7 +91,7 @@
       "one": "{{ count }}개 필터 적용됨",
       "other": "{{ count }}개 필터 적용됨"
     },
-    "account": "계정",
+    "account": "계정 드롭다운 열기",
     "cart": "카트",
     "cart_count": "카트에 있는 총 품목 수",
     "menu": "메뉴",
@@ -102,7 +102,11 @@
     "discount": "할인 코드 적용",
     "discount_applied": "적용된 할인 코드: {{ code }}",
     "open_cart_drawer": "카트 서랍 열기",
-    "pause_video": "동영상 일시 중지"
+    "pause_video": "동영상 일시 중지",
+    "inventory_status": "재고 상태",
+    "find_country": "국가 찾기",
+    "localization_region_and_language": "지역 및 언어 선택기 열기",
+    "open_search_modal": "검색 모달 열기"
   },
   "actions": {
     "add_to_cart": "카트에 추가",
@@ -137,7 +141,10 @@
     "log_in": "로그인",
     "log_out": "로그아웃",
     "apply": "적용",
-    "open_image_in_full_screen": "전체 화면으로 이미지 열기"
+    "open_image_in_full_screen": "전체 화면으로 이미지 열기",
+    "sign_in_options": "기타 로그인 옵션",
+    "sign_up": "가입하기",
+    "sort": "정렬"
   },
   "content": {
     "reviews": "리뷰",
@@ -154,6 +161,7 @@
     "seller_note": "특별 지침",
     "cart_subtotal": "소계",
     "discounts": "할인",
+    "discount": "할인",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "관세 및 세금이 포함된 가격입니다. 결제 시 할인 및 <a href=\"{{ link }}\">배송료</a>가 계산됩니다.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "관세 및 세금이 포함된 가격입니다. 결제 시 할인 및 배송료가 계산됩니다.",
     "taxes_included_shipping_at_checkout_with_policy_html": "세금이 포함된 가격입니다. 결제 시 할인 및 <a href=\"{{ link }}\">배송료</a>가 계산됩니다.",
@@ -234,7 +242,22 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "세금 및 배송료는 결제 시 계산됩니다.",
     "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "세금이 포함된 가격입니다. 배송료는 결제 시 계산됩니다.",
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "세금이 포함된 가격입니다. 배송료는 결제 시 계산됩니다.",
-    "view_more_details": "더 많은 세부 정보 보기"
+    "view_more_details": "더 많은 세부 정보 보기",
+    "powered_by": "상점 제공:",
+    "store_owner_link_html": "스토어 소유자이신가요? <a href=\"{{ link }}\">여기에서 로그인</a>하세요.",
+    "shipping_discount_error": "배송 요금 할인은 결제 단계에서 주소를 추가한 후에 표시됩니다.",
+    "discount_code_error": "카트에 할인 코드를 적용할 수 없습니다",
+    "inventory_low_stock": "재고 부족",
+    "inventory_in_stock": "재고 있음",
+    "inventory_out_of_stock": "품절",
+    "page_placeholder_title": "페이지 제목",
+    "page_placeholder_content": "해당 콘텐츠를 표시할 페이지를 선택합니다.",
+    "placeholder_image": "플레이스 홀더 이미지",
+    "shipping_policy": "결제 시 배송료 계산됨.",
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }}개 남음",
+      "other": "{{ count }}개 남음"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -252,14 +275,18 @@
   },
   "placeholders": {
     "password": "비밀번호",
-    "search": "검색"
+    "search": "검색",
+    "product_title": "제품명",
+    "collection_title": "컬렉션 제목"
   },
   "products": {
     "product": {
       "add_to_cart": "카트에 추가",
       "added_to_cart": "카트에 추가됨",
       "adding_to_cart": "추가 중...",
-      "add_to_cart_error": "카트에 추가하는 중 오류 발생"
+      "add_to_cart_error": "카트에 추가하는 중 오류 발생",
+      "sold_out": "품절",
+      "unavailable": "사용할 수 없음"
     }
   },
   "fields": {

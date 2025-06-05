@@ -80,7 +80,7 @@
     "divider_section": "ตัวแบ่ง",
     "faq_section": "คำถามที่พบบ่อย",
     "filters": "การกรองและการจัดเรียง",
-    "follow_on_shop": "ติดตามใน Shop",
+    "follow_on_shop": "ติดตามบน Shop",
     "footer": "ส่วนท้าย",
     "footer_utilities": "เครื่องมือสำหรับส่วนท้าย",
     "group": "กลุ่ม",
@@ -155,7 +155,6 @@
     "editorial": "รูปแบบบทความ",
     "editorial_jumbo_text": "รูปแบบบทความ: ข้อความขนาดใหญ่",
     "hero_marquee": "ส่วนแสดงหลัก: ข้อความเลื่อน",
-    "hero_large_logo": "ส่วนแสดงหลัก: โลโก้ขนาดใหญ่",
     "input_fields": "ฟิลด์ป้อนข้อมูล",
     "local_pickup": "การรับสินค้าที่ร้าน",
     "marquee_section": "ข้อความเลื่อน",
@@ -170,7 +169,8 @@
     "social_link": "ลิงก์โซเชียลมีเดีย",
     "split_showcase": "การแสดงผลแบบแบ่งส่วน",
     "variant_pickers": "รายการตัวเลือกสินค้า",
-    "pills": "ทรงเม็ดยา"
+    "pills": "ทรงเม็ดยา",
+    "large_logo": "โลโก้ขนาดใหญ่"
   },
   "settings": {
     "alignment": "การจัดแนว",
@@ -294,7 +294,7 @@
     "cart_total": "ยอดรวมตะกร้าสินค้า",
     "cart_type": "ประเภท",
     "case": "เคส",
-    "checkout_buttons": "อนุญาตให้มีปุ่มการชำระเงินแบบเร่งด่วน",
+    "checkout_buttons": "ปุ่มชำระเงินแบบเร่งด่วน",
     "collection_list": "คอลเลกชัน",
     "collection_templates": "เทมเพลตคอลเลกชัน",
     "content": "เนื้อหา",
@@ -484,7 +484,17 @@
     "vertical_padding": "ระยะขอบแนวตั้ง",
     "visibility": "การแสดงผล",
     "product_corner_radius": "รัศมีมุมผลิตภัณฑ์",
-    "card_corner_radius": "รัศมีมุมบัตร"
+    "card_corner_radius": "รัศมีมุมบัตร",
+    "animation_repeat": "ทำซ้ำภาพเคลื่อนไหว",
+    "blurred_reflection": "ภาพสะท้อนที่เบลอ",
+    "card_hover_effect": "เอฟเฟ็กต์เมื่อวางเมาส์ที่บัตร",
+    "collection_title_case": "เคสชื่อคอลเลกชัน",
+    "effects": "เอฟเฟ็กต์",
+    "product_and_card_title_case": "เคสชื่อสินค้าและชื่อบัตร",
+    "product_title_case": "เคสชื่อสินค้า",
+    "reflection_opacity": "ความทึบแสงของภาพสะท้อน",
+    "text_label_case": "เคสป้ายกำกับข้อความ",
+    "transition_to_main_product": "การเปลี่ยนจากบัตรสินค้าไปยังหน้าสินค้า"
   },
   "options": {
     "adapt_to_image": "ปรับตามรูปภาพ",
@@ -751,7 +761,12 @@
     "social_youtube": "โซเชียล: YouTube",
     "spotlight": "รายการที่นิยม",
     "standard": "มาตรฐาน",
-    "subheading": "หัวเรื่องย่อย"
+    "subheading": "หัวเรื่องย่อย",
+    "blur": "เบลอ",
+    "lift": "ยกนูน",
+    "reveal": "เปิดเผย",
+    "scale": "ขยายสเกล",
+    "subtle_zoom": "ซูม"
   },
   "content": {
     "advanced": "Advanced",
@@ -836,7 +851,8 @@
     "product_page": "หน้าสินค้า",
     "text": "ข้อความ",
     "thumbnails": "รูปภาพขนาดย่อ",
-    "visibility": "การแสดงผล"
+    "visibility": "การแสดงผล",
+    "app_required_for_ratings": "จำเป็นต้องมีแอปสำหรับการรีวิวสินค้า [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>แชร์ข้อมูลเกี่ยวกับแบรนด์ของคุณให้ลูกค้าทราบ โดยอธิบายคุณสมบัติของสินค้า แชร์ประกาศ หรือกล่าวต้อนรับลูกค้าสู่ร้านค้าของคุณ</p>"
@@ -873,19 +889,9 @@
     "aspect_ratio_adjusted": "ปรับในบางเลย์เอาต์แล้ว",
     "auto_open_cart_drawer": "เมื่อเปิดใช้งาน ตะกร้าสินค้าแบบเลื่อนด้านข้างจะเปิดโดยอัตโนมัติเมื่อมีการเพิ่มสินค้าลงในตะกร้าสินค้า",
     "custom_liquid": "เพิ่มส่วนย่อยของแอปหรือโค้ดอื่นๆ เพื่อสร้างการปรับแต่งขั้นสูง [ดูข้อมูลเพิ่มเติม](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "ใช้สำหรับตัวกรองที่นำไปใช้ รหัสส่วนลด และคำแนะนำการค้นหา"
-  },
-  "github": {
-    "announcement_bar": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[กระทู้ Github](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "ใช้สำหรับตัวกรองที่นำไปใช้ รหัสส่วนลด และคำแนะนำการค้นหา",
+    "applies_on_image_only": "ใช้กับรูปภาพเท่านั้น",
+    "hover_effects": "ใช้กับบัตรสินค้าและบัตรคอลเลกชัน"
   },
   "categories": {
     "basic": "Basic",

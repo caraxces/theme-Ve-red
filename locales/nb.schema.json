@@ -153,7 +153,6 @@
     "editorial": "Redaksjonell",
     "editorial_jumbo_text": "Redaksjonell: Jumbotekst",
     "hero_marquee": "Hovedbanner: Skrollbanner",
-    "hero_large_logo": "Hovedbanner: Stor logo",
     "input_fields": "Inndatafelter",
     "local_pickup": "Lokal henting",
     "marquee_section": "Marquee",
@@ -167,7 +166,11 @@
     "social_link": "Kobling til sosiale medier",
     "split_showcase": "Split-presentasjon",
     "variant_pickers": "Variantvelgere",
-    "pills": "Piller"
+    "pills": "Piller",
+    "product_title": "Produkttittel",
+    "large_logo": "Stor logo",
+    "product_list_button": "«Vis alle»-knappen",
+    "product_inventory": "Produktlager"
   },
   "settings": {
     "alignment": "Justering",
@@ -482,7 +485,16 @@
     "vertical_padding": "Vertikal utfylling",
     "visibility": "Synlighet",
     "product_corner_radius": "Hjørneradius på produkt",
-    "card_corner_radius": "Hjørneradius på kort"
+    "card_corner_radius": "Hjørneradius på kort",
+    "alignment_mobile": "Justering på mobil",
+    "animation_repeat": "Gjenta animasjon",
+    "blurred_reflection": "Uskarp refleksjon",
+    "card_hover_effect": "Musepekereffekt på kort",
+    "effects": "Effekter",
+    "inventory_threshold": "Terskel for lav lagerbeholdning",
+    "reflection_opacity": "Refleksjonsopasitet",
+    "show_inventory_quantity": "Vis lav lagerbeholdning",
+    "transition_to_main_product": "Overgang fra produktkort til produktside"
   },
   "options": {
     "adapt_to_image": "Tilpass til bilde",
@@ -749,7 +761,12 @@
     "social_youtube": "Sosiale medier: YouTube",
     "spotlight": "Spotlight",
     "standard": "Standard",
-    "subheading": "Underoverskrift"
+    "subheading": "Underoverskrift",
+    "blur": "Uklarhet",
+    "lift": "Løft",
+    "reveal": "Avsløring",
+    "scale": "Skala",
+    "subtle_zoom": "Zoom"
   },
   "content": {
     "advanced": "Avansert",
@@ -833,7 +850,9 @@
     "product_page": "Produktside",
     "text": "Tekst",
     "thumbnails": "Miniatyrbilder",
-    "visibility": "Synlighet"
+    "visibility": "Synlighet",
+    "visible_if_collection_has_more_products": "Synlig hvis samlingen har flere produkter enn det som vises",
+    "app_required_for_ratings": "En app kreves for produktanmeldelser. [Finn ut mer](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Del informasjon om merkevaren din med kundene. Beskriv et produkt, gjør kunngjøringer eller ønsk kundene velkommen til butikken.</p>"
@@ -870,19 +889,9 @@
     "aspect_ratio_adjusted": "Justert i noen layouts",
     "auto_open_cart_drawer": "Når dette er aktivert, åpnes handlekurvskuffen automatisk når et produkt legges til i handlekurven.",
     "custom_liquid": "Legg til app-kodeutdrag eller en annen kode for å opprette avanserte tilpasninger. [Finn ut mer](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Brukes for anvendte filtre, rabattkoder og søkeforslag"
-  },
-  "github": {
-    "announcement_bar": "[Github-problem](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github-problem](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github-problem](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github-problem](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github-problem](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github-problem](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github-problem](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github-problem](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github-problem](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github-problem](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "Brukes for anvendte filtre, rabattkoder og søkeforslag",
+    "applies_on_image_only": "Gjelder bare bilder",
+    "hover_effects": "Gjelder produkt- og samlingskort"
   },
   "categories": {
     "product_list": "Produktliste",

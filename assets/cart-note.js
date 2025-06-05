@@ -34,7 +34,6 @@ class CartNote extends Component {
         signal: abortController.signal,
       });
     } catch (error) {
-      // Something went wrong, should we retry?
     } finally {
       this.#activeFetch = null;
       cartPerformance.measureFromEvent('note-update:user-action', event);

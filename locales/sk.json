@@ -99,7 +99,7 @@
       "few": "Použité filtre: {{ count }}",
       "many": "Použité filtre: {{ count }}"
     },
-    "account": "Konto",
+    "account": "Otvoriť rozbaľovaciu ponuku konta",
     "cart": "Košík",
     "cart_count": "Celkový počet položiek v košíku",
     "menu": "Ponuka",
@@ -111,7 +111,10 @@
     "discount_applied": "Použitý zľavový kód: {{ code }}",
     "open_cart_drawer": "Otvoriť zoznam košíka",
     "inventory_status": "Stav zásob",
-    "pause_video": "Pozastaviť video"
+    "pause_video": "Pozastaviť video",
+    "find_country": "Nájsť krajinu",
+    "localization_region_and_language": "Otvoriť výber oblasti a jazyka",
+    "open_search_modal": "Otvoriť modálne okno vyhľadávania"
   },
   "actions": {
     "add_to_cart": "Pridať do košíka",
@@ -150,7 +153,8 @@
     "apply": "Použiť",
     "sign_in_options": "Ďalšie možnosti prihlásenia",
     "sign_up": "Zaregistrovať sa",
-    "open_image_in_full_screen": "Otvoriť obrázok na celú obrazovku"
+    "open_image_in_full_screen": "Otvoriť obrázok na celú obrazovku",
+    "sort": "Zoradiť"
   },
   "content": {
     "reviews": "recenz.",
@@ -167,6 +171,7 @@
     "seller_note": "Špeciálne pokyny",
     "cart_subtotal": "Medzisúčet",
     "discounts": "Zľavy",
+    "discount": "Zľava",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Vrátane ciel a daní. Zľavy a <a href=\"{{ link }}\">doprava</a> sa vypočítajú pri platbe.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Vrátane ciel a daní. Zľavy a doprava sa vypočítajú pri platbe.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Vrátane daní. Zľavy a <a href=\"{{ link }}\">doprava</a> sa vypočítajú pri platbe.",
@@ -260,7 +265,15 @@
       "other": "Zostáva {{ count }}",
       "few": "Zostáva {{ count }}",
       "many": "Zostáva {{ count }}"
-    }
+    },
+    "powered_by": "Tento obchod bude prevádzkovať",
+    "store_owner_link_html": "Ste vlastníkom obchodu? <a href=\"{{ link }}\">Prihláste sa tu</a>",
+    "shipping_discount_error": "Zľavy na dopravu sa zobrazia pri platbe po pridaní adresy",
+    "discount_code_error": "Zľavový kód nie je vo vašom košíku možné použiť",
+    "page_placeholder_title": "Názov stránky",
+    "page_placeholder_content": "Výberom stránky zobrazíte jej obsah.",
+    "placeholder_image": "Obrázok zástupného objektu",
+    "shipping_policy": "Doprava sa vypočíta v pokladni."
   },
   "gift_cards": {
     "issued": {
@@ -278,14 +291,18 @@
   },
   "placeholders": {
     "password": "Heslo",
-    "search": "Vyhľadať"
+    "search": "Vyhľadať",
+    "product_title": "Názov produktu",
+    "collection_title": "Názov kolekcie"
   },
   "products": {
     "product": {
       "add_to_cart": "Pridať do košíka",
       "added_to_cart": "Pridané do košíka",
       "adding_to_cart": "Pridávanie...",
-      "add_to_cart_error": "Chyba pri pridávaní do košíka"
+      "add_to_cart_error": "Chyba pri pridávaní do košíka",
+      "sold_out": "Vypredané",
+      "unavailable": "Nedostupné"
     }
   },
   "fields": {

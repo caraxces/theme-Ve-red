@@ -151,7 +151,6 @@
     "editorial": "Editoriaali",
     "editorial_jumbo_text": "Editoriaali: jumboteksti",
     "hero_marquee": "Hero: markiisi",
-    "hero_large_logo": "Hero: suuri logo",
     "input_fields": "Syötekentät",
     "local_pickup": "Paikallinen nouto",
     "marquee_section": "Markiisi",
@@ -169,7 +168,9 @@
     "social_link": "Sosiaalisen median linkki",
     "split_showcase": "Jaettu esittely",
     "variant_pickers": "Versionvalitsimet",
-    "pills": "Pillerikuvakkeet"
+    "pills": "Pillerikuvakkeet",
+    "product_title": "Tuotteen nimi",
+    "large_logo": "Suuri logo"
   },
   "settings": {
     "alignment": "Tasaus",
@@ -487,7 +488,13 @@
     "vertical_padding": "Pystytäyte",
     "visibility": "Näkyvyys",
     "product_corner_radius": "Tuotteen kulman säde",
-    "card_corner_radius": "Kortin kulman säde"
+    "card_corner_radius": "Kortin kulman säde",
+    "animation_repeat": "Toistuva animaatio",
+    "blurred_reflection": "Sumennettu heijastus",
+    "card_hover_effect": "Kortin osoitusefekti",
+    "effects": "Efektit",
+    "reflection_opacity": "Heijastuksen peittävyys",
+    "transition_to_main_product": "Siirtymä tuotekortista tuotesivuun"
   },
   "options": {
     "adapt_to_image": "Sovita kuvaan",
@@ -754,7 +761,12 @@
     "social_youtube": "Some: YouTube",
     "spotlight": "Spotlight",
     "standard": "Normaali",
-    "subheading": "Alaotsikko"
+    "subheading": "Alaotsikko",
+    "blur": "Sumeus",
+    "lift": "Nosto",
+    "reveal": "Paljastus",
+    "scale": "Skaalaus",
+    "subtle_zoom": "Zoomaus"
   },
   "content": {
     "advanced": "Kehittynyt",
@@ -839,7 +851,8 @@
     "manage_policies": "[Hallinnoi käytäntöjä](/admin/settings/legal)",
     "product_page": "Tuotesivu",
     "text": "Teksti",
-    "thumbnails": "Pikkukuvat"
+    "thumbnails": "Pikkukuvat",
+    "app_required_for_ratings": "Tuotearviot edellyttävät sovellusta. [Lue lisää](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Kerro brändiäsi koskevia tietoja asiakkaillesi. Kuvaile tuotetta, jaa ilmoituksia tai toivota asiakkaat tervetulleiksi kauppaasi.</p>"
@@ -876,19 +889,9 @@
     "aspect_ratio_adjusted": "Säädetty joissakin pohjissa",
     "auto_open_cart_drawer": "Kun veto-ostoskori on käytössä, se avataan automaattisesti, kun tuote lisätään ostoskoriin.",
     "custom_liquid": "Luo vaativampia mukautuksia lisäämällä sovelluksen koodinpätkiä tai muuta koodia. [Lue lisää](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Käyttökohteita käytetyt suodattimet, alennuskoodit ja hakuehdotukset"
-  },
-  "github": {
-    "announcement_bar": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github-ongelma](https://github.com/Shopify/horizon/issues/2986)"
+    "pills_usage": "Käyttökohteita käytetyt suodattimet, alennuskoodit ja hakuehdotukset",
+    "applies_on_image_only": "Koskee vain kuvia",
+    "hover_effects": "Käytetään tuote- ja kokoelmakorteissa"
   },
   "categories": {
     "basic": "Basic",

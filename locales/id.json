@@ -87,7 +87,7 @@
     "slideshow_next": "Slide berikutnya",
     "slideshow_previous": "Slide sebelumnya",
     "filters": "Filter",
-    "account": "Akun",
+    "account": "Buka dropdown akun",
     "cart": "Keranjang",
     "cart_count": "Total item di keranjang",
     "filter_count": {
@@ -103,7 +103,10 @@
     "discount_applied": "Kode diskon yang dipakai: {{ code }}",
     "open_cart_drawer": "Buka isi keranjang",
     "inventory_status": "Status Inventaris",
-    "pause_video": "Jeda video"
+    "pause_video": "Jeda video",
+    "find_country": "Temukan negara",
+    "localization_region_and_language": "Buka selektor wilayah dan bahasa",
+    "open_search_modal": "Buka modal pencarian"
   },
   "actions": {
     "add_to_cart": "Tambahkan ke keranjang",
@@ -139,7 +142,9 @@
     "log_out": "Logout",
     "apply": "Pakai",
     "sign_in_options": "Opsi masuk lainnya",
-    "open_image_in_full_screen": "Buka gambar dalam layar penuh"
+    "open_image_in_full_screen": "Buka gambar dalam layar penuh",
+    "sign_up": "Daftar",
+    "sort": "Urutkan"
   },
   "content": {
     "reviews": "ulasan",
@@ -156,6 +161,7 @@
     "seller_note": "Instruksi khusus",
     "cart_subtotal": "Subtotal",
     "discounts": "Diskon",
+    "discount": "Diskon",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Termasuk bea cukai dan pajak. Diskon dan <a href=\"{{ link }}\">biaya pengiriman</a> dihitung saat checkout.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Termasuk bea cukai dan pajak. Diskon dan biaya pengiriman dihitung saat checkout.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Termasuk pajak. Diskon dan <a href=\"{{ link }}\">biaya pengiriman</a> dihitung saat checkout.",
@@ -246,7 +252,12 @@
     "inventory_low_stock_show_count": {
       "one": "Tersisa {{ count }}",
       "other": "Tersisa {{ count }}"
-    }
+    },
+    "discount_code_error": "Kode diskon tidak dapat diterapkan ke keranjang Anda",
+    "shipping_policy": "Biaya pengiriman dihitung saat checkout.",
+    "shipping_discount_error": "Diskon biaya pengiriman akan ditampilkan saat checkout setelah menambahkan alamat",
+    "powered_by": "Toko ini didukung oleh",
+    "store_owner_link_html": "Anda pemilik toko? <a href=\"{{ link }}\">Login di sini</a>"
   },
   "gift_cards": {
     "issued": {
@@ -264,14 +275,18 @@
   },
   "placeholders": {
     "password": "Sandi",
-    "search": "Cari"
+    "search": "Cari",
+    "product_title": "Judul produk",
+    "collection_title": "Judul koleksi"
   },
   "products": {
     "product": {
       "add_to_cart": "Tambahkan ke keranjang",
       "added_to_cart": "Ditambahkan ke keranjang",
       "adding_to_cart": "Menambahkan...",
-      "add_to_cart_error": "Kesalahan saat menambahkan ke keranjang"
+      "add_to_cart_error": "Kesalahan saat menambahkan ke keranjang",
+      "sold_out": "Habis",
+      "unavailable": "Tidak Tersedia"
     }
   },
   "fields": {

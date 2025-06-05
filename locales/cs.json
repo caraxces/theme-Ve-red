@@ -99,7 +99,7 @@
       "few": "Je použito více filtrů ({{ count }})",
       "many": "Je použito více filtrů ({{ count }})"
     },
-    "account": "Účet",
+    "account": "Otevřít rozbalovací nabídku účtu",
     "cart": "Košík",
     "cart_count": "Celkem položek v košíku",
     "menu": "Nabídka",
@@ -111,7 +111,10 @@
     "discount_applied": "Uplatněný slevový kód: {{ code }}",
     "open_cart_drawer": "Otevřít výsuvný košík",
     "inventory_status": "Stav skladových zásob",
-    "pause_video": "Pozastavit video"
+    "pause_video": "Pozastavit video",
+    "find_country": "Najít zemi",
+    "localization_region_and_language": "Otevřít výběr regionu a jazyka",
+    "open_search_modal": "Otevřít modální vyhledávání"
   },
   "actions": {
     "add_to_cart": "Přidat do košíku",
@@ -150,7 +153,8 @@
     "apply": "Použít",
     "sign_in_options": "Další možnosti přihlášení",
     "sign_up": "Zaregistrovat se",
-    "open_image_in_full_screen": "Otevřít obrázek na celou obrazovku"
+    "open_image_in_full_screen": "Otevřít obrázek na celou obrazovku",
+    "sort": "Třídit"
   },
   "content": {
     "reviews": "recen.",
@@ -167,6 +171,7 @@
     "seller_note": "Zvláštní pokyny",
     "cart_subtotal": "Mezisoučet",
     "discounts": "Slevy",
+    "discount": "Sleva",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Včetně cla a daní. Slevy a <a href=\"{{ link }}\">cena dopravy</a> se vypočítají na pokladně.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Včetně cla a daní. Slevy a cena dopravy se vypočítají na pokladně.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Včetně daní. Slevy a <a href=\"{{ link }}\">cena dopravy</a> se vypočítají na pokladně.",
@@ -263,7 +268,12 @@
       "other": "Zbývá: {{ count }}",
       "few": "Zbývá: {{ count }}",
       "many": "Zbývá: {{ count }}"
-    }
+    },
+    "powered_by": "Obchod bude využívat platformu",
+    "store_owner_link_html": "Jste majitelem obchodu? <a href=\"{{ link }}\">Přihlaste se zde</a>",
+    "shipping_discount_error": "Slevy na dopravu se zobrazí při placení po přidání adresy.",
+    "discount_code_error": "Slevový kód nelze na váš košík uplatnit",
+    "shipping_policy": "Cena za dopravu se vypočítá u pokladny."
   },
   "gift_cards": {
     "issued": {

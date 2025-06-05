@@ -95,7 +95,7 @@
       "other": "{{ count }} filtre aplicate",
       "few": "{{ count }} filtre aplicate"
     },
-    "account": "Cont",
+    "account": "Deschide meniul vertical al contului",
     "cart": "Coș",
     "cart_count": "Total articole în coș",
     "menu": "Meniu",
@@ -106,7 +106,11 @@
     "discount": "Aplică un cod de reducere",
     "discount_applied": "Cod de reducere aplicat: {{ code }}",
     "open_cart_drawer": "Deschide sertarul coșului",
-    "pause_video": "Pune pe pauză videoclipul"
+    "pause_video": "Pune pe pauză videoclipul",
+    "inventory_status": "Stare inventar",
+    "find_country": "Găsește țara",
+    "localization_region_and_language": "Deschide instrumentul de selectare a regiunii și limbii",
+    "open_search_modal": "Deschide fereastra modală de căutare"
   },
   "actions": {
     "add_to_cart": "Adaugă în coș",
@@ -142,7 +146,10 @@
     "back": "Înapoi",
     "log_in": "Conectează-te",
     "log_out": "Deconectează-te",
-    "open_image_in_full_screen": "Deschide imaginea în modul ecran complet"
+    "open_image_in_full_screen": "Deschide imaginea în modul ecran complet",
+    "sign_in_options": "Alte opțiuni de conectare",
+    "sign_up": "Înscrie-te",
+    "sort": "Sortează"
   },
   "content": {
     "reviews": "recenzii",
@@ -159,6 +166,7 @@
     "seller_note": "Instrucțiuni speciale",
     "cart_subtotal": "Subtotal",
     "discounts": "Reduceri",
+    "discount": "Reducere",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Taxe și taxe vamale incluse. Reducerile și <a href=\"{{ link }}\">transportul</a> sunt calculate la finalizarea comenzii.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Taxe și taxe vamale incluse. Reducerile și transportul sunt calculate la finalizarea comenzii.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Taxe incluse. Reducerile și <a href=\"{{ link }}\">transportul</a> sunt calculate la finalizarea comenzii.",
@@ -244,7 +252,20 @@
     "view_more_details": "Vezi mai multe detalii",
     "page_placeholder_title": "Titlul paginii",
     "page_placeholder_content": "Selectează o pagină pentru a afișa conținutul acesteia.",
-    "placeholder_image": "Imagine substituent"
+    "placeholder_image": "Imagine substituent",
+    "powered_by": "Acest magazin va fi oferit de",
+    "store_owner_link_html": "Ești proprietarul magazinului? <a href=\"{{ link }}\">Conectează-te aici</a>",
+    "shipping_discount_error": "Reducerile pentru transport sunt afișate pe pagina de efectuare a plății, după ce ai adăugat adresa",
+    "discount_code_error": "Codul de reducere nu poate fi aplicat coșului tău de cumpărături",
+    "inventory_low_stock": "Stoc redus",
+    "inventory_in_stock": "În stoc",
+    "inventory_out_of_stock": "Stoc epuizat",
+    "shipping_policy": "Transportul este calculat la momentul efectuării plății.",
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }} rămas",
+      "other": "{{ count }} rămas",
+      "few": "{{ count }} rămas"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -262,14 +283,18 @@
   },
   "placeholders": {
     "password": "Parolă",
-    "search": "Caută"
+    "search": "Caută",
+    "product_title": "Titlul produsului",
+    "collection_title": "Titlul colecției"
   },
   "products": {
     "product": {
       "add_to_cart": "Adaugă în coș",
       "added_to_cart": "Adăugat în coș",
       "adding_to_cart": "Se adaugă...",
-      "add_to_cart_error": "Eroare la adăugarea în coș"
+      "add_to_cart_error": "Eroare la adăugarea în coș",
+      "sold_out": "Stoc epuizat",
+      "unavailable": "Indisponibil"
     }
   },
   "fields": {

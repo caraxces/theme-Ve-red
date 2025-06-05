@@ -140,7 +140,6 @@ export class ZoomDialog extends Component {
     const activeIndex = media.indexOf(mostVisibleElement);
     const transitionName = `gallery-item`;
 
-    // TODO: This is breaking component boundaries and should be refactored
     const mediaGallery = /** @type {import('./media-gallery').MediaGallery | undefined} */ (
       this.closest('media-gallery')
     );

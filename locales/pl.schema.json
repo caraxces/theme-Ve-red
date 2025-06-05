@@ -153,7 +153,6 @@
     "editorial": "Artykuł",
     "editorial_jumbo_text": "Artykuł: tekst jumbo",
     "hero_marquee": "Element główny: baner",
-    "hero_large_logo": "Element główny: duże logo",
     "input_fields": "Pola wprowadzania",
     "local_pickup": "Odbiór lokalny",
     "marquee_section": "Baner",
@@ -166,7 +165,12 @@
     "products_editorial": "Lista produktów: układ redakcyjny",
     "social_link": "Link do mediów społecznościowych",
     "split_showcase": "Podzielona prezentacja",
-    "variant_pickers": "Selektory wariantów"
+    "variant_pickers": "Selektory wariantów",
+    "product_title": "Tytuł produktu",
+    "large_logo": "Duże logo",
+    "product_list_button": "Przycisk Wyświetl wszystkie",
+    "product_inventory": "Zapas produktu",
+    "pills": "Przyciski"
   },
   "settings": {
     "autoplay": "Autoodtwarzanie",
@@ -306,7 +310,7 @@
     "cart_total": "Całkowita wartość koszyka",
     "cart_type": "Typ",
     "case": "Wielkość liter",
-    "checkout_buttons": "Zezwalaj na przyciski przyspieszonej realizacji zakupu",
+    "checkout_buttons": "Przyciski przyspieszonej realizacji zakupu",
     "collection_list": "Kolekcje",
     "collection_templates": "Szablony kolekcji",
     "content": "Treść",
@@ -473,7 +477,24 @@
     "vertical_padding": "Wypełnienie pionowe",
     "visibility": "Widoczność",
     "product_corner_radius": "Promień rogu produktu",
-    "card_corner_radius": "Promień rogu karty"
+    "card_corner_radius": "Promień rogu karty",
+    "alignment_mobile": "Dopasowanie na urządzeniu mobilnym",
+    "animation_repeat": "Powtórz animację",
+    "blurred_reflection": "Zamazane odbicie",
+    "card_hover_effect": "Efekt najechania kursorem na kartę",
+    "card_size": "Rozmiar karty",
+    "collection_title_case": "Wielkość liter tytułu kolekcji",
+    "effects": "Efekty",
+    "inventory_threshold": "Niski próg zapasu",
+    "mobile_card_size": "Rozmiar karty mobilnej",
+    "page": "Strona",
+    "product_and_card_title_case": "Wielkość liter tytułu produktu i karty",
+    "product_title_case": "Wielkość liter tytułu produktu",
+    "reflection_opacity": "Nieprzezroczystość odbicia",
+    "right_padding": "Wypełnienie z prawej",
+    "show_inventory_quantity": "Wyświetl niski poziom zapasu",
+    "text_label_case": "Wielkość liter etykiety tekstowej",
+    "transition_to_main_product": "Przejście z karty produktu do strony produktu"
   },
   "options": {
     "adapt_to_image": "Dostosuj do obrazu",
@@ -740,7 +761,12 @@
     "social_youtube": "Media społecznościowe: YouTube",
     "spotlight": "Spotlight",
     "standard": "Standardowa",
-    "subheading": "Nagłówek podrzędny"
+    "subheading": "Nagłówek podrzędny",
+    "blur": "Zamaż",
+    "lift": "Uniesienie",
+    "reveal": "Pokaż",
+    "scale": "Skalowanie",
+    "subtle_zoom": "Powiększenie"
   },
   "content": {
     "background_video": "Film w tle",
@@ -823,14 +849,17 @@
     "product_page": "Strona produktu",
     "text": "Tekst",
     "thumbnails": "Miniatury",
-    "visibility": "Widoczność"
+    "visibility": "Widoczność",
+    "visible_if_collection_has_more_products": "Widoczne, jeśli kolekcja ma więcej produktów niż pokazano",
+    "grid_layout": "Układ siatki",
+    "app_required_for_ratings": "Do oceniania produktów wymagana jest aplikacja. [Dowiedz się więcej](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Udostępnij klientom informacje o swojej marce. Opisz produkt, udostępnij ogłoszenia lub przywitaj klientów w swoim sklepie.</p>"
   },
   "text_defaults": {
     "collapsible_row": "Zwijany wiersz",
-    "button_label": "Przycisk z etykietą",
+    "button_label": "Kup teraz",
     "heading": "Nagłówek",
     "email_signup_button_label": "Subskrybuj",
     "accordion_heading": "Nagłówek akordeonu",
@@ -859,19 +888,10 @@
     "transparent_background": "Sprawdź każdy szablon, w którym zastosowano przezroczyste tło, pod kątem czytelności",
     "aspect_ratio_adjusted": "Dostosowano w niektórych układach",
     "auto_open_cart_drawer": "Gdy ta opcja jest aktywna, szuflada koszyka otworzy się automatycznie po dodaniu produktu do koszyka.",
-    "custom_liquid": "Dodaj fragmenty kodu aplikacji lub inny kod, aby utworzyć zaawansowane dostosowania. [Dowiedz się więcej](https://shopify.dev/docs/api/liquid)"
-  },
-  "github": {
-    "announcement_bar": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Problem na GitHubie](https://github.com/Shopify/horizon/issues/2986)"
+    "custom_liquid": "Dodaj fragmenty kodu aplikacji lub inny kod, aby utworzyć zaawansowane dostosowania. [Dowiedz się więcej](https://shopify.dev/docs/api/liquid)",
+    "applies_on_image_only": "Dotyczy tylko obrazów",
+    "hover_effects": "Dotyczy kart produktów i kolekcji",
+    "pills_usage": "Używane przez zastosowane filtry, kody rabatowe i sugestie wyszukiwania"
   },
   "categories": {
     "product_list": "Lista produktów",

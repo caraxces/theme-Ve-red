@@ -87,7 +87,7 @@
     "search_results_count": "找到“{{ query }}”的 {{ count }} 条搜索结果",
     "search_results_no_results": "未找到“{{ query }}”的相关结果",
     "filters": "筛选条件",
-    "account": "账户",
+    "account": "打开账户下拉菜单",
     "cart": "购物车",
     "cart_count": "购物车中的商品总数",
     "filter_count": {
@@ -103,7 +103,10 @@
     "discount_applied": "已应用折扣码：{{ code }}",
     "open_cart_drawer": "打开购物车抽屉",
     "inventory_status": "库存状态",
-    "pause_video": "暂停视频"
+    "pause_video": "暂停视频",
+    "localization_region_and_language": "打开区域和语言选择器",
+    "open_search_modal": "打开搜索模态窗口",
+    "find_country": "查找国家/地区"
   },
   "actions": {
     "add_to_cart": "添加到购物车",
@@ -140,7 +143,8 @@
     "apply": "应用",
     "sign_in_options": "其他登录选项",
     "sign_up": "注册",
-    "open_image_in_full_screen": "全屏打开图片"
+    "open_image_in_full_screen": "全屏打开图片",
+    "sort": "排序"
   },
   "content": {
     "reviews": "评价",
@@ -157,6 +161,7 @@
     "seller_note": "特殊说明",
     "cart_subtotal": "小计",
     "discounts": "折扣",
+    "discount": "折扣",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "已含关税和税费。结账时计算折扣和<a href=\"{{ link }}\">运费</a>。",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "已含关税和税费。结账时计算折扣和运费。",
     "taxes_included_shipping_at_checkout_with_policy_html": "已含税费。结账时计算折扣和<a href=\"{{ link }}\">运费</a>。",
@@ -247,7 +252,12 @@
     "inventory_low_stock_show_count": {
       "one": "剩余 {{ count }}",
       "other": "剩余 {{ count }}"
-    }
+    },
+    "shipping_discount_error": "添加地址后，结账时会显示运费折扣",
+    "discount_code_error": "折扣码无法应用于您的购物车",
+    "shipping_policy": "结账时计算运费。",
+    "powered_by": "此商店依托",
+    "store_owner_link_html": "您是否为店主？<a href=\"{{ link }}\">在此处登录</a>"
   },
   "gift_cards": {
     "issued": {
@@ -265,14 +275,18 @@
   },
   "placeholders": {
     "password": "密码",
-    "search": "搜索"
+    "search": "搜索",
+    "product_title": "产品标题",
+    "collection_title": "产品系列标题"
   },
   "products": {
     "product": {
       "add_to_cart": "添加到购物车",
       "added_to_cart": "添加到购物车",
       "adding_to_cart": "正在添加...",
-      "add_to_cart_error": "添加到购物车时出错"
+      "add_to_cart_error": "添加到购物车时出错",
+      "sold_out": "售罄",
+      "unavailable": "不可售"
     }
   },
   "fields": {

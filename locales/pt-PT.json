@@ -95,7 +95,7 @@
       "other": "{{ count }} filtros aplicados",
       "many": "{{ count }} filtros aplicados"
     },
-    "account": "Conta",
+    "account": "Abrir menu pendente de conta",
     "cart": "Carrinho",
     "cart_count": "Total de itens no carrinho",
     "menu": "Menu",
@@ -106,7 +106,11 @@
     "discount": "Aplicar um código de desconto",
     "discount_applied": "Código de desconto aplicado: {{ code }}",
     "open_cart_drawer": "Abrir painel deslizante do carrinho",
-    "pause_video": "Colocar vídeo em pausa"
+    "pause_video": "Colocar vídeo em pausa",
+    "inventory_status": "Estado do inventário",
+    "localization_region_and_language": "Abrir seletor de região e idioma",
+    "open_search_modal": "Abrir modal de pesquisa",
+    "find_country": "Localizar país"
   },
   "actions": {
     "add_to_cart": "Adicionar ao carrinho",
@@ -142,7 +146,10 @@
     "enter_password": "Introduzir palavra-passe",
     "view_store_information": "Ver as informações da loja",
     "apply": "Aplicar",
-    "open_image_in_full_screen": "Abrir imagem em ecrã inteiro"
+    "open_image_in_full_screen": "Abrir imagem em ecrã inteiro",
+    "sign_in_options": "Outras opções de início de sessão",
+    "sign_up": "Registar-se",
+    "sort": "Ordenar"
   },
   "content": {
     "reviews": "avaliações",
@@ -159,6 +166,7 @@
     "seller_note": "Instruções especiais",
     "cart_subtotal": "Subtotal",
     "discounts": "Descontos",
+    "discount": "Desconto",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Encargos e impostos incluídos. Descontos e <a href=\"{{ link }}\">envio</a> calculados na finalização da compra.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Encargos e impostos incluídos. Descontos e envio calculados na finalização da compra.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Impostos incluídos. Descontos e <a href=\"{{ link }}\">envio</a> calculados na finalização da compra.",
@@ -243,7 +251,21 @@
     "wrong_password": "Palavra-passe incorreta",
     "view_more_details": "Ver mais informações",
     "page_placeholder_title": "Título da página",
-    "page_placeholder_content": "Selecione uma página para apresentar o conteúdo."
+    "page_placeholder_content": "Selecione uma página para apresentar o conteúdo.",
+    "powered_by": "Esta loja terá tecnologia",
+    "store_owner_link_html": "É o proprietário da loja? <a href=\"{{ link }}\">Inicie sessão aqui</a>",
+    "shipping_discount_error": "Os descontos de envio são apresentados na finalização da compra após adicionar um endereço",
+    "discount_code_error": "O código de desconto não pode ser aplicado ao seu carrinho",
+    "inventory_low_stock": "Stock reduzido",
+    "inventory_in_stock": "Em stock",
+    "inventory_out_of_stock": "Esgotado",
+    "placeholder_image": "Imagem de marcador de posição",
+    "shipping_policy": "Portes calculados na finalização da compra.",
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }} restante(s)",
+      "other": "{{ count }} restante(s)",
+      "many": "{{ count }} restante(s)"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -261,14 +283,18 @@
   },
   "placeholders": {
     "password": "Palavra-passe",
-    "search": "Pesquisar"
+    "search": "Pesquisar",
+    "product_title": "Título do produto",
+    "collection_title": "Título da coleção"
   },
   "products": {
     "product": {
       "add_to_cart": "Adicionar ao carrinho",
       "added_to_cart": "Adicionado ao carrinho",
       "adding_to_cart": "A adicionar...",
-      "add_to_cart_error": "Erro ao adicionar ao carrinho"
+      "add_to_cart_error": "Erro ao adicionar ao carrinho",
+      "sold_out": "Esgotado",
+      "unavailable": "Indisponível"
     }
   },
   "fields": {

@@ -91,7 +91,7 @@
       "one": "{{ count }} szűrő alkalmazva",
       "other": "{{ count }} szűrő alkalmazva"
     },
-    "account": "Fiók",
+    "account": "Fiók legördülő menü megnyitása",
     "cart": "Kosár",
     "cart_count": "Összes termék a kosárban",
     "menu": "Menü",
@@ -103,7 +103,10 @@
     "discount_applied": "Beváltott kedvezménykód: {{ code }}",
     "open_cart_drawer": "Kosárpanel megnyitása",
     "inventory_status": "Készlet állapota",
-    "pause_video": "Videó szüneteltetése"
+    "pause_video": "Videó szüneteltetése",
+    "find_country": "Ország keresése",
+    "localization_region_and_language": "Régió- és nyelvválasztó megnyitása",
+    "open_search_modal": "Modális keresőablak megnyitása"
   },
   "actions": {
     "add_to_cart": "Hozzáadás a kosárhoz",
@@ -140,7 +143,8 @@
     "apply": "Beváltás",
     "sign_in_options": "További bejelentkezési lehetőségek",
     "sign_up": "Regisztráció",
-    "open_image_in_full_screen": "Kép megnyitása teljes képernyőn"
+    "open_image_in_full_screen": "Kép megnyitása teljes képernyőn",
+    "sort": "Rendezés"
   },
   "content": {
     "reviews": "összegzés",
@@ -157,6 +161,7 @@
     "seller_note": "Különleges utasítások",
     "cart_subtotal": "Részösszeg",
     "discounts": "Kedvezmények",
+    "discount": "Kedvezmény",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Tartalmazza a vámokat és az adókat. A kedvezmények és a <a href=\"{{ link }}\">szállítási költség</a> kiszámítása a pénztárban történik.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Tartalmazza a vámokat és az adókat. A kedvezmények és a szállítási költség kiszámítása a pénztárban történik.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Tartalmazza az adókat. A kedvezmények és a <a href=\"{{ link }}\">szállítási költség</a> kiszámítása a pénztárban történik.",
@@ -248,7 +253,11 @@
       "one": "Elérhető összeg: {{ count }}",
       "other": "Elérhető összeg: {{ count }}"
     },
-    "shipping_policy": "A fizetéskor kiszámított szállítási költség."
+    "shipping_policy": "A fizetéskor kiszámított szállítási költség.",
+    "discount_code_error": "A kedvezménykód nem érvényesíthető a kosaradon",
+    "shipping_discount_error": "A szállítási kedvezmények a fizetéskor jelennek meg a cím megadását követően",
+    "powered_by": "A bolt szolgáltatója:",
+    "store_owner_link_html": "Te vagy az áruház tulajdonosa? <a href=\"{{ link }}\">Jelentkezz be itt</a>"
   },
   "gift_cards": {
     "issued": {

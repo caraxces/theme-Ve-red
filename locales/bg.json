@@ -91,7 +91,7 @@
       "one": "Приложен е {{ count }} филтър",
       "other": "Приложени са {{ count }} филтъра"
     },
-    "account": "Профил",
+    "account": "Отваряне на падащо меню на профила",
     "cart": "Количка",
     "cart_count": "Общо артикули в количката",
     "menu": "Меню",
@@ -103,7 +103,10 @@
     "discount_applied": "Приложен код за отстъпка: {{ code }}",
     "open_cart_drawer": "Отвори панела с количката",
     "inventory_status": "Статус на стоковите запаси",
-    "pause_video": "Пауза на видеоклипа"
+    "pause_video": "Пауза на видеоклипа",
+    "find_country": "Намери страна",
+    "localization_region_and_language": "Отваряне на диалогов прозорец за избор на регион и език",
+    "open_search_modal": "Отваряне на диалогов прозорец за търсене"
   },
   "actions": {
     "add_to_cart": "Добавяне към количката",
@@ -140,7 +143,8 @@
     "apply": "Приложи",
     "sign_up": "Регистриране",
     "sign_in_options": "Други опции за влизане",
-    "open_image_in_full_screen": "Отваряне на изображението на цял екран"
+    "open_image_in_full_screen": "Отваряне на изображението на цял екран",
+    "sort": "Сортиране"
   },
   "content": {
     "reviews": "мнения",
@@ -157,6 +161,7 @@
     "seller_note": "Специални инструкции",
     "cart_subtotal": "Междинна сума",
     "discounts": "Отстъпки",
+    "discount": "Отстъпка",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "С включено мито и данъци. Отстъпките и <a href=\"{{ link }}\">доставката</a> се изчисляват при плащане.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "С включено мито и данъци. Отстъпките и доставката се изчисляват при плащане.",
     "taxes_included_shipping_at_checkout_with_policy_html": "С включени данъци. Отстъпките и <a href=\"{{ link }}\">доставката</a> се изчисляват при плащане.",
@@ -248,7 +253,11 @@
       "one": "Оставаща стойност: {{ count }}",
       "other": "Оставаща стойност: {{ count }}"
     },
-    "shipping_policy": "Доставката се изчислява при плащане."
+    "shipping_policy": "Доставката се изчислява при плащане.",
+    "discount_code_error": "Кодът за отстъпка не може да бъде приложен към вашата количка",
+    "shipping_discount_error": "Отстъпките от доставката се показват при преминаването към плащане след добавяне на адрес",
+    "powered_by": "Този магазин ще се поддържа от",
+    "store_owner_link_html": "Вие ли сте собственикът на магазина? <a href=\"{{ link }}\">Влезте тук</a>"
   },
   "gift_cards": {
     "issued": {

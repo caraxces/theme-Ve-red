@@ -95,7 +95,7 @@
       "other": "{{ count }} filtros aplicados",
       "many": "{{ count }} filtros aplicados"
     },
-    "account": "Cuenta",
+    "account": "Abrir menú desplegable de la cuenta",
     "cart": "Carrito",
     "cart_count": "Total de artículos en el carrito",
     "menu": "Menú",
@@ -106,7 +106,11 @@
     "discount": "Aplicar un código de descuento",
     "discount_applied": "Aplicar código de descuento: {{ code }}",
     "open_cart_drawer": "Abrir el carrito lateral",
-    "pause_video": "Pausar el video"
+    "pause_video": "Pausar el video",
+    "inventory_status": "Estado del inventario",
+    "find_country": "Buscar país",
+    "localization_region_and_language": "Abrir selector de región e idioma",
+    "open_search_modal": "Abrir modal de búsqueda"
   },
   "actions": {
     "add_to_cart": "Agregar al carrito",
@@ -142,7 +146,10 @@
     "enter_password": "Introducir la contraseña",
     "view_store_information": "Ver la información de la tienda",
     "apply": "Aplicar",
-    "open_image_in_full_screen": "Abrir imagen a pantalla completa"
+    "open_image_in_full_screen": "Abrir imagen a pantalla completa",
+    "sign_in_options": "Otras opciones de inicio de sesión",
+    "sign_up": "Registrarse",
+    "sort": "Ordenar"
   },
   "content": {
     "reviews": "reseñas",
@@ -159,6 +166,7 @@
     "seller_note": "Instrucciones especiales",
     "cart_subtotal": "Subtotal",
     "discounts": "Descuentos",
+    "discount": "Descuento",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Aranceles e impuestos incluidos. Descuentos y <a href=\"{{ link }}\">envío</a> calculados en la página de pago.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Aranceles e impuestos incluidos. Descuentos y envío calculados en la pantalla de pago.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Impuestos incluidos. Descuentos y <a href=\"{{ link }}\">envío</a> calculados en la página de pago.",
@@ -244,7 +252,20 @@
     "view_more_details": "Ver más información",
     "page_placeholder_title": "Título de la página",
     "page_placeholder_content": "Selecciona una página para mostrar su contenido.",
-    "placeholder_image": "Imagen marcadora de posición"
+    "placeholder_image": "Imagen marcadora de posición",
+    "powered_by": "Esta tienda contará con tecnología de",
+    "store_owner_link_html": "¿Esta tienda es tuya? <a href=\"{{ link }}\">Inicia sesión aquí</a>",
+    "shipping_discount_error": "Los descuentos de envío se muestran en la pantalla de pago tras agregar una dirección",
+    "discount_code_error": "El código de descuento no se puede aplicar a tu carrito",
+    "inventory_low_stock": "Bajas existencias",
+    "inventory_in_stock": "En existencias",
+    "inventory_out_of_stock": "Agotado",
+    "shipping_policy": "Envío calculado en el pago.",
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }} restante",
+      "other": "{{ count }} restantes",
+      "many": "{{ count }} restantes"
+    }
   },
   "gift_cards": {
     "issued": {
@@ -271,7 +292,9 @@
       "add_to_cart": "Agregar al carrito",
       "added_to_cart": "Agregado al carrito",
       "adding_to_cart": "Agregando...",
-      "add_to_cart_error": "Error al agregar al carrito"
+      "add_to_cart_error": "Error al agregar al carrito",
+      "sold_out": "Agotado",
+      "unavailable": "No disponible"
     }
   },
   "fields": {

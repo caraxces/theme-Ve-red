@@ -2,7 +2,8 @@ import { Component } from '@theme/component';
 import { debounce, onDocumentReady } from '@theme/utilities';
 import { MegaMenuHoverEvent } from '@theme/events';
 
-const ACTIVATE_DELAY = 250;
+const SHORT_ACTIVATE_DELAY = 0;
+const LONG_ACTIVATE_DELAY = 250;
 const DEACTIVATE_DELAY = 350;
 
 /**
@@ -12,17 +13,29 @@ const DEACTIVATE_DELAY = 350;
  * @property {HTMLElement | null} activeItem - The currently active menu item.
  *
  * @typedef {object} Refs
+ * @property {HTMLElement} overflowMenu - The overflow menu.
  * @property {HTMLElement[]} [submenu] - The submenu in each respective menu item.
  *
  * @extends {Component<Refs>}
  */
 class HeaderMenu extends Component {
-  requiredRefs = ['submenu'];
+  requiredRefs = ['overflowMenu'];
+
+  #abortController = new AbortController();
 
   connectedCallback() {
     super.connectedCallback();
 
+    this.overflowMenu?.addEventListener('pointerleave', () => this.#debouncedDeactivate(), {
+      signal: this.#abortController.signal,
+    });
+
     onDocumentReady(this.#preloadImages);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    this.#abortController.abort();
   }
 
   /**
@@ -42,16 +55,33 @@ class HeaderMenu extends Component {
   }
 
   /**
+   * Get the overflow menu
+   */
+  get overflowMenu() {
+    return /** @type {HTMLElement | null} */ (this.refs.overflowMenu?.shadowRoot?.querySelector('[part="overflow"]'));
+  }
+
+  /**
+   * Whether the overflow menu is hovered
+   * @returns {boolean}
+   */
+  get overflowHovered() {
+    return this.refs.overflowMenu?.matches(':hover') ?? false;
+  }
+
+  /**
    * Activate the selected menu item immediately
    * @param {PointerEvent | FocusEvent} event
    */
   activate = (event) => {
     this.#debouncedDeactivate.cancel();
+    this.#shortDebouncedActivateHandler.cancel();
+    this.#longDebouncedActivateHandler.cancel();
 
     if (this.#state.activeItem) {
-      this.#activateHandler(event);
+      this.#shortDebouncedActivateHandler(event);
     } else {
-      this.#debouncedActivateHandler(event);
+      this.#longDebouncedActivateHandler(event);
     }
   };
 
@@ -72,28 +102,42 @@ class HeaderMenu extends Component {
 
     if (!item || item == this.#state.activeItem) return;
 
-    this.dataset.overflowExpanded = (event.target.slot !== '').toString();
+    const isDefaultSlot = event.target.slot === '';
 
-    this.#deactivate();
+    this.dataset.overflowExpanded = (!isDefaultSlot).toString();
+
+    const previouslyActiveItem = this.#state.activeItem;
+
+    if (previouslyActiveItem) {
+      previouslyActiveItem.ariaExpanded = 'false';
+    }
+
     this.#state.activeItem = item;
     this.ariaExpanded = 'true';
     item.ariaExpanded = 'true';
 
-    const submenu = findSubmenu(item);
+    let submenu = findSubmenu(item);
+    let overflowMenuHeight = this.overflowMenu?.offsetHeight ?? 0;
 
-    if (!submenu) return;
+    if (!submenu && !isDefaultSlot) {
+      submenu = this.overflowMenu;
+    }
 
-    this.style.setProperty('--submenu-height', `${submenu.offsetHeight}px`);
+    const submenuHeight = submenu ? Math.max(submenu.offsetHeight, overflowMenuHeight) : 0;
+
+    this.style.setProperty('--submenu-height', `${submenuHeight}px`);
   };
 
-  #debouncedActivateHandler = debounce(this.#activateHandler, ACTIVATE_DELAY);
+  #shortDebouncedActivateHandler = debounce(this.#activateHandler, SHORT_ACTIVATE_DELAY);
+  #longDebouncedActivateHandler = debounce(this.#activateHandler, LONG_ACTIVATE_DELAY);
 
   /**
    * Deactivate the active item after a delay
    * @param {PointerEvent | FocusEvent} event
    */
   deactivate(event) {
-    this.#debouncedActivateHandler.cancel();
+    this.#shortDebouncedActivateHandler.cancel();
+    this.#longDebouncedActivateHandler.cancel();
 
     if (!(event.target instanceof Element)) return;
 
@@ -102,34 +146,20 @@ class HeaderMenu extends Component {
     // Make sure the item to be deactivated is still the active one. Ideally
     // we cancelled the debounce before the item was changed, but just in case.
     if (item === this.#state.activeItem) {
-      this.#debouncedDeactivate(event);
+      this.#debouncedDeactivate();
     }
   }
-
-  /**
-   * Deactivate the active item after a delay
-   * @param {PointerEvent | FocusEvent} event
-   */
-  #debouncedDeactivate = debounce((event) => {
-    this.dataset.overflowExpanded = 'false';
-
-    const item = findMenuItem(event.target);
-
-    // Make sure the item to be deactivated is still the active one. Ideally
-    // we cancelled the debounce before the item was changed, but just in case.
-    if (item != this.#state.activeItem) return;
-
-    this.#deactivate(item);
-  }, DEACTIVATE_DELAY);
 
   /**
    * Deactivate the active item immediately
    * @param {HTMLElement | null} [item]
    */
   #deactivate = (item = this.#state.activeItem) => {
-    this.style.setProperty('--submenu-height', '0px');
+    if (!item || item != this.#state.activeItem) return;
+    if (this.overflowHovered) return;
 
-    if (!item) return;
+    this.style.setProperty('--submenu-height', '0px');
+    this.dataset.overflowExpanded = 'false';
 
     this.#state.activeItem = null;
     this.ariaExpanded = 'false';
@@ -140,6 +170,12 @@ class HeaderMenu extends Component {
       item.removeAttribute('data-animating');
     }, this.animationDelay);
   };
+
+  /**
+   * Deactivate the active item after a delay
+   * @param {PointerEvent | FocusEvent} event
+   */
+  #debouncedDeactivate = debounce(this.#deactivate, DEACTIVATE_DELAY);
 
   /**
    * Preload images that are set to load lazily.

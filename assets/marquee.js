@@ -20,6 +20,9 @@ class MarqueeComponent extends Component {
   connectedCallback() {
     super.connectedCallback();
 
+    const { content } = this.refs;
+    if (content.firstElementChild?.children.length === 0) return;
+
     this.#addRepeatedItems();
     this.#duplicateContent();
     this.#setSpeed();
@@ -159,8 +162,9 @@ class MarqueeComponent extends Component {
     const { content } = this.refs;
     const marqueeWidth = this.offsetWidth;
     const marqueeRepeatedItemWidth =
-      content.firstElementChild instanceof HTMLElement ? content.firstElementChild.offsetWidth : 0;
-    return Math.ceil(marqueeWidth / marqueeRepeatedItemWidth);
+      content.firstElementChild instanceof HTMLElement ? content.firstElementChild.offsetWidth : 1;
+
+    return marqueeRepeatedItemWidth === 0 ? 1 : Math.ceil(marqueeWidth / marqueeRepeatedItemWidth);
   }
 }
 

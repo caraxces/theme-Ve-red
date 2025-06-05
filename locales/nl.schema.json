@@ -49,7 +49,7 @@
     "product_list": "Productlijst",
     "spacer": "Opvulling",
     "products_carousel": "Productlijst: Carrousel",
-    "products_grid": "Productlijst: Grid",
+    "products_grid": "Productlijst: Raster",
     "pull_quote": "Citaat ophalen",
     "contact_form": "Contactformulier",
     "featured_product": "Uitgelichte producten",
@@ -154,7 +154,6 @@
     "editorial": "Redactioneel",
     "editorial_jumbo_text": "Redactioneel: Jumbo-tekst",
     "hero_marquee": "Hero: Marquee",
-    "hero_large_logo": "Hero: Groot logo",
     "input_fields": "Invoervelden",
     "local_pickup": "Afhalen ter plaatse",
     "marquee_section": "Marquee",
@@ -169,7 +168,9 @@
     "social_link": "Socialmedia-link",
     "split_showcase": "Split showcase",
     "variant_pickers": "Variantkiezers",
-    "pills": "Keuzeopties"
+    "pills": "Keuzeopties",
+    "large_logo": "Groot logo",
+    "product_inventory": "Productvoorraad"
   },
   "settings": {
     "autoplay": "Automatisch afspelen",
@@ -484,7 +485,16 @@
     "vertical_padding": "Verticaal vullen",
     "visibility": "Zichtbaarheid",
     "product_corner_radius": "Hoekradius product",
-    "card_corner_radius": "Hoekradius kaart"
+    "card_corner_radius": "Hoekradius kaart",
+    "alignment_mobile": "Uitlijning op mobiel",
+    "animation_repeat": "Animatie herhalen",
+    "blurred_reflection": "Onscherpe weerspiegeling",
+    "card_hover_effect": "Zweefeffect voor kaart",
+    "effects": "Effecten",
+    "inventory_threshold": "Drempelwaarde lage voorraad",
+    "reflection_opacity": "Opaciteit reflectie",
+    "show_inventory_quantity": "Laag voorraadaantal weergeven",
+    "transition_to_main_product": "Overgang van productkaart naar productpagina"
   },
   "options": {
     "adapt_to_image": "Aanpassen aan afbeelding",
@@ -751,7 +761,12 @@
     "social_youtube": "Social: YouTube",
     "spotlight": "Spotlight",
     "standard": "Standaard",
-    "subheading": "Subkop"
+    "subheading": "Subkop",
+    "blur": "Vervaging",
+    "lift": "Optillen",
+    "reveal": "Tonen",
+    "scale": "Schalen",
+    "subtle_zoom": "Zoomen"
   },
   "content": {
     "background_video": "Achtergrondvideo",
@@ -836,7 +851,8 @@
     "manage_policies": "[Beleidsregels beheren](/admin/settings/legal)",
     "product_page": "Productpagina",
     "text": "Tekst",
-    "thumbnails": "Miniatuurafbeeldingen"
+    "thumbnails": "Miniatuurafbeeldingen",
+    "app_required_for_ratings": "Er is een app vereist voor productbeoordelingen. [Meer informatie](https://help.shopify.com/manual/apps)"
   },
   "html_defaults": {
     "share_information_about_your": "<p>Deel informatie over je merk met klanten. Beschrijf een product, doe aankondigingen of verwelkom klanten in je winkel.</p>"
@@ -873,7 +889,9 @@
     "aspect_ratio_adjusted": "Aangepast in sommige opmaken",
     "auto_open_cart_drawer": "Als deze optie is ingeschakeld, wordt de winkelwagenoptie automatisch geopend wanneer een product wordt toegevoegd aan de winkelwagen.",
     "custom_liquid": "Voeg app-fragmenten of andere code toe om geavanceerde aanpassingen aan te maken. [Meer informatie](https://shopify.dev/docs/api/liquid)",
-    "pills_usage": "Gebruikt voor toegepaste filters, kortingscodes en zoeksuggesties"
+    "pills_usage": "Gebruikt voor toegepaste filters, kortingscodes en zoeksuggesties",
+    "applies_on_image_only": "Uitsluitend van toepassing op afbeeldingen",
+    "hover_effects": "Van toepassing op product- en collectiekaarten"
   },
   "categories": {
     "product_list": "Productlijst",
@@ -893,17 +911,5 @@
     "products": "Producten",
     "other_sections": "Anders",
     "storytelling": "Storytelling"
-  },
-  "github": {
-    "announcement_bar": "[Github-probleem](https://github.com/Shopify/horizon/issues/2987)",
-    "hero": "[Github-probleem](https://github.com/Shopify/horizon/issues/2978)",
-    "marquee": "[Github-probleem](https://github.com/Shopify/horizon/issues/2979)",
-    "pull_quote": "[Github-probleem](https://github.com/Shopify/horizon/issues/2980)",
-    "media_with_content": "[Github-probleem](https://github.com/Shopify/horizon/issues/2981)",
-    "alternating_content_rows": "[Github-probleem](https://github.com/Shopify/horizon/issues/2982)",
-    "collection_list": "[Github-probleem](https://github.com/Shopify/horizon/issues/2983)",
-    "product_list": "[Github-probleem](https://github.com/Shopify/horizon/issues/2984)",
-    "featured_product": "[Github-probleem](https://github.com/Shopify/horizon/issues/2985)",
-    "content_swimlane": "[Github-probleem](https://github.com/Shopify/horizon/issues/2986)"
   }
 }

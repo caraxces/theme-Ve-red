@@ -15,7 +15,7 @@ import { morph } from '@theme/morph';
  *
  * @extends {Component<Refs>}
  */
-class ProductCard extends Component {
+export class ProductCard extends Component {
   requiredRefs = ['productCardLink'];
 
   get productPageUrl() {
@@ -67,9 +67,11 @@ class ProductCard extends Component {
    */
   #handleQuickAdd = () => {
     this.removeEventListener('pointerenter', this.#fetchProductPageHandler);
+    this.removeEventListener('focusin', this.#fetchProductPageHandler);
 
     if (isDesktopBreakpoint()) {
       this.addEventListener('pointerenter', this.#fetchProductPageHandler);
+      this.addEventListener('focusin', this.#fetchProductPageHandler);
     }
   };
 
